@@ -1,0 +1,142 @@
+{
+    "hash": "3924cefc697e49bebedf7e6bf6ed3dc8",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers",
+                "reference": "v1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/composer/installers/archive/v1.0.1.zip",
+                "reference": "v1.0.1",
+                "shasum": ""
+            },
+            "replace": {
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "time": "2013-01-14 07:14:45",
+            "type": "composer-installer",
+            "extra": {
+                "class": "Composer\\Installers\\Installer"
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "symfony",
+                "installer",
+                "zend",
+                "wordpress",
+                "cakephp",
+                "codeigniter",
+                "fuelphp",
+                "drupal",
+                "lithium",
+                "li3",
+                "joomla",
+                "laravel",
+                "phpbb",
+                "ppi",
+                "silverstripe",
+                "kohana",
+                "mako",
+                "TYPO3 Flow",
+                "TYPO3 Neos",
+                "agl"
+            ]
+        },
+        {
+            "name": "typo3cms/fluidcontent",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NamelessCoder/fluidcontent",
+                "reference": "origin/master"
+            },
+            "type": "typo3-flow-package",
+            "installation-source": "source",
+            "time": "2013-01-27 02:24:19"
+        },
+        {
+            "name": "typo3cms/fluidpages",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NamelessCoder/fluidpages",
+                "reference": "origin/master"
+            },
+            "type": "typo3-flow-package",
+            "installation-source": "source",
+            "time": "2013-01-28 21:50:48"
+        },
+        {
+            "name": "typo3cms/flux",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NamelessCoder/flux",
+                "reference": "origin/master"
+            },
+            "type": "typo3-flow-package",
+            "installation-source": "source",
+            "time": "2013-01-27 02:52:34"
+        },
+        {
+            "name": "typo3cms/news",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3v4/Extensions/news.git",
+                "reference": "origin/master"
+            },
+            "type": "typo3-flow-package",
+            "installation-source": "source",
+            "time": "2013-01-30 06:33:27"
+        },
+        {
+            "name": "typo3cms/realurl",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3v4/Extensions/realurl.git",
+                "reference": "origin/master"
+            },
+            "type": "typo3-flow-package",
+            "installation-source": "source",
+            "time": "2013-01-29 14:07:00"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": [
+
+    ]
+}

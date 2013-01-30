@@ -1,0 +1,58 @@
+###################################################
+# TypoScript: constants
+###################################################
+
+config {
+
+	# cat=site-configuration/content/0100; type=text; label= Domain (FQDN)
+	#domain = example.com
+
+	# cat=site-configuration/content/0140; type=int; label= Rootpage Uid
+	rootPid = 1
+
+	# cat=site-configuration/content/0150; type=int; label= Enable the Index Search extension
+	index_enable = 0
+
+	# cat=site-configuration/content/0151; type=int; label= Enable the Index Search extension to index file
+	index_externals = 0
+}
+
+styles.content {
+	imgtext.maxWInText = 0
+	imgtext.linkWrap.width = 800
+	loginform.pid = 0
+	media.defaultVideoWidth = 960
+	imgtext.maxW = 960
+}
+
+# Scriptmerger
+plugin.tx_scriptmerger {
+	css.compress.enable = 0
+	javascript.compress.enable = 0
+}
+
+# Assign Context
+config.context = Production
+
+[globalString = ENV:TYPO3_CONTEXT = Development]
+	config.context = Development
+[end]
+
+
+# Language
+
+config {
+	language = en
+}
+
+[globalVar = GP:L = 1]
+	config {
+		language = de
+	}
+[end]
+
+[globalVar = GP:L = 2]
+	config {
+		language = fr
+	}
+[end]

@@ -1,0 +1,39 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform id="3-columns-layout" label="3 columns layout">
+			<flux:flexform.grid>
+
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column colPos="0" name="Main Content"/>
+					<flux:flexform.grid.column colPos="2" name="Sidebar Content"/>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Resources">
+	</f:section>
+
+	<f:section name="Content">
+		<div class="row-fluid">
+			<div class="span3">
+				<f:render section="SubNavigation" partial="SubNavigation"  optional="TRUE" arguments="{_all}" />
+			</div>
+			<div class="span6" role="main">
+				<v:page.content.render column="0"/>
+				<f:render section="AddThis" partial="AddThis" optional="TRUE" arguments="{_all}"/>
+			</div>
+			<aside class="span3" role="complementary">
+				<v:page.content.render column="2"/>
+			</aside>
+		</div>
+	</f:section>
+
+</div>

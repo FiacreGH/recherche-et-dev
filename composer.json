@@ -1,0 +1,120 @@
+{
+	"name": "typo3cms/bootstrap-introduction",
+	"description": "Bootstrap introduction package for TYPO3 CMS",
+	"keywords": ["bootstrap", "introduction-package", "typo3", "cms"],
+	"homepage": "http://bootstrap.ecodev.ch",
+	"license": "LGPL-3.0+",
+	"authors": [
+		{
+			"name": "Fabien Udriot",
+			"email": "fabien.udriot@ecodev.ch",
+			"homepage": "http://ecodev.ch"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "*",
+		"typo3cms/flux": "*",
+		"typo3cms/fluidpages": "*",
+		"typo3cms/fluidcontent": "*",
+		"typo3cms/fluidcontent": "*",
+		"typo3cms/realurl": "*",
+		"typo3cms/news": "*"
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/flux",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/NamelessCoder/flux",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/fluidpages",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/NamelessCoder/fluidpages",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/fluidcontent",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/NamelessCoder/fluidcontent",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/fluidpages_bootstrap",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/NamelessCoder/fluidpages_bootstrap",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/realurl",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "git://git.typo3.org/TYPO3v4/Extensions/realurl.git",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/news",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "git://git.typo3.org/TYPO3v4/Extensions/news.git",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		}
+	],
+	"extra": {
+		"installer-paths": {
+			"htdocs/typo3conf/ext/{$name}/": [
+				"typo3cms/flux",
+				"typo3cms/fluidpages",
+				"typo3cms/fluidcontent",
+				"typo3cms/fluidpages_bootstrap",
+				"typo3cms/realurl",
+				"typo3cms/news"
+			]
+		}
+	},
+	"minimum-stability": "dev",
+	"require-dev": {
+
+	}
+}

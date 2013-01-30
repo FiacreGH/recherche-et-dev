@@ -1,0 +1,40 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+
+	<f:section name="SubNavigation">
+		<!-- submenu navigation, collapsible -->
+		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="TRUE">
+			<f:if condition="{menu}">
+				<nav role="navigation">
+					<ul class="nav nav-list bs-docs-sidenav affix-top">
+						<f:for each="{menu}" as="submenuPage" iteration="iteration">
+							<v:switch value="{submenuPage.doktype}">
+								<v:case case="199" break="TRUE">
+									<li class="disabled">
+										<i class="icon-chevron-right"></i>
+										<f:if condition="{iteration.isFirst}" else="&nbsp;&nbsp;"/>
+										<span class="navbar-text" style="color: #bbbbbb">{submenuPage.title}:</span>
+										&nbsp;
+									</li>
+								</v:case>
+								<v:case case="default" break="TRUE">
+									<li class="{submenuPage.class}">
+										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
+									        href="{submenuPage.link}" class="{submenuPage.class}">
+											<i class="icon-chevron-right"></i>{submenuPage.title}
+										</a>
+									</li>
+								</v:case>
+							</v:switch>
+						</f:for>
+					</ul>
+				</nav>
+			</f:if>
+		</v:page.menu>
+	</f:section>
+
+</div>

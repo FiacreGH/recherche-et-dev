@@ -1,0 +1,64 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Footer">
+
+		<v:page.content.render column="3" as="footerContentElements">
+			<f:if condition="{footerContentElements}">
+				<div class="footer">
+					<span class="right">
+						<f:for each="{footerContentElements}" as="footerContentElement">
+							<f:format.raw>{footerContentElement}</f:format.raw>
+						</f:for>
+					</span>
+				</div>
+			</f:if>
+		</v:page.content.render>
+
+
+		<footer role="contentinfo">
+
+			<div class="row-fluid">
+
+				<v:page.menu entryLevel="0" levels="3" includeSpacers="FALSE" expandAll="TRUE"
+				             useShortcutData="TRUE">
+					<f:if condition="{menu}">
+
+						<f:for each="{menu}" as="submenuPage" iteration="iteration">
+							<div class="span2">
+								<ul class="unstyled">
+									<li class="{submenuPage.class}">
+										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
+										   href="{submenuPage.link}" class="{submenuPage.class}">
+											{submenuPage.title}
+										</a>
+									</li>
+								</ul>
+							</div>
+						</f:for>
+					</f:if>
+				</v:page.menu>
+			</div>
+			<!-- /sitemap-->
+
+			<div class="row-fluid">
+				<div class="span5">
+					<small>
+						© Company 2013 - bla, bla
+					</small>
+				</div>
+
+				<div class="span7 right">
+					<small>
+						Company, Rue de la Poste 16, CH-2504 City, Tel: +41 (0)32 342 02 45,
+						<f:link.email email="info@company"/>
+					</small>
+				</div>
+			</div>
+		</footer>
+	</f:section>
+
+</div>
