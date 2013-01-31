@@ -14,10 +14,12 @@
 	"require": {
 		"php": ">=5.3.3",
 		"composer/installers": "*",
+		"typo3cms/vhs": "*",
 		"typo3cms/flux": "*",
 		"typo3cms/fluidpages": "*",
 		"typo3cms/fluidcontent": "*",
-		"typo3cms/fluidcontent": "*",
+		"typo3cms/fluidcontent_bootstrap": "*",
+		"typo3cms/introduction_bootstrap": "*",
 		"typo3cms/realurl": "*",
 		"typo3cms/news": "*"
 	},
@@ -30,6 +32,19 @@
 				"type": "typo3-flow-package",
 				"source": {
 					"url": "https://github.com/NamelessCoder/flux",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/vhs",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/NamelessCoder/vhs",
 					"type": "git",
 					"reference": "origin/master"
 				}
@@ -64,11 +79,24 @@
 		{
 			"type": "package",
 			"package": {
-				"name": "typo3cms/fluidpages_bootstrap",
+				"name": "typo3cms/fluidcontent_bootstrap",
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/fluidpages_bootstrap",
+					"url": "https://github.com/NamelessCoder/fluidcontent_bootstrap",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/introduction_bootstrap",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "https://github.com/Ecodev/introduction_bootstrap",
 					"type": "git",
 					"reference": "origin/master"
 				}
@@ -105,9 +133,11 @@
 		"installer-paths": {
 			"htdocs/typo3conf/ext/{$name}/": [
 				"typo3cms/flux",
+				"typo3cms/vhs",
 				"typo3cms/fluidpages",
 				"typo3cms/fluidcontent",
-				"typo3cms/fluidpages_bootstrap",
+				"typo3cms/fluidcontent_bootstrap",
+				"typo3cms/introduction_bootstrap",
 				"typo3cms/realurl",
 				"typo3cms/news"
 			]
