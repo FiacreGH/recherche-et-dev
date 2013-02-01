@@ -1,0 +1,27 @@
+###########
+# /
+###########
+/build.xml
+/.*
+.gitmodules
+/nbproject/private/
+/vendor/*
+
+###########
+# Make an exception for this file
+###########
+!.gitignore
+
+###########
+# /htdocs/*
+###########
+/htdocs/nbproject
+/htdocs/typo3_src*
+
+######################
+# /htdocs/typo3conf/
+######################
+/htdocs/typo3conf/LocalConfiguration.php
+/htdocs/typo3conf/ENABLE_INSTALL_TOOL
+/htdocs/typo3conf/FIRST_INSTALL
+/htdocs/typo3conf/*.log

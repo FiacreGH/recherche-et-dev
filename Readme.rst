@@ -21,8 +21,10 @@ Follow these steps to get the website running - in no time I would be a marketin
 	# Clone the repository
 	git clone https://github.com/Ecodev/bootstrap_package.git
 
+
 	# If composer is not yet installed.
 	# hint: consider installing "composer" globally in your system at one point.
+	cd bootstrap_package
 	curl -s https://getcomposer.org/installer | php
 
 	# Install the dependencies
@@ -39,7 +41,7 @@ Follow these steps to get the website running - in no time I would be a marketin
 
 	# Manual steps
 	-> configure a Virtual Host and DNS entries (e.g editing /etc/hosts file)
-	-> go to http://example.com and run the 1,2,3 wizard
+	-> open in the browser http://example.com and run the 1,2,3 wizard
 
 Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention.
 If you want to get rid of it, rename the file structure to your convenient before the step "configure a Virtual Host"
