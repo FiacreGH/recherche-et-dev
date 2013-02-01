@@ -5,7 +5,7 @@ This is another introduction package for TYPO3 CMS with some variants that may i
 
 * Twitter Bootstrap as HTML / CSS Framework
 * Entirely based on **Fluid** form the templating and rendering.
-* File ``fileadmin`` is kept for media only (images, documents etc...) and is kept clean from JavaScript / CSS files.
+* Folder ``fileadmin`` is kept for media only (images, documents etc...) and is kept clean from JavaScript / CSS files.
 * `Composer`_ as an alternative for managing and installing extensions.
 
 .. _Composer: http://getcomposer.org/
@@ -40,24 +40,25 @@ Follow these steps to get the website running - in no time if I would talk marke
 	-> open in the browser http://example.com and run the 1,2,3 wizard
 
 
-Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention.
+Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention in our company.
 If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
 
-~~Notice the composer step is not mandatory~~ (**not true as of today since EXT:speciality was not published on the TER**).
-The difference is that extensions will be fetched from the TER and manage from the Extension Manager to be updated which is fine
-but not as fancy as the composer approach.
+--Notice the composer step is not mandatory-- (**not true as of today since ``EXT:speciality`` was not published on the TER**).
+The difference is that extensions will be fetched from the TER and managed from the Extension Manager for update which is fine
+but not as fancy as the composer approach. Besides the fancy part, the main reasons to use Composer is the capability to handle extension from Git / SVN repositories.
 
 
 How to customize?
 ==================
 
-As a next step, you likely would like to change the CSS, add some custom layouts or customize configuration.
-The place to head to is EXT:speciality which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
-is just the extension key we are use to in our company and that we keep across our projects. This should be easily changed if needed.
+As a next step, you likely want to change the CSS, add some custom layouts or customize configuration.
+The place to head to is ``EXT:speciality`` which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
+is just the extension we are using in our company as convention. We keep it across our projects so that we don't have to think more
+where to find the source code. This is not a big deal to change the name.
 
-As a short tutorial, let assume one needs to add a 4 column layout. Proceed as follows:
+As a short tutorial, let assume one needs to add a 4 column layout in the website. Proceed as follows:
 
-* Copy EXT:speciality/Resources/Private/Templates/Page/3Columns.html to EXT:speciality/Resources/Private/Templates/Page/4Columns.html
+* Copy ``EXT:speciality/Resources/Private/Templates/Page/3Columns.html`` to ``EXT:speciality/Resources/Private/Templates/Page/4Columns.html``
 * Update section "Content" and "Configuration" in ``speciality/Resources/Private/Templates/Page/4Columns.html``
 
 You have a new layout to be used in BE / FE! You don't believe me, do you?
@@ -70,13 +71,13 @@ For further reading, I recommend the `excellent work / documentation`_ from Clau
 Make your own introduction package
 ==================================
 
-Making your own package is much easier than it looks. Actually the EXT:introduction (which provided the boilerplate code) was designed to manage multiple packages.
-You will need to fork the ``introduction`` extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
+Building your own introduction package is much easier than it looks. Actually the ``EXT:introduction`` (which provided the boilerplate code) was designed to manage multiple packages.
+You will need to fork the Introduction extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
 
 So here are the steps:
 
 * Fork https://github.com/Ecodev/introduction.git
-* Duplicate directory with your own name EXT:introduction/Resources/Private/Subpackages/Introduction .
+* Duplicate directory with your own name ``EXT:introduction/Resources/Private/Subpackages/Introduction``.
 * Go through the files and replace what makes sense.
 
 .. _TYPO3 Git repository: http://git.typo3.org/TYPO3v4/Distributions/Introduction.git/tree/master:/typo3conf/ext
@@ -123,7 +124,7 @@ Todo
 
 I have at least three todo list for this project, below is the fourth one ;)
 
-* document EXT:speciality more in depth
+* document ``EXT:speciality`` more in depth
 * document features tests - how to use them
 
 
