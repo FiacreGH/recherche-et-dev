@@ -19,7 +19,7 @@
 		"typo3cms/fluidpages": "*",
 		"typo3cms/fluidcontent": "*",
 		"typo3cms/fluidcontent_bootstrap": "*",
-		"typo3cms/introduction_bootstrap": "*",
+		"typo3cms/introduction": "*",
 		"typo3cms/realurl": "*",
 		"typo3cms/news": "*"
 	},
@@ -92,11 +92,11 @@
 		{
 			"type": "package",
 			"package": {
-				"name": "typo3cms/introduction_bootstrap",
+				"name": "typo3cms/introduction",
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/Ecodev/introduction_bootstrap",
+					"url": "https://github.com/Ecodev/introduction",
 					"type": "git",
 					"reference": "origin/master"
 				}
@@ -137,7 +137,7 @@
 				"typo3cms/fluidpages",
 				"typo3cms/fluidcontent",
 				"typo3cms/fluidcontent_bootstrap",
-				"typo3cms/introduction_bootstrap",
+				"typo3cms/introduction",
 				"typo3cms/realurl",
 				"typo3cms/news"
 			]

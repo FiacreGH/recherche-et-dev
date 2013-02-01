@@ -1,26 +1,22 @@
 Bootstrap package for TYPO3 CMS
 ================================
 
-The aim of this package is not only to provide a ready to go website but also be a framework for developing TYPO3 website base on the finest technology.
-
-cut down the starting time for every project to focus in the interesting job!
-
-  Boilerplate
-
-Keywords
+This is another introduction package for TYPO3 CMS with some variants that may be interesting:
 
 * Twitter Bootstrap as HTML / CSS Framework
-* Templating based on Fluid @todo link
-* Composer for managing extensions.
+* Templating and rendering fully based on Fluid
+* File fileadmin is kept for media only such as images / documents etc... but is kept clean from JavaScript / CSS files.
+* `Composer`_ as an alternative for managing and installing extensions.
+
+.. _Composer: http://getcomposer.org/
 
 How to install?
 ===============
 
-Follow these steps to get the website running - in no time I would be a marketing guy :) ::
+Follow these steps to get the website running - in no time if I would talk marketing :) ::
 
 	# Clone the repository
 	git clone https://github.com/Ecodev/bootstrap_package.git
-
 
 	# If composer is not yet installed.
 	# hint: consider installing "composer" globally in your system at one point.
@@ -43,23 +39,52 @@ Follow these steps to get the website running - in no time I would be a marketin
 	-> configure a Virtual Host and DNS entries (e.g editing /etc/hosts file)
 	-> open in the browser http://example.com and run the 1,2,3 wizard
 
+
 Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention.
-If you want to get rid of it, rename the file structure to your convenient before the step "configure a Virtual Host"
+If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
+
+~~ Notice the composer step is not mandatory ~~ (**not true as of today since EXT:speciality was not published on the TER**).
+The difference is extensions will be fetched from the TER and should be be managed from the Extension Manager which is also fine
+but perhaps not as fancy than than the composer approach.
+
 
 How to customize?
 ==================
 
-Development happen in Speciality. With the EXT:, il mean extension located in typo3conf/ext. Speciality is just the extension name we use in our company to know where to code (versus each website its own one.
+As a next step, you likely would like to change the CSS, add some custom layouts or customize configuration.
+The code to update is stored in EXT:speciality which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
+is just the extension key we are use to in our company and that we keep across our projects. This should be easy to change.
 
-Tutorial: copy file 3column to 4columns and change every
+As short tutorial, let assume one needs to add a 4 column layout. Proceed as follows:
 
-More example into Claus Due example
+* Copy EXT:speciality/Resources/Private/Templates/Page/3Columns.html EXT:speciality/Resources/Private/Templates/Page/4Columns.html
+* Edit speciality/Resources/Private/Templates/Page/4Columns.html and update section "Content" and "Configuration"
 
+You have a new layout! You don't believe me, do you?
 
-Building its own dump
+For further reading, I would recommend the `excellent work / documentation`_ from Claus Due. @NamelessCoder let me know if you would like to add something here.
+
+.. _excellent work / documentation: http://fedext.net/features.html
+
+Make your own introduction package
 ==================================
 
-If one need to build a SQL dump of its own website including the changes made along the way, there is a script within the build directory that may be useful for dumping the database.
+Making your own package is much easier than it sounds. Actually the EXT:introduction (which provided the boilerplate code) was designed to manage multiple packages.
+
+You will need to fork the ``introduction`` extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
+
+So here are the steps:
+
+* Fork https://github.com/Ecodev/introduction.git
+* Duplicate directory with your own name EXT:introduction/Resources/Private/Subpackages/Introduction .
+* Go through the files and replace what makes sense.
+
+.. _TYPO3 Git repository: http://git.typo3.org/TYPO3v4/Distributions/Introduction.git/tree/master:/typo3conf/ext
+
+Dump database
+---------------
+
+To build a SQL dump of its own website, there is a script within the build directory that may be useful for dumping the database.
 Proceed as follow::
 
 	cd build
@@ -71,18 +96,25 @@ Proceed as follow::
 	./dump.php --dry-run
 
 
+Copy files
+------------
+
+Copy the files that need to be shipped. For the case of the Bootstrap package.
+
+* cp -r htdocs/{fileadmin,uploads} htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files
+
+
 Hint for production
 ==================================
 
 !!! Important notice, for production usage consider doing the following step:
 
-* remove the extension ``introduction_bootstrap`` located at ``htdocs/typo3conf/ext/introduction_bootstrap``.
+* Remove the extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``.
   The extension has become useless once the website has been installed.
-* Suggested security put the database password into directory ``private`` at the root.
-* select the language package in the BE. @todo provide a on-line tutorial how to do that.
+* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
 * Update the Index Reference (for
 	php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
-
+* Select the language package in the BE. @todo provide with a link to an already existing tutorial.
 * ... there are probably more tips to come here...
 
 

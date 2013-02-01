@@ -1,5 +1,5 @@
 {
-    "hash": "3f435fb82ca08d1df1551424af7ffcfa",
+    "hash": "204cbc37131708241b24ada2f475ac78",
     "packages": [
         {
             "name": "composer/installers",
@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers",
-                "reference": "v1.0.1"
+                "reference": "cec4cdea596919a87dd2b4527eefe5c3782fef58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/composer/installers/archive/v1.0.1.zip",
-                "reference": "v1.0.1",
+                "url": "https://api.github.com/repos/composer/installers/zipball/cec4cdea596919a87dd2b4527eefe5c3782fef58",
+                "reference": "cec4cdea596919a87dd2b4527eefe5c3782fef58",
                 "shasum": ""
             },
             "replace": {
@@ -22,7 +22,7 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "3.7.*"
             },
-            "time": "2013-01-14 07:14:45",
+            "time": "2013-02-01 03:59:30",
             "type": "composer-installer",
             "extra": {
                 "class": "Composer\\Installers\\Installer"
@@ -78,7 +78,7 @@
                 "url": "https://github.com/NamelessCoder/fluidcontent",
                 "reference": "origin/master"
             },
-            "time": "2013-01-27 02:24:19",
+            "time": "2013-01-30 21:40:01",
             "type": "typo3-flow-package",
             "installation-source": "source"
         },
@@ -90,9 +90,9 @@
                 "url": "https://github.com/NamelessCoder/fluidcontent_bootstrap",
                 "reference": "origin/master"
             },
+            "time": "2013-01-17 16:25:50",
             "type": "typo3-flow-package",
-            "installation-source": "source",
-            "time": "2013-01-17 16:25:50"
+            "installation-source": "source"
         },
         {
             "name": "typo3cms/fluidpages",
@@ -102,7 +102,7 @@
                 "url": "https://github.com/NamelessCoder/fluidpages",
                 "reference": "origin/master"
             },
-            "time": "2013-01-30 19:17:53",
+            "time": "2013-01-30 21:37:32",
             "type": "typo3-flow-package",
             "installation-source": "source"
         },
@@ -114,21 +114,21 @@
                 "url": "https://github.com/NamelessCoder/flux",
                 "reference": "origin/master"
             },
-            "time": "2013-01-27 02:52:34",
+            "time": "2013-01-31 15:07:45",
             "type": "typo3-flow-package",
             "installation-source": "source"
         },
         {
-            "name": "typo3cms/introduction_bootstrap",
+            "name": "typo3cms/introduction",
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Ecodev/introduction_bootstrap",
+                "url": "https://github.com/Ecodev/introduction",
                 "reference": "origin/master"
             },
             "type": "typo3-flow-package",
             "installation-source": "source",
-            "time": "2013-01-31 17:10:56"
+            "time": "2013-02-01 11:51:34"
         },
         {
             "name": "typo3cms/news",
@@ -162,9 +162,9 @@
                 "url": "https://github.com/NamelessCoder/vhs",
                 "reference": "origin/master"
             },
+            "time": "2013-01-31 22:33:26",
             "type": "typo3-flow-package",
-            "installation-source": "source",
-            "time": "2013-01-30 21:41:45"
+            "installation-source": "source"
         }
     ],
     "packages-dev": null,

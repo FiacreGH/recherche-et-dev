@@ -43,7 +43,7 @@ return array(
 			'reports',
 			'felogin',
 			'form',
-			'introduction_bootstrap',
+			'introduction',
 		),
 	),
 	'SYS' => array(

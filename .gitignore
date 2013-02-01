@@ -3,6 +3,7 @@
 ###########
 /build.xml
 /.*
+/*.phar
 .gitmodules
 /nbproject/private/
 /vendor/*
