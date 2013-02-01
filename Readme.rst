@@ -1,11 +1,11 @@
 Bootstrap package for TYPO3 CMS
 ================================
 
-This is another introduction package for TYPO3 CMS with some variants that may be interesting:
+This is another introduction package for TYPO3 CMS with some variants that may interest you:
 
 * Twitter Bootstrap as HTML / CSS Framework
-* Templating and rendering fully based on Fluid
-* File fileadmin is kept for media only such as images / documents etc... but is kept clean from JavaScript / CSS files.
+* Entirely based on **Fluid** form the templating and rendering.
+* File ``fileadmin`` is kept for media only (images, documents etc...) and is kept clean from JavaScript / CSS files.
 * `Composer`_ as an alternative for managing and installing extensions.
 
 .. _Composer: http://getcomposer.org/
@@ -43,34 +43,34 @@ Follow these steps to get the website running - in no time if I would talk marke
 Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention.
 If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
 
-~~ Notice the composer step is not mandatory ~~ (**not true as of today since EXT:speciality was not published on the TER**).
-The difference is extensions will be fetched from the TER and should be be managed from the Extension Manager which is also fine
-but perhaps not as fancy than than the composer approach.
+~~Notice the composer step is not mandatory~~ (**not true as of today since EXT:speciality was not published on the TER**).
+The difference is that extensions will be fetched from the TER and manage from the Extension Manager to be updated which is fine
+but not as fancy as the composer approach.
 
 
 How to customize?
 ==================
 
 As a next step, you likely would like to change the CSS, add some custom layouts or customize configuration.
-The code to update is stored in EXT:speciality which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
-is just the extension key we are use to in our company and that we keep across our projects. This should be easy to change.
+The place to head to is EXT:speciality which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
+is just the extension key we are use to in our company and that we keep across our projects. This should be easily changed if needed.
 
-As short tutorial, let assume one needs to add a 4 column layout. Proceed as follows:
+As a short tutorial, let assume one needs to add a 4 column layout. Proceed as follows:
 
-* Copy EXT:speciality/Resources/Private/Templates/Page/3Columns.html EXT:speciality/Resources/Private/Templates/Page/4Columns.html
-* Edit speciality/Resources/Private/Templates/Page/4Columns.html and update section "Content" and "Configuration"
+* Copy EXT:speciality/Resources/Private/Templates/Page/3Columns.html to EXT:speciality/Resources/Private/Templates/Page/4Columns.html
+* Update section "Content" and "Configuration" in ``speciality/Resources/Private/Templates/Page/4Columns.html``
 
-You have a new layout! You don't believe me, do you?
+You have a new layout to be used in BE / FE! You don't believe me, do you?
 
-For further reading, I would recommend the `excellent work / documentation`_ from Claus Due. @NamelessCoder let me know if you would like to add something here.
+For further reading, I recommend the `excellent work / documentation`_ from Claus Due which framework is used in the Bootstrap package.
+@NamelessCoder let me know if you would like to add something more here. Sponsor? Resource?
 
 .. _excellent work / documentation: http://fedext.net/features.html
 
 Make your own introduction package
 ==================================
 
-Making your own package is much easier than it sounds. Actually the EXT:introduction (which provided the boilerplate code) was designed to manage multiple packages.
-
+Making your own package is much easier than it looks. Actually the EXT:introduction (which provided the boilerplate code) was designed to manage multiple packages.
 You will need to fork the ``introduction`` extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
 
 So here are the steps:
@@ -104,16 +104,16 @@ Copy the files that need to be shipped. For the case of the Bootstrap package.
 * cp -r htdocs/{fileadmin,uploads} htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files
 
 
+That's it you just have made a new introduction package! Well, there will be more time needed but the principle is fairly simple.
+
 Hint for production
 ==================================
 
 !!! Important notice, for production usage consider doing the following step:
 
-* Remove the extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``.
-  The extension has become useless once the website has been installed.
+* Remove the extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
 * Suggested security: put the database password into directory ``private`` at the root or somewhere else.
-* Update the Index Reference (for
-	php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
+* Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
 * Select the language package in the BE. @todo provide with a link to an already existing tutorial.
 * ... there are probably more tips to come here...
 
@@ -123,8 +123,8 @@ Todo
 
 I have at least three todo list for this project, below is the fourth one ;)
 
-@todo document EXT:speciality what it does and for what reason
-@todo document folder features how to use the features tests
+* document EXT:speciality more in depth
+* document features tests - how to use them
 
 
 Override configuration for development
