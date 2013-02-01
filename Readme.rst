@@ -5,7 +5,7 @@ This is another introduction package for TYPO3 CMS with some variants that may i
 
 * Twitter Bootstrap as HTML / CSS Framework
 * Entirely based on **Fluid** form the templating and rendering.
-* Folder ``fileadmin`` is kept for media only (images, documents etc...) and is kept clean from JavaScript / CSS files.
+* Folder ``fileadmin`` is kept for media only (images, documents etc...) and is clean from TS / JS / CSS files.
 * `Composer`_ as an alternative for managing and installing extensions.
 
 .. _Composer: http://getcomposer.org/
