@@ -4,8 +4,8 @@
 
 options {
 	# RTE
-	RTESmallHeight = 700
-	RTESmallWidth = 700
+	RTESmallHeight = 800
+	RTESmallWidth = 800
 
 	clearCache.pages = 1
 	clearCache.all = 1
