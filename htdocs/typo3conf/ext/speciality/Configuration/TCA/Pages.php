@@ -1,9 +1,9 @@
 <?php
 
 // Configure Pages
-t3lib_div::loadTCA('pages');
+\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
 
-$relativePath = t3lib_extMgm::extRelPath($_EXTKEY);
+$relativePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY);
 
 // @todo remove me if not used
 #$TCA['pages']['columns']['module']['config']['items'][] = array('TypoScript', 'typoscript', '../typo3/sysext/t3skin/icons/module_web_ts.gif');
