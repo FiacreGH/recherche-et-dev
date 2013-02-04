@@ -36,7 +36,17 @@ Follow these steps to get the website running - in no time if I would talk marke
 	ln -s typo3_src-* typo3_src
 
 	# Manual steps
-	-> configure a Virtual Host and DNS entries (e.g editing /etc/hosts file)
+	-> configure a Virtual Host. Example for Apache:
+
+		<VirtualHost *:80>
+		    DocumentRoot "/var/vhosts/example.fab/htdocs"
+		    ServerName example.fab
+		    ServerAlias *.example.fab
+		    ErrorLog "/var/vhosts/example.fab/logs/error_log"
+		    CustomLog "/var/vhosts/example.fab/logs/access_log" common
+		</VirtualHost>
+
+	-> add a DNS entry (e.g editing /etc/hosts file)
 	-> open in the browser http://example.com and run the 1,2,3 wizard
 
 
@@ -63,10 +73,13 @@ As a short tutorial, let assume one needs to add a 4 column layout in the websit
 
 You have a new layout to be used in BE / FE! You don't believe me, do you?
 
-For further reading, I recommend the `excellent work / documentation`_ from Claus Due which framework is used in the Bootstrap package.
-@NamelessCoder let me know if you would like to add something more here. Sponsor? Resource?
+As further reading, I recommend the `excellent work / documentation`_ from `@NamelessCoder`_ which framework is used in the Bootstrap package, sponsored by `Wildside`_  and its motivation. Also, I recommend having at look `fluidpages_bootstrap`_ which definitely contains more advance examples for page layouts.
+
 
 .. _excellent work / documentation: http://fedext.net/features.html
+.. _@NamelessCoder: https://twitter.com/NamelessCoder
+.. _Wildside: http://www.wildside.dk/da/start/
+.. _fluidpages_bootstrap: https://github.com/NamelessCoder/fluidpages_bootstrap
 
 Make your own introduction package
 ==================================
@@ -118,6 +131,23 @@ Hint for production
 * Select the language package in the BE. @todo provide with a link to an already existing tutorial.
 * ... there are probably more tips to come here...
 
+Static TypoScript configuration
+=================================
+
+Static configuration files are usually managed and stored in the database. To be precise they are added from a Template record (AKA ``sys_template``) in tab "Includes"
+However, it may be nicer to handle them problematically so they can be versioned in the source code. For that purpose a thin API is available taking advantage of hook in ``\TYPO3\CMS\Core\TypoScript\TemplateService``. In ``ext_localconf.php``, you will find the following code::
+
+	# A list of static configuration file to be loaded. Order is important of course.
+	\TYPO3\CMS\Speciality\Hooks\TypoScriptTemplate::getInstance()->addStaticTemplates(array(
+		'EXT:css_styled_content/static',
+		'EXT:speciality/Configuration/TypoScript',
+		'EXT:fluidcontent/Configuration/TypoScript',
+		'EXT:fluidcontent_boostrap/Configuration/TypoScript',
+	));
+
+It is still possible to load a static configuration file from a Template record. Notice, it will be loaded on the top.
+
+Thanks Xavier for your inspiring blog post http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html!
 
 Todo
 =========
