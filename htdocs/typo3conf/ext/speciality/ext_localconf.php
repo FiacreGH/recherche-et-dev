@@ -16,22 +16,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['i
 	'EXT:fluidcontent_boostrap/Configuration/TypoScript',
 ));
 
-
-//# Computes Context
-//if (!defined('TYPO3_CONTEXT')) {
-//	if (getenv('TYPO3_CONTEXT')) {
-//		define('TYPO3_CONTEXT', getenv('TYPO3_CONTEXT'));
-//	} elseif (ini_get('TYPO3_ENV')) {
-//		define('TYPO3_CONTEXT', ini_get('TYPO3_CONTEXT'));
-//	} else {
-//		define('TYPO3_CONTEXT', 'Production');
-//	}
-//}
-
 # Default configuration
 $defaultConfigurationFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . '/Configuration/Php/DefaultConfiguration.php';
 require_once($defaultConfigurationFile);
-
 
 # Development configuration (override default configuration)
 $developmentConfigurationFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . '/Configuration/Development/DefaultConfiguration.php';

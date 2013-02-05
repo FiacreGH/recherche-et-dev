@@ -36,7 +36,7 @@ Follow these steps to get the website running - in no time if I would talk marke
 	ln -s typo3_src-* typo3_src
 
 	# Manual steps
-	-> configure a Virtual Host. Example for Apache:
+	-> configure a Virtual Host. Convenience example for Apache:
 
 		<VirtualHost *:80>
 		    DocumentRoot "/var/vhosts/example.fab/htdocs"
@@ -63,8 +63,15 @@ How to customize?
 
 As a next step, you likely want to change the CSS, add some custom layouts or customize configuration.
 The place to head to is ``EXT:speciality`` which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
-is just the extension we are using in our company as convention. We keep it across our projects so that we don't have to think more
-where to find the source code. This is not a big deal to change the name.
+is just the extension key we are using in our company as convention. We keep it across our projects so that we don't have to think more
+where to find the source code. This is not a big deal to change the name in case. However, the extension is mandatory and contains:
+
+* HTML templates - ``EXT:speciality/Resources/Private/``
+* Public resources such as JavaScript and CSS files  - ``EXT:speciality/Resources/Public/``
+* PHP Code - ``EXT:speciality/Classes/``
+
+Adding a new layout
+---------------------
 
 As a short tutorial, let assume one needs to add a 4 column layout in the website. Proceed as follows:
 
@@ -81,7 +88,83 @@ As further reading, I recommend the `excellent work / documentation`_ from `@Nam
 .. _Wildside: http://www.wildside.dk/da/start/
 .. _fluidpages_bootstrap: https://github.com/NamelessCoder/fluidpages_bootstrap
 
-Make your own introduction package
+
+Static TypoScript files API
+----------------------------
+
+Static configuration files are usually managed and stored in the database. To be precise they are added from a Template record (AKA ``sys_template``) in tab "Includes"
+However, it may be nicer to handle them problematically so they can be versioned in the source code. For that purpose a thin API is available taking advantage of hook in ``\TYPO3\CMS\Core\TypoScript\TemplateService``. In ``ext_localconf.php``, you will find the following code::
+
+	# A list of static configuration files to be loaded. Order is important of course.
+	\TYPO3\CMS\Speciality\Hooks\TypoScriptTemplate::getInstance()->addStaticTemplates(array(
+		'EXT:css_styled_content/static',
+		'EXT:speciality/Configuration/TypoScript',
+		'EXT:fluidcontent/Configuration/TypoScript',
+		'EXT:fluidcontent_boostrap/Configuration/TypoScript',
+	));
+
+It is still possible to load a static configuration file from a Template record. Notice, it will be loaded on the top of the ones added by the API.
+
+Thanks Xavier for your inspiring `blog post`_.
+
+.. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html!
+
+Context API
+------------
+
+A thin API has also been introduced for handling Application Context. An Application Context tells whether the applications runs in development, production or whatever.
+A default context has been defined as "Development". For now it does nothing particular but can be used in Extension to decide how to behaves according
+to the context. A good example is about sending email in a development context. It is likely to send email to a debug recipient while debugging / developing the application.
+
+Context can be get like::
+
+	if (\TYPO3\CMS\Speciality\Utility\Context::getInstance()->isProduction()) {
+		// do something
+	}
+
+	# Display the context name
+	var_dump(\TYPO3\CMS\Speciality\Utility\Context::getInstance()->getName());
+
+Context can be be set in the Extension Manager when configuring ``EXT:speciality`` where a value is to be picked among value Development, Production or Testing. Adding a custom context is as easy as adding a value into file ``EXT:speciality/ext_conf_template.txt``. It can also be defined by the mean of an environment variable which will have the priority if existing. For example, one can put in .htaccess::
+
+	SetEnv TYPO3_CONTEXT Production
+
+Hopefully, this feature should be handled by the Core `at one point`_ like TYPO3 Flow `has`_.
+One thing that is still missing is a patch to add the support of TypoScript condition for a Context::
+
+	[context = Foo]
+	[end]
+
+.. _at one point: http://forge.typo3.org/issues/39441
+.. _has: http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartIII/Bootstrapping.html
+
+Override configuration for development
+---------------------------------------
+
+While developing on its local machine, it might be interesting to override default values of the live website.
+A good example, is the domain name for instance which will be different from production.
+It can be performed by adding configuration in directory ``EXT:speciality/Configuration/Development``.
+
+* One can add two TypoScript files that are will be automatically loaded on the top (and will override the default configuration)
+	* ``EXT:speciality/Configuration/Development/setup.txt``
+	* ``EXT:speciality/Configuration/Development/constants.txt``
+
+* For configuration set by PHP, one can introduce file ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` which will also be automatically loaded. Just make sure, the extension "speciality" is loaded at the latest to avoid unwanted behaviour.
+
+Check list for production
+==================================
+
+To go live with your website, consider doing the following step:
+
+* Change icons in the document root (favicon, apple touch icons) and configure robots.txt, humans.txt if needed.
+* Remove extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
+* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
+* Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
+* Select the language package in the BE. @todo provide with a link to an already existing tutorial.
+* ... there are probably more tips to come here...
+
+
+Making your own introduction package
 ==================================
 
 Building your own introduction package is much easier than it looks. Actually the ``EXT:introduction`` (which provided the boilerplate code) was designed to manage multiple packages.
@@ -120,55 +203,9 @@ Copy the files that need to be shipped. For the case of the Bootstrap package.
 
 That's it you just have made a new introduction package! Well, there will be more time needed but the principle is fairly simple.
 
-Hint for production
-==================================
-
-!!! Important notice, for production usage consider doing the following step:
-
-* Remove the extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
-* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
-* Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
-* Select the language package in the BE. @todo provide with a link to an already existing tutorial.
-* ... there are probably more tips to come here...
-
-Static TypoScript configuration
-=================================
-
-Static configuration files are usually managed and stored in the database. To be precise they are added from a Template record (AKA ``sys_template``) in tab "Includes"
-However, it may be nicer to handle them problematically so they can be versioned in the source code. For that purpose a thin API is available taking advantage of hook in ``\TYPO3\CMS\Core\TypoScript\TemplateService``. In ``ext_localconf.php``, you will find the following code::
-
-	# A list of static configuration file to be loaded. Order is important of course.
-	\TYPO3\CMS\Speciality\Hooks\TypoScriptTemplate::getInstance()->addStaticTemplates(array(
-		'EXT:css_styled_content/static',
-		'EXT:speciality/Configuration/TypoScript',
-		'EXT:fluidcontent/Configuration/TypoScript',
-		'EXT:fluidcontent_boostrap/Configuration/TypoScript',
-	));
-
-It is still possible to load a static configuration file from a Template record. Notice, it will be loaded on the top.
-
-Thanks Xavier for your inspiring blog post http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html!
-
 Todo
 =========
 
 I have at least three todo list for this project, below is the fourth one ;)
 
-* document ``EXT:speciality`` more in depth
 * document features tests - how to use them
-
-
-Override configuration for development
----------------------------------------
-
-@todo check if this still true!
-
-While developing the website in a development context, it might be interesting to override some default values such as the domain name for instance.
-It can be performed by adding configuration in directory ``EXT:speciality/Configuration/Development``.
-
-There are two TypoScript files that are going to be automatically included and override the default configuration:
-
-* setup.txt
-* constants.txt
-
-File ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` will also be included. Make sure you don't load changes after that if you want the settings to be applied.
