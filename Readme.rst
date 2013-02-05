@@ -60,7 +60,7 @@ The difference is that extensions will be fetched from the TER and managed from 
 but not as fancy as the composer approach. Besides the fancy part, the main reasons to use Composer is the capability to handle extension from Git / SVN repositories.
 
 
-How to customize?
+How to continue?
 ==================
 
 As a next step, you likely want to change the CSS, add some custom layouts or customize configuration.
@@ -91,6 +91,9 @@ As further reading, I recommend the `excellent work / documentation`_ from `@Nam
 .. _fluidpages_bootstrap: https://github.com/NamelessCoder/fluidpages_bootstrap
 
 
+What special features is here?
+=====================================
+
 Static TypoScript files API
 ----------------------------
 
@@ -109,8 +112,8 @@ It is still possible to load a static configuration file from a Template record 
 
 .. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html!
 
-Context API
-------------
+Application Context API
+------------------------
 
 A thin API has also been introduced for handling Application Context. An Application Context tells whether the applications runs in development, production or whatever.
 A default context has been defined as "Development". For now it does nothing particular but can be used in Extension to decide how to behaves according
@@ -130,7 +133,7 @@ A Context can be be set in the Extension Manager when configuring ``EXT:speciali
 	SetEnv TYPO3_CONTEXT Production
 
 Hopefully, this feature will be handled by the Core `at one point`_ like TYPO3 Flow `has`_.
-One thing that is still missing is a patch to add the support of TypoScript condition for a Context::
+One thing that is still missing is a patch adding the support of TypoScript condition for a Context::
 
 	[context = Foo]
 	[end]
@@ -145,12 +148,23 @@ While developing on its local machine, it might be interesting to override defau
 A good example, is the domain name for instance which will be different than the one in production.
 It can be performed by adding configuration in directory ``EXT:speciality/Configuration/Development``.
 
-* Two TypoScript files will be automatically loaded on the top (and will override the default configuration)
+* If present, two TypoScript files will be automatically loaded on the top (and will override the default configuration)
 
 	* ``EXT:speciality/Configuration/Development/setup.txt``
 	* ``EXT:speciality/Configuration/Development/constants.txt``
 
-* A PHP file can be introduced ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` for PHP configuration which will also be automatically loaded. Just make sure, the extension "speciality" is loaded at last to avoid unwanted behaviour.
+* A PHP file can be added ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` for PHP configuration which will also be automatically loaded. Just make sure, the extension "speciality" is loaded at last to avoid unwanted behaviour.
+
+Tip: check out default PHP configuration from ``EXT:speciality/Configuration/Php/DefaultConfiguration.php``
+
+Tip for Development
+---------------------
+
+* TYPO3 has many levels of caches. While it is good for performance, it will become very annoying in development mode. Check out the `uncache extension`_ to work around.
+* For new TYPO3 developers which has to get started with extension development head to the `extension builder`_.
+
+.. _uncache extension:: https://github.com/NamelessCoder/uncache
+.. _extension builder: https://forge.typo3.org/projects/show/extension-extension_builder
 
 Check list for production
 ==================================
@@ -159,20 +173,27 @@ To go live with your website, consider doing the following step:
 
 * Change icons in the document root (favicon, apple touch icons) and configure robots.txt, humans.txt if needed.
 * Remove extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
-* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
+* If you still plan to use composer, update ``composer.json`` at the root and change the reference "master" to a feature / tag branch. Otherwise ``composer update`` will always check out the master branch which is not desired for production.
 * Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
 * Select the language package in the BE. @todo provide with a link to an already existing tutorial.
+* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
 * ... there are probably more tips to come here...
 
 Feature tests
 ==================================
 
-
 @todo add something more here
 
 
+TODO
+======
+
+* Test and add aloha editor for FE editing https://forge.typo3.org/projects/show/extension-aloha
+* To add SEO extension. Candidate: https://forge.typo3.org/projects/show/extension-seo
+
+
 Making your own introduction package
-==================================
+=====================================
 
 Building your own introduction package is much easier than it looks. Actually the ``EXT:introduction`` (which provided the boilerplate code) was designed to manage multiple packages.
 You will need to fork the Introduction extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
@@ -198,7 +219,6 @@ Proceed as follow::
 
 	# Before running the script for real display the command on the console.
 	./dump.php --dry-run
-
 
 Copy files
 ------------
