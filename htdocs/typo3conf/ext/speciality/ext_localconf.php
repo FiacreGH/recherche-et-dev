@@ -13,7 +13,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['i
 	'EXT:css_styled_content/static',
 	'EXT:speciality/Configuration/TypoScript',
 	'EXT:fluidcontent/Configuration/TypoScript',
-	'EXT:fluidcontent_boostrap/Configuration/TypoScript',
+	'EXT:fluidcontent_bootstrap/Configuration/TypoScript',
 ));
 
 # Default configuration
