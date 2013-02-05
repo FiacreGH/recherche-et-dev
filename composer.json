@@ -33,7 +33,7 @@
 				"source": {
 					"url": "https://github.com/NamelessCoder/flux",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -46,7 +46,7 @@
 				"source": {
 					"url": "https://github.com/NamelessCoder/vhs",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -59,7 +59,7 @@
 				"source": {
 					"url": "https://github.com/NamelessCoder/fluidpages",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -72,7 +72,7 @@
 				"source": {
 					"url": "https://github.com/NamelessCoder/fluidcontent",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -85,7 +85,7 @@
 				"source": {
 					"url": "https://github.com/NamelessCoder/fluidcontent_bootstrap",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -98,7 +98,7 @@
 				"source": {
 					"url": "https://github.com/Ecodev/introduction",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -111,7 +111,7 @@
 				"source": {
 					"url": "git://git.typo3.org/TYPO3v4/Extensions/realurl.git",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		},
@@ -124,7 +124,7 @@
 				"source": {
 					"url": "git://git.typo3.org/TYPO3v4/Extensions/news.git",
 					"type": "git",
-					"reference": "origin/master"
+					"reference": "master"
 				}
 			}
 		}
