@@ -54,7 +54,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
 				// 'en' => '0',
 				'' => '0',
 				// Traditional Chinese
-				'en' => '1',
+				'fr' => '1',
 				'de' => '2',
 			),
 			'noMatch' => 'bypass',

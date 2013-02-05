@@ -79,12 +79,14 @@ if (FALSE) {
 }
 
 // graphics settings
-$TYPO3_CONF_VARS['GFX']["im"] = '1';
-$TYPO3_CONF_VARS['GFX']["im_path"] = '/opt/local/bin/';
-$TYPO3_CONF_VARS['GFX']["im_path_lzw"] = '/opt/local/bin/';
-$TYPO3_CONF_VARS['GFX']['TTFdpi'] = '96';
-$TYPO3_CONF_VARS['GFX']['im_version_5'] = 'gm';
-$TYPO3_CONF_VARS["GFX"]["im_v5effects"] = '-1';
+if (FALSE) {
+	$TYPO3_CONF_VARS['GFX']["im"] = '1';
+	$TYPO3_CONF_VARS['GFX']["im_path"] = '/opt/local/bin/';
+	$TYPO3_CONF_VARS['GFX']["im_path_lzw"] = '/opt/local/bin/';
+	$TYPO3_CONF_VARS['GFX']['TTFdpi'] = '96';
+	$TYPO3_CONF_VARS['GFX']['im_version_5'] = 'gm';
+	$TYPO3_CONF_VARS["GFX"]["im_v5effects"] = '-1';
+}
 
 #curl and filepath helpers
 $TYPO3_CONF_VARS['BE']['unzip_path'] = '/usr/bin/';

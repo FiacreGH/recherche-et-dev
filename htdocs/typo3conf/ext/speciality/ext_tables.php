@@ -24,3 +24,4 @@ foreach ($recordTypes as $recordType) {
 		include_once ($configurationFile);
 	}
 }
+

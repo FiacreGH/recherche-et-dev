@@ -23,8 +23,13 @@ options {
 	clipboardNumberPads = 1
 }
 
-# Force re-loading the cache for external TS
-admPanel.override.tsdebug.forceTemplateParsing = 1
+admPanel {
+	enable.edit = 1
+
+	# Force re-loading the cache for external TS
+	override.tsdebug.forceTemplateParsing = 1
+}
+
 
 # Default User value
 # @doc http://typo3.org/documentation/document-library/core-documentation/doc_core_tsconfig/4.7.0/view/1/3/#id552119

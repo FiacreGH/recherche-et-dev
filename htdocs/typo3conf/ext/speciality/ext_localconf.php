@@ -21,8 +21,12 @@ $defaultConfigurationFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::
 require_once($defaultConfigurationFile);
 
 # Development configuration (override default configuration)
-$developmentConfigurationFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . '/Configuration/Development/DefaultConfiguration.php';
-if (TYPO3_CONTEXT == 'Development' && file_exists($developmentConfigurationFile)) {
+$developmentConfigurationFile = sprintf('%s/Configuration/%s/DefaultConfiguration.php',
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY),
+	\TYPO3\CMS\Speciality\Utility\Context::getInstance()->getName()
+);
+
+if (file_exists($developmentConfigurationFile)) {
 	include_once($developmentConfigurationFile);
 }
 
