@@ -1,10 +1,12 @@
 ###################################################
-# Header
+# Menu
 ###################################################
 
-# Header Settings
-lib.header = COA
-lib.header {
-	10 = TEXT
-	10.value = [header]
+lib.menu {
+	main {
+		entryLevel = 0
+	}
+	sub {
+		entryLevel = 1
+	}
 }

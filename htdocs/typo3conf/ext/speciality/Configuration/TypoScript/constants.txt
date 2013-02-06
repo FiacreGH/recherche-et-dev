@@ -25,22 +25,7 @@ styles.content {
 	imgtext.maxW = 960
 }
 
-# Scriptmerger
-plugin.tx_scriptmerger {
-	css.compress.enable = 0
-	javascript.compress.enable = 0
-}
-
-# Assign Context
-config.context = Production
-
-[globalString = ENV:TYPO3_CONTEXT = Development]
-	config.context = Development
-[end]
-
-
 # Language
-
 config {
 	language = en
 }

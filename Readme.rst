@@ -150,20 +150,20 @@ It can be performed by adding configuration in directory ``EXT:speciality/Config
 
 * If present, two TypoScript files will be automatically loaded on the top (and will override the default configuration)
 
-	* ``EXT:speciality/Configuration/Development/setup.txt``
-	* ``EXT:speciality/Configuration/Development/constants.txt``
+	``EXT:speciality/Configuration/Development/setup.txt``
+	``EXT:speciality/Configuration/Development/constants.txt``
 
 * A PHP file can be added ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` for PHP configuration which will also be automatically loaded. Just make sure, the extension "speciality" is loaded at last to avoid unwanted behaviour.
 
 Tip: check out default PHP configuration from ``EXT:speciality/Configuration/Php/DefaultConfiguration.php``
 
-Tip for Development
+Tip for development
 ---------------------
 
 * TYPO3 has many levels of caches. While it is good for performance, it will become very annoying in development mode. Check out the `uncache extension`_ to work around.
-* For new TYPO3 developers which has to get started with extension development head to the `extension builder`_.
+* For new TYPO3 developers which are starting with extension development head to the `extension builder`_.
 
-.. _uncache extension:: https://github.com/NamelessCoder/uncache
+.. _uncache extension: https://github.com/NamelessCoder/uncache
 .. _extension builder: https://forge.typo3.org/projects/show/extension-extension_builder
 
 Check list for production
@@ -223,9 +223,8 @@ Proceed as follow::
 Copy files
 ------------
 
-Copy the files that need to be shipped. For the case of the Bootstrap package.
+Copy the files that need to be shipped. For the case of the Bootstrap package:
 
-* cp -r htdocs/{fileadmin,uploads} htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files
+	cp -r htdocs/{fileadmin,uploads} htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files
 
-
-That's it you just have made a new introduction package! Well, there will be more time needed but the principle is fairly simple.
+That's it! You just have made a new introduction package! Well, this will require more time but the principle is fairly simple.

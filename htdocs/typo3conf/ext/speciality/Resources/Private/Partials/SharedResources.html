@@ -1,0 +1,31 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="SharedResources">
+
+		<v:asset.script name="jquery" allowMoveToFooter="false"
+		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/jquery-1.9.0.min.js"/>
+		<v:asset.script name="modernizr" allowMoveToFooter="false" dependencies="jquery"
+		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/modernizr-2.6.2-respond-1.1.0.min.js"/>
+
+		<v:asset.script name="bootstrap-core"
+		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/bootstrap.min.js"
+		                dependencies="jquery"/>
+		<v:asset.script name="plugin"
+		                path="EXT:speciality/Resources/Public/JavaScript/plugins.js"
+		                dependencies="jquery"/>
+		<v:asset.script name="main"
+		                path="EXT:speciality/Resources/Public/JavaScript/main.js"
+		                dependencies="jquery"/>
+
+		<v:asset.style name="bootstrap" path="EXT:speciality/Resources/Public/Style/bootstrap.min.css"/>
+		<v:asset.style name="bootstrap-responsive" path="EXT:speciality/Resources/Public/Style/bootstrap-responsive.min.css"/>
+		<v:asset.style name="main" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Style/main.css"/>
+		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"
+		               external="TRUE" standalone="TRUE"/>
+	</f:section>
+
+</div>

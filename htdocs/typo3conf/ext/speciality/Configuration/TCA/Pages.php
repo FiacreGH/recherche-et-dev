@@ -19,10 +19,7 @@ if (TYPO3_MODE == 'BE') {
 			$icon,
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png'
 		);
-
 	}
-
 }
-
 
 ?>
