@@ -2,7 +2,6 @@
 <?php
 /**
  * Script that will generate a dump out of this website.
- *
  */
 
 // @todo decide whether to ship pictures or not. Tendency not! -> truncate table sys_file and sys_file_reference?
@@ -22,7 +21,7 @@ Usage:
 
 Options:
 	-d, --dry-run          Output command that are going to be executed but don't run them.
-	--move                 Move the dump file into EXT:introduction_bootstrap
+	--move                 Move the dump file into EXT:introduction
 	-h, --help             Display this help message.
 
 EOF;
@@ -52,6 +51,7 @@ $tables = array(
 	'sys_registry',
 	'sys_file_processedfile',
 	'sys_refindex',
+	'tx_extensionmanager_domain_model_extension',
 );
 
 // Get a list of cache table which should be cleared beforehand and merge them into the $tables variable.
@@ -79,13 +79,26 @@ foreach ($tablePrefixes as $prefix) {
 }
 
 foreach ($tables as $table) {
-
 	$commands[] = sprintf('mysql -u root -p%s -e "TRUNCATE table %s;" %s',
 		$configuration['DB']['password'],
 		$table,
 		$configuration['DB']['database']
 	);
+}
 
+// Remove record with flag delete = 0
+
+$tables = array(
+	'tt_content',
+	'pages',
+);
+
+foreach ($tables as $table) {
+	$commands[] = sprintf('mysql -u root -p%s -e "DELETE FROM %s WHERE deleted=1;" %s',
+		$configuration['DB']['password'],
+		$table,
+		$configuration['DB']['database']
+	);
 }
 
 $commands[] = 'echo "Dumping database..."';
@@ -96,7 +109,7 @@ $commands[] = sprintf('mysqldump -u %s -p%s --skip-quote-names --skip-extended-i
 );
 
 if (Argument::has('/^move$/is')) {
-	$commands[] = 'mv introduction.sql ../htdocs/typo3conf/ext/introduction_bootstrap/Resources/Private/Subpackages/Introduction/Database/introduction.sql';
+	$commands[] = 'mv introduction.sql ../htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Database/introduction.sql';
 }
 $console->execute($commands);
 
