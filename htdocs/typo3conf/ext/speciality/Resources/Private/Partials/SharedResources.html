@@ -6,6 +6,12 @@
 
 	<f:section name="SharedResources">
 
+		<v:asset.style name="bootstrap" path="EXT:speciality/Resources/Public/Style/bootstrap.min.css"/>
+		<v:asset.style name="bootstrap-responsive" path="EXT:speciality/Resources/Public/Style/bootstrap-responsive.min.css"/>
+		<v:asset.style name="main-sheet" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Style/main.css"/>
+		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"
+		               external="TRUE" standalone="TRUE"/>
+
 		<v:asset.script name="jquery" allowMoveToFooter="false"
 		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/jquery-1.9.0.min.js"/>
 		<v:asset.script name="modernizr" allowMoveToFooter="false" dependencies="jquery"
@@ -17,12 +23,6 @@
 		                path="EXT:speciality/Resources/Public/JavaScript/plugins.js"/>
 		<v:asset.script name="main" dependencies="jquery"
 		                path="EXT:speciality/Resources/Public/JavaScript/main.js"/>
-
-		<v:asset.style name="bootstrap" path="EXT:speciality/Resources/Public/Style/bootstrap.min.css"/>
-		<v:asset.style name="bootstrap-responsive" path="EXT:speciality/Resources/Public/Style/bootstrap-responsive.min.css"/>
-		<v:asset.style name="main-sheet" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Style/main.css"/>
-		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"
-		               external="TRUE" standalone="TRUE"/>
 	</f:section>
 
 </div>
