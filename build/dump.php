@@ -32,7 +32,24 @@ EOF;
 
 // Get the configuration for this website
 $configuration = require('../htdocs/typo3conf/LocalConfiguration.php');
-if (empty($configuration['DB'])) {
+
+$alternativeConfigurationFile = '../private/Database.php';
+if (file_exists('../private/Database.php')) {
+	require $alternativeConfigurationFile;
+	if (!empty($GLOBALS['TYPO3_CONF_VARS']['DB']['database'])) {
+		$configuration['DB']['database'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['database'];
+	}
+	if (!empty($GLOBALS['TYPO3_CONF_VARS']['DB']['host'])) {
+		$configuration['DB']['host'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['host'];
+	}
+	if (!empty($GLOBALS['TYPO3_CONF_VARS']['DB']['password'])) {
+		$configuration['DB']['password'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['password'];
+	}
+	if (!empty($GLOBALS['TYPO3_CONF_VARS']['DB']['username'])) {
+		$configuration['DB']['username'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['username'];
+	}
+}
+if (empty($configuration['DB']['database']) || empty($configuration['DB']['username']) || empty($configuration['DB']['password'])) {
 	die('No database credentials found. Are there somewhere else than in typo3conf/LocalConfiguration.php?');
 }
 
