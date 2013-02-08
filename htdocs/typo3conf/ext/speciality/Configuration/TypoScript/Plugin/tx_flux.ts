@@ -4,7 +4,7 @@
 
 # "tx_fed" for historical reason.
 plugin.tx_fed {
-	page.fluidpages {
+	page.speciality {
 		templateRootPath = EXT:speciality/Resources/Private/Templates/
 		partialRootPath = EXT:speciality/Resources/Private/Partials/
 		layoutRootPath = EXT:speciality/Resources/Private/Layouts/

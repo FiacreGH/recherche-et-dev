@@ -16,10 +16,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['i
 	'EXT:fluidcontent_bootstrap/Configuration/TypoScript',
 ));
 
-# Default configuration
-$defaultConfigurationFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . '/Configuration/Php/DefaultConfiguration.php';
-require_once($defaultConfigurationFile);
-
 # Development configuration (override default configuration)
 $developmentConfigurationFile = sprintf('%s/Configuration/%s/DefaultConfiguration.php',
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY),
@@ -29,5 +25,4 @@ $developmentConfigurationFile = sprintf('%s/Configuration/%s/DefaultConfiguratio
 if (file_exists($developmentConfigurationFile)) {
 	include_once($developmentConfigurationFile);
 }
-
 ?>
