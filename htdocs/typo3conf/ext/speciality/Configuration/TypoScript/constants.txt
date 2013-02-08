@@ -25,6 +25,7 @@ styles.content {
 	imgtext.maxW = 960
 }
 
+
 # Language
 config {
 	language = en
@@ -32,12 +33,12 @@ config {
 
 [globalVar = GP:L = 1]
 	config {
-		language = de
+		language = fr
 	}
 [end]
 
 [globalVar = GP:L = 2]
 	config {
-		language = fr
+		language = de
 	}
 [end]

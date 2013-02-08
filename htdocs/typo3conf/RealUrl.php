@@ -43,17 +43,12 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
 			'noMatch' => 'bypass'
 		),
 
-		// this section might be removed if multiple languages are based upon
-		// domains than preVars. See realurl-custom.php
+		// Language configuration
 		array(
 			'GETvar' => 'L',
 			'valueMap' => array(
 				// id's need to line up with Website Language Ids in TYPO3
-				// English, default, no preVar applied
-				// 'english' => '0',
-				// 'en' => '0',
-				'' => '0',
-				// Traditional Chinese
+				'en' => '0',
 				'fr' => '1',
 				'de' => '2',
 			),
