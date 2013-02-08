@@ -48,7 +48,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
 			'GETvar' => 'L',
 			'valueMap' => array(
 				// id's need to line up with Website Language Ids in TYPO3
-				'en' => '0',
+				'' => '0',
 				'fr' => '1',
 				'de' => '2',
 			),
