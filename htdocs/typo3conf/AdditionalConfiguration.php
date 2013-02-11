@@ -15,6 +15,9 @@ if (file_exists($databaseCredentialsFile)) {
 # Frontend Settings
 #$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '404.html';
 
+# Menu for clearing the language cache
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['lang']['cache']['clear_menu'] = TRUE;
+
 // Add some more prefix table for the live search (the top right search)
 // Usage for editor: #user:foo
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['fe_user'] = 'fe_users';
