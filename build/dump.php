@@ -34,7 +34,7 @@ EOF;
 $configuration = require('../htdocs/typo3conf/LocalConfiguration.php');
 
 $alternativeConfigurationFile = '../private/Database.php';
-if (file_exists('../private/Database.php')) {
+if (file_exists($alternativeConfigurationFile)) {
 	require $alternativeConfigurationFile;
 	if (!empty($GLOBALS['TYPO3_CONF_VARS']['DB']['database'])) {
 		$configuration['DB']['database'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['database'];
