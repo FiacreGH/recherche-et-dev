@@ -122,7 +122,7 @@ RTE {
 
 		// Toolbar order
 		# After "ecoimages, bar, image"
-		toolbarOrder = formatblock, blockstyle, textstyle, linebreak, bold, italic, underline, bar, textcolor, bgcolor, bar, orderedlist, unorderedlist, bar, left, center, right, justifyfull, linebreak, copy, cut, paste, bar, undo, redo, bar, findreplace, removeformat, bar, link, unlink, bar, ecoimages, ecodocuments, bar, table, bar, line, bar, insertparagraphbefore, insertparagraphafter, bar, chMode, showhelp, about, linebreak, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+		toolbarOrder = formatblock, blockstyle, textstyle, linebreak, bold, italic, underline, bar, textcolor, bgcolor, bar, orderedlist, unorderedlist, bar, left, center, right, justifyfull, linebreak, copy, cut, paste, bar, undo, redo, bar, findreplace, removeformat, bar, link, unlink, bar, image, ecoimages, ecodocuments, bar, table, bar, line, bar, insertparagraphbefore, insertparagraphafter, bar, chMode, showhelp, about, linebreak, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
 
 		// Group buttons (Mozilla only)
 		keepButtonGroupTogether = 1
