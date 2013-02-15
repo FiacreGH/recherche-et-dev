@@ -23,19 +23,36 @@
 
 			<div class="row-fluid">
 
-				<v:page.menu entryLevel="0" levels="3" includeSpacers="FALSE" expandAll="TRUE"
+
+				<v:page.menu entryLevel="0" levels="2" includeSpacers="FALSE" expandAll="TRUE"
 				             useShortcutData="TRUE">
 					<f:if condition="{menu}">
 
-						<f:for each="{menu}" as="submenuPage" iteration="iteration">
-							<div class="span2">
+						<f:for each="{menu}" as="menuPage" iteration="iteration">
+							<div class="span3">
 								<ul class="unstyled">
-									<li class="{submenuPage.class}">
+									<li class="{menuPage.class}">
 										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
-										   href="{submenuPage.link}" class="{submenuPage.class}">
-											{submenuPage.title}
+										   href="{menuPage.link}" class="{menuPage.class}">
+											<h4>{menuPage.title}</h4>
 										</a>
 									</li>
+
+									<!-- Sub menu -->
+									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="FALSE" expandAll="TRUE"
+									             useShortcutData="TRUE">
+										<f:if condition="{menu}">
+											<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+												<li class="{subMenuPage.class}">
+													<a tabindex="{subIteration.cycle -> v:math.sum(b: 200)}"
+													   href="{subMenuPage.link}" class="{subMenuPage.class}">
+														{subMenuPage.title}
+													</a>
+												</li>
+											</f:for>
+										</f:if>
+									</v:page.menu>
+
 								</ul>
 							</div>
 						</f:for>
