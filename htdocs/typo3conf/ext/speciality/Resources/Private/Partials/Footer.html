@@ -22,10 +22,8 @@
 		<footer role="contentinfo">
 
 			<div class="row-fluid">
-
-
 				<v:page.menu entryLevel="0" levels="2" includeSpacers="FALSE" expandAll="TRUE"
-				             useShortcutData="TRUE">
+				             useShortcutTarget="TRUE">
 					<f:if condition="{menu}">
 
 						<f:for each="{menu}" as="menuPage" iteration="iteration">
@@ -40,7 +38,7 @@
 
 									<!-- Sub menu -->
 									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="FALSE" expandAll="TRUE"
-									             useShortcutData="TRUE">
+									             useShortcutTarget="TRUE">
 										<f:if condition="{menu}">
 											<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
 												<li class="{subMenuPage.class}">
