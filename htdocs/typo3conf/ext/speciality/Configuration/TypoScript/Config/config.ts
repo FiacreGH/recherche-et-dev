@@ -39,7 +39,7 @@ config {
 	linkVars = L(int), print
 
 	# html5? Yeah!
-	doctype = html_5
+	doctype = html5
 
 	# XML? Not that!
 	xmlprologue = none
