@@ -14,6 +14,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['i
 	'EXT:speciality/Configuration/TypoScript',
 	'EXT:fluidcontent/Configuration/TypoScript',
 	'EXT:fluidcontent_bootstrap/Configuration/TypoScript',
+	'EXT:seo_basics/static',
 ));
 
 # Development configuration (override default configuration)

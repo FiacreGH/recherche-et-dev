@@ -1,18 +1,18 @@
 {
-    "hash": "2e400f275b67848137ec0955d51b36d3",
+    "hash": "2424fd05c8e3c4001deeb5c874bd58f8",
     "packages": [
         {
             "name": "composer/installers",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/composer/installers",
-                "reference": "cec4cdea596919a87dd2b4527eefe5c3782fef58"
+                "url": "https://github.com/composer/installers.git",
+                "reference": "v1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/cec4cdea596919a87dd2b4527eefe5c3782fef58",
-                "reference": "cec4cdea596919a87dd2b4527eefe5c3782fef58",
+                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.2",
+                "reference": "v1.0.2",
                 "shasum": ""
             },
             "replace": {
@@ -22,10 +22,13 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "3.7.*"
             },
-            "time": "2013-02-01 03:59:30",
+            "time": "2013-02-18 00:51:06",
             "type": "composer-installer",
             "extra": {
-                "class": "Composer\\Installers\\Installer"
+                "class": "Composer\\Installers\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
             },
             "autoload": {
                 "psr-0": {
@@ -111,7 +114,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-03 16:34:27"
+            "time": "2013-02-05 17:08:22"
         },
         {
             "name": "typo3cms/introduction",
@@ -122,7 +125,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-01 14:52:50"
+            "time": "2013-02-11 14:08:54"
         },
         {
             "name": "typo3cms/news",
@@ -147,6 +150,17 @@
             "time": "2013-02-05 10:58:33"
         },
         {
+            "name": "typo3cms/seo_basics",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3v4/Extensions/seo_basics.git",
+                "reference": "master"
+            },
+            "type": "typo3-flow-package",
+            "time": "2011-07-28 13:34:39"
+        },
+        {
             "name": "typo3cms/vhs",
             "version": "master",
             "source": {
@@ -155,7 +169,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-04 21:41:02"
+            "time": "2013-02-08 17:02:09"
         }
     ],
     "packages-dev": null,
