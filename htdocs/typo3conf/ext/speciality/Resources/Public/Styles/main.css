@@ -19,12 +19,6 @@ body {
 	text-align: right;
 }
 
-.breadcrumb a.sub {
-	padding-right: 10px;
-	margin-right: 10px;
-	border-right: 1px dotted #000000;
-}
-
 /* Sidenav for Docs
 -------------------------------------------------- */
 
