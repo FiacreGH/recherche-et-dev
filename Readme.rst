@@ -189,7 +189,6 @@ TODO
 ======
 
 * Test and add aloha editor for FE editing https://forge.typo3.org/projects/show/extension-aloha
-* To add SEO extension. Candidate: https://forge.typo3.org/projects/show/extension-seo
 
 
 Making your own introduction package
