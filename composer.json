@@ -22,6 +22,8 @@
 		"typo3cms/introduction": "*",
 		"typo3cms/realurl": "*",
 		"typo3cms/seo_basics": "*",
+		"typo3cms/metadata": "*",
+		"typo3cms/media": "*",
 		"typo3cms/news": "*"
 	},
 	"repositories": [
@@ -132,6 +134,32 @@
 		{
 			"type": "package",
 			"package": {
+				"name": "typo3cms/metadata",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "git://git.typo3.org/TYPO3v4/Extensions/metadata.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "typo3cms/media",
+				"version": "master",
+				"type": "typo3-flow-package",
+				"source": {
+					"url": "git://git.typo3.org/TYPO3v4/Extensions/media.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
 				"name": "typo3cms/news",
 				"version": "master",
 				"type": "typo3-flow-package",
@@ -154,6 +182,8 @@
 				"typo3cms/introduction",
 				"typo3cms/realurl",
 				"typo3cms/seo_basics",
+				"typo3cms/metadata",
+				"typo3cms/media",
 				"typo3cms/news"
 			]
 		}

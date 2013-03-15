@@ -1,5 +1,5 @@
 {
-    "hash": "2424fd05c8e3c4001deeb5c874bd58f8",
+    "hash": "14a1eeda9960c054ca14f0e04e16aab8",
     "packages": [
         {
             "name": "composer/installers",
@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.2"
+                "reference": "v1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.3",
+                "reference": "v1.0.3",
                 "shasum": ""
             },
             "replace": {
@@ -22,7 +22,7 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "3.7.*"
             },
-            "time": "2013-02-18 00:51:06",
+            "time": "2013-03-02 22:45:58",
             "type": "composer-installer",
             "extra": {
                 "class": "Composer\\Installers\\Installer",
@@ -43,7 +43,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -69,6 +69,7 @@
                 "silverstripe",
                 "symfony",
                 "wordpress",
+                "yii",
                 "zend"
             ]
         },
@@ -125,7 +126,29 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-11 14:08:54"
+            "time": "2013-03-15 15:33:19"
+        },
+        {
+            "name": "typo3cms/media",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3v4/Extensions/media.git",
+                "reference": "master"
+            },
+            "type": "typo3-flow-package",
+            "time": "2013-03-15 12:52:19"
+        },
+        {
+            "name": "typo3cms/metadata",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3v4/Extensions/metadata.git",
+                "reference": "master"
+            },
+            "type": "typo3-flow-package",
+            "time": "2013-03-01 16:24:50"
         },
         {
             "name": "typo3cms/news",
@@ -169,7 +192,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-08 17:02:09"
+            "time": "2013-02-20 16:46:15"
         }
     ],
     "packages-dev": null,

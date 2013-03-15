@@ -173,7 +173,6 @@ To go live with your website, consider doing the following step:
 
 * Change icons in the document root (favicon, apple touch icons) and configure robots.txt, humans.txt if needed.
 * Remove extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
-* If you still plan to use composer, update ``composer.json`` at the root and change the reference "master" to a feature / tag branch. Otherwise ``composer update`` will always check out the master branch which is not desired for production.
 * Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
 * Select the language package in the BE. @todo provide with a link to an already existing tutorial.
 * Suggested security: put the database password into directory ``private`` at the root or somewhere else.
