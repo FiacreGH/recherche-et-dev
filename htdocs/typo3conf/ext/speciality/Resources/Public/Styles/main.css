@@ -321,3 +321,7 @@ DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
 .csc-textpic .csc-textpic-imagecolumn {
 	float: left;
 }
+
+figcaption {
+	display: none;
+}
