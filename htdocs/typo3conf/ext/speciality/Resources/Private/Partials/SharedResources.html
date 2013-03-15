@@ -12,6 +12,11 @@
 		<v:asset.style name="rte" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Styles/rte.css"/>
 		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"
 		               external="TRUE" standalone="TRUE"/>
+		<v:asset.style name="colorbox" path="EXT:jquerycolorbox/res/css/colorbox.css" standalone="TRUE"/>
+
+
+
+
 
 		<v:asset.script name="jquery" allowMoveToFooter="false"
 		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/jquery-1.9.0.min.js"/>
@@ -24,6 +29,12 @@
 		                path="EXT:speciality/Resources/Public/JavaScript/plugins.js"/>
 		<v:asset.script name="main" dependencies="jquery"
 		                path="EXT:speciality/Resources/Public/JavaScript/main.js"/>
+
+		<v:asset.script name="jquery-colorbox" dependencies="jquery"
+		                path="EXT:jquerycolorbox/res/js/jquery.colorbox-min.js"/>
+		<v:asset.script name="jquery-colorbox-main" dependencies="jquery"
+		                path="EXT:jquerycolorbox/res/js/main.js"/>
+
 	</f:section>
 
 </div>
