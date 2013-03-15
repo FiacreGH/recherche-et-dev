@@ -5,7 +5,6 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 	<f:section name="TabNavigation">
-		<!-- tabbed, lower submenu navigation, collapsible -->
 		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel') -> v:math.sum(b: 1)}" useShortcutData="TRUE">
 			<f:if condition="{menu}">
 				<ul class="nav nav-pills pull-right">
