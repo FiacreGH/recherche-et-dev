@@ -4,8 +4,6 @@
  * Script that will generate a dump out of this website.
  */
 
-// @todo decide whether to ship pictures or not. Tendency not! -> truncate table sys_file and sys_file_reference?
-
 $console = new Console();
 
 // Parse argument
