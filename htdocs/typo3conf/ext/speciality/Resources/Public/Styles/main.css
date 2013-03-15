@@ -228,15 +228,96 @@ body {
 	}
 }
 
+/* CSS Style Content below */
+.csc-default {
+	clear: both;
+}
+
+/* Reset figure styling */
+DIV.csc-textpic .csc-textpic-imagewrap FIGURE,
+DIV.csc-textpic FIGURE.csc-textpic-imagewrap {
+	margin: 0;
+	display: table;
+}
+
+DIV.csc-textpic .csc-textpic-imagewrap .csc-textpic-image {
+	margin-bottom: 10px;
+}
+
+/* Multiple Image Layout Options */
+DIV.csc-textpic-imagecolumn, TD.csc-textpic-imagecolumn .csc-textpic-image {
+	margin-right: 10px;
+}
+
+DIV.csc-textpic DIV.csc-textpic-imagecolumn {
+	float: left;
+}
+
+DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
+	overflow: hidden;
+}
+
+/* Position: In text, right */
+.csc-textpic-intext-left .csc-textpic-imagewrap {
+	float: left;
+}
+
+.csc-textpic-intext-left .csc-textpic-imagewrap,
+.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
+	margin-right: 10px;
+}
+
+/* Position: In text, right */
+.csc-textpic-intext-right .csc-textpic-imagewrap {
+	float: right;
+}
+
+.csc-textpic-intext-right .csc-textpic-imagewrap,
+.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
+	margin-left: 10px;
+}
 
 
+/* Position: Beside text, left */
+.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
+	float: left;
+}
 
+/* Position: Beside text, right */
+.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
+	float: right;
+}
 
+/* Position: Above, center */
+.csc-textpic-center .csc-textpic-center-outer {
+	position: relative;
+	float: right;
+	right: 50%;
+}
+.csc-textpic-center .csc-textpic-center-inner {
+	position: relative;
+	float: right;
+	right: -50%;
+}
 
+.csc-textpic-center .csc-textpic-imagewrap, .csc-textpic-center .csc-textpic-imagewrap {
+	overflow: hidden;
+}
 
+/* Position: Above, right */
+.csc-textpic-right .csc-textpic-imagewrap {
+	float: right;
+}
 
+.csc-textpic-right .csc-textpic-text {
+	clear: right;
+}
 
+/* Position: Below, right */
+.csc-textpic-right .csc-textpic-imagewrap {
+	float: right;
+}
 
-
-
-
+.csc-textpic .csc-textpic-imagecolumn {
+	float: left;
+}
