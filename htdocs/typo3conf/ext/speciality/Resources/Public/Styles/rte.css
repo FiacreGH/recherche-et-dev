@@ -173,13 +173,13 @@ a.mail {
 }
 
 /* Image styles */
-img.float-left {
+img.image-left {
 	float: left;
 	padding-right: 10px;
 	padding-bottom: 10px;
 }
 
-img.float-right {
+img.image-right {
 	float: right;
 	padding-left: 10px;
 	padding-bottom: 10px;
