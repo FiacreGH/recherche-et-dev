@@ -34,7 +34,7 @@
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/flux",
+					"url": "https://github.com/FluidTYPO3/flux",
 					"type": "git",
 					"reference": "master"
 				}
@@ -47,7 +47,7 @@
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/vhs",
+					"url": "https://github.com/FluidTYPO3/vhs",
 					"type": "git",
 					"reference": "master"
 				}
@@ -60,7 +60,7 @@
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/fluidpages",
+					"url": "https://github.com/FluidTYPO3/fluidpages",
 					"type": "git",
 					"reference": "master"
 				}
@@ -73,7 +73,7 @@
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/fluidcontent",
+					"url": "https://github.com/FluidTYPO3/fluidcontent",
 					"type": "git",
 					"reference": "master"
 				}
@@ -86,7 +86,7 @@
 				"version": "master",
 				"type": "typo3-flow-package",
 				"source": {
-					"url": "https://github.com/NamelessCoder/fluidcontent_bootstrap",
+					"url": "https://github.com/FluidTYPO3/fluidcontent_bootstrap",
 					"type": "git",
 					"reference": "master"
 				}

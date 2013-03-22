@@ -1,5 +1,5 @@
 {
-    "hash": "14a1eeda9960c054ca14f0e04e16aab8",
+    "hash": "37eedaa868476d4445e1764d26dc913d",
     "packages": [
         {
             "name": "composer/installers",
@@ -81,41 +81,41 @@
                 "url": "https://github.com/NamelessCoder/fluidcontent",
                 "reference": "master"
             },
-            "type": "typo3-flow-package",
-            "time": "2013-02-03 16:40:55"
+            "time": "2013-03-17 22:51:55",
+            "type": "typo3-flow-package"
         },
         {
             "name": "typo3cms/fluidcontent_bootstrap",
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/NamelessCoder/fluidcontent_bootstrap",
+                "url": "https://github.com/FluidTYPO3/fluidcontent_bootstrap",
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-01 15:35:40"
+            "time": "2013-02-22 22:30:52"
         },
         {
             "name": "typo3cms/fluidpages",
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/NamelessCoder/fluidpages",
+                "url": "https://github.com/FluidTYPO3/fluidpages",
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-03 16:38:11"
+            "time": "2013-03-21 19:36:28"
         },
         {
             "name": "typo3cms/flux",
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/NamelessCoder/flux",
+                "url": "https://github.com/FluidTYPO3/flux",
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-05 17:08:22"
+            "time": "2013-03-21 19:32:29"
         },
         {
             "name": "typo3cms/introduction",
@@ -126,7 +126,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-15 15:33:19"
+            "time": "2013-03-18 15:29:14"
         },
         {
             "name": "typo3cms/media",
@@ -137,7 +137,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-15 12:52:19"
+            "time": "2013-03-22 17:54:25"
         },
         {
             "name": "typo3cms/metadata",
@@ -159,7 +159,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-04 23:02:44"
+            "time": "2013-03-22 12:22:17"
         },
         {
             "name": "typo3cms/realurl",
@@ -170,7 +170,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-05 10:58:33"
+            "time": "2013-03-13 08:26:05"
         },
         {
             "name": "typo3cms/seo_basics",
@@ -188,11 +188,11 @@
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/NamelessCoder/vhs",
+                "url": "https://github.com/FluidTYPO3/vhs",
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-20 16:46:15"
+            "time": "2013-03-21 10:04:20"
         }
     ],
     "packages-dev": null,
