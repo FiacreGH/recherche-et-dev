@@ -40,7 +40,9 @@
 		<f:render section="Content"/>
 		<!--TYPO3SEARCH_end-->
 
-		<f:render section="Disqus" partial="Disqus" optional="TRUE" arguments="{_all}"/>
+		<f:if condition="{v:var.typoscript(path: 'lib.disqus.display')}">
+			<f:render section="Disqus" partial="Disqus" optional="TRUE" arguments="{_all}"/>
+		</f:if>
 		<f:render section="Footer" partial="Footer"/>
 	</div>
 
