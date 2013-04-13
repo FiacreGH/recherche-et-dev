@@ -1,4 +1,8 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
     "hash": "37eedaa868476d4445e1764d26dc913d",
     "packages": [
         {
@@ -7,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.3"
+                "reference": "d6d091410adecb7385733809a9d9237ed642c81c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.3",
-                "reference": "v1.0.3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d6d091410adecb7385733809a9d9237ed642c81c",
+                "reference": "d6d091410adecb7385733809a9d9237ed642c81c",
                 "shasum": ""
             },
             "replace": {
@@ -22,7 +26,6 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "3.7.*"
             },
-            "time": "2013-03-02 22:45:58",
             "type": "composer-installer",
             "extra": {
                 "class": "Composer\\Installers\\Installer",
@@ -43,7 +46,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "http://dontkry.com",
+                    "homepage": "https://github.com/shama",
                     "role": "Developer"
                 }
             ],
@@ -71,18 +74,19 @@
                 "wordpress",
                 "yii",
                 "zend"
-            ]
+            ],
+            "time": "2013-04-07 20:02:43"
         },
         {
             "name": "typo3cms/fluidcontent",
             "version": "master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/NamelessCoder/fluidcontent",
+                "url": "https://github.com/FluidTYPO3/fluidcontent",
                 "reference": "master"
             },
-            "time": "2013-03-17 22:51:55",
-            "type": "typo3-flow-package"
+            "type": "typo3-flow-package",
+            "time": "2013-04-10 06:59:11"
         },
         {
             "name": "typo3cms/fluidcontent_bootstrap",
@@ -93,7 +97,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-02-22 22:30:52"
+            "time": "2013-04-07 07:07:11"
         },
         {
             "name": "typo3cms/fluidpages",
@@ -104,7 +108,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-21 19:36:28"
+            "time": "2013-04-10 06:59:26"
         },
         {
             "name": "typo3cms/flux",
@@ -115,7 +119,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-21 19:32:29"
+            "time": "2013-04-10 19:27:05"
         },
         {
             "name": "typo3cms/introduction",
@@ -137,7 +141,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-22 17:54:25"
+            "time": "2013-04-08 06:36:49"
         },
         {
             "name": "typo3cms/metadata",
@@ -148,7 +152,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-01 16:24:50"
+            "time": "2013-04-06 08:42:10"
         },
         {
             "name": "typo3cms/news",
@@ -159,7 +163,7 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-22 12:22:17"
+            "time": "2013-04-09 12:26:02"
         },
         {
             "name": "typo3cms/realurl",
@@ -192,15 +196,23 @@
                 "reference": "master"
             },
             "type": "typo3-flow-package",
-            "time": "2013-03-21 10:04:20"
+            "time": "2013-04-07 10:20:05"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
     "minimum-stability": "dev",
     "stability-flags": [
+
+    ],
+    "platform": {
+        "php": ">=5.3.3"
+    },
+    "platform-dev": [
 
     ]
 }
