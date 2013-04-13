@@ -11,10 +11,11 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['i
 
 \TYPO3\CMS\Speciality\Hooks\TypoScriptTemplate::getInstance()->addStaticTemplates(array(
 	'EXT:css_styled_content/static',
-	'EXT:speciality/Configuration/TypoScript',
+	'EXT:seo_basics/static',
+	'EXT:news/Configuration/TypoScript',
 	'EXT:fluidcontent/Configuration/TypoScript',
 	'EXT:fluidcontent_bootstrap/Configuration/TypoScript',
-	'EXT:seo_basics/static',
+	'EXT:speciality/Configuration/TypoScript', // keep loading last
 ));
 
 # Development configuration (override default configuration)

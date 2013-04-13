@@ -19,6 +19,11 @@ body {
 	text-align: right;
 }
 
+.news-img-caption {
+	clear: both;
+	font-size: 80%;
+}
+
 /* Sidenav for Docs
 -------------------------------------------------- */
 
