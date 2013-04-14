@@ -26,3 +26,9 @@
 /htdocs/typo3conf/ENABLE_INSTALL_TOOL
 /htdocs/typo3conf/FIRST_INSTALL
 /htdocs/typo3conf/*.log
+
+
+###########
+# /scripts/*
+###########
+/scripts/Configuration.php

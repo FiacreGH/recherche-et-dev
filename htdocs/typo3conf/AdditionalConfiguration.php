@@ -1,7 +1,7 @@
 <?php
 
 // Security tip for production: putting the database password outside the document root!
-$databaseCredentialsFile = PATH_site . '../private/Database.php';
+$databaseCredentialsFile = PATH_site . '../scripts/Configuration.php';
 if (file_exists($databaseCredentialsFile)) {
 	require_once ($databaseCredentialsFile);
 	// file ``private/Database.php`` should contains something like:
