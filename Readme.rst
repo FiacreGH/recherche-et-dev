@@ -178,17 +178,27 @@ To go live with your website, consider doing the following step:
 * Suggested security: put the database password into directory ``private`` at the root or somewhere else.
 * ... there are probably more tips to come here...
 
-Feature tests
+Behavior-driven development
 ==================================
 
-@todo add something more here
+According to Wikipedia, `behavior-driven development`_ (abbreviated BDD) is a software development process based on test-driven development.
+The main purpose of BDD is to ensure the feature set is there taking the point of view of a User (largely speaking). It is also referred as
+"Acceptance tests". Acceptance criteria should be written in terms of scenarios and implemented as classes:
+Given [initial context], when [event occurs], then [ensure some outcomes].
+
+Since an example is worth a thousand words::
+
+	cd tests
+
+	curl http://getcomposer.org/installer | php
+	php composer.phar install
+
+	./bin/behat
+
+Feature tests files are to be found into ``tests/features``.
 
 
-TODO
-======
-
-* Test and add aloha editor for FE editing https://forge.typo3.org/projects/show/extension-aloha
-
+.. _behavior-driven development: http://en.wikipedia.org/wiki/Behavior-driven_development
 
 Making your own introduction package
 =====================================
