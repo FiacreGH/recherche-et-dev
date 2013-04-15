@@ -13,6 +13,7 @@
 
 # Plugin
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_cssstyledcontent.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_form.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_indexedsearch.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_news.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_pagebrowse.ts">
