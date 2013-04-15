@@ -35,20 +35,47 @@ class PackageCommand extends Console\Command\Command {
 
 		$homePath = realpath(__DIR__ . '/../../../../..');
 
-		$commands[] = sprintf('cd %s; cp -r htdocs bootstrappackage', $homePath);
+		# Archive ball options
+		$balls = array(
+			'tarball' => array(
+				'copy_option' => '-R',
+				'command' => 'tar -czf',
+				'extension' => 'tar.gz',
+				'file_to_remove' => '',
+			),
+			'zipball' => array(
+				'copy_option' => '-r',
+				'command' => 'zip -rq',
+				'extension' => 'zip',
+				'file_to_remove' => 'typo3_src', // special case for zipball since symlink are not followed
+			),
+		);
+		foreach ($balls as $key => $ball) {
 
-		// Restore certain files
-		$commands[] = sprintf('cd %s; touch bootstrappackage/typo3conf/FIRST_INSTALL', $homePath);
-		$commands[] = sprintf('cd %s; curl -O https://raw.github.com/Ecodev/bootstrap_package/master/htdocs/typo3conf/LocalConfiguration.php', $homePath);
-		$commands[] = sprintf('cd %s; mv LocalConfiguration.php bootstrappackage/typo3conf', $homePath);
-		$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
+			$commands[] = sprintf('echo "Packaging %s..."', $key);
+			$commands[] = sprintf('cd %s; cp %s htdocs bootstrappackage', $homePath, $ball['copy_option']);
 
-		// Create tarball and zipball
-		$commands[] = sprintf('cd %s; tar -czf bootstrappackage.tar.gz bootstrappackage', $homePath);
-		$commands[] = sprintf('cd %s; zip -r bootstrappackage.zip bootstrappackage', $homePath);
+			// Restore certain files
+			$commands[] = sprintf('cd %s; touch bootstrappackage/typo3conf/FIRST_INSTALL', $homePath);
+			$commands[] = sprintf('cd %s; curl -s -O https://raw.github.com/Ecodev/bootstrap_package/master/htdocs/typo3conf/LocalConfiguration.php', $homePath);
+			$commands[] = sprintf('cd %s; mv LocalConfiguration.php bootstrappackage/typo3conf', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/.git', $homePath); // save a bit of space by removing git info
 
-		// delete bootstrap package directory
-		$commands[] = sprintf('cd %s; rm -rf bootstrappackage', $homePath);
+			if (! empty($ball['file_to_remove'])) {
+				$commands[] = sprintf('cd %s; rm -rf bootstrappackage/%s', $homePath, $ball['file_to_remove']);
+			}
+
+			// Create ball
+			$commands[] = sprintf('cd %s; %s bootstrappackage.%s bootstrappackage',
+				$homePath,
+				$ball['command'],
+				$ball['extension']
+			);
+
+			// delete bootstrap package directory
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage', $homePath);
+		}
 
 		if ($input->getOption('move')) {
 			$target = $input->getOption('move');
