@@ -33,14 +33,22 @@ class PackageCommand extends Console\Command\Command {
 	 */
 	protected function execute(Console\Input\InputInterface $input, Console\Output\OutputInterface $output) {
 
-		$originalPath = realpath(__DIR__ . '/../../../../../htdocs');
 		$homePath = realpath(__DIR__ . '/../../../../..');
-		$path = str_replace('/htdocs', '/bootstrappackage', $originalPath);
 
-		$commands[] = sprintf('mv %s %s', $originalPath, $path);
+		$commands[] = sprintf('cd %s; cp -r htdocs bootstrappackage', $homePath);
+
+		// Restore certain files
+		$commands[] = sprintf('cd %s; touch bootstrappackage/typo3conf/FIRST_INSTALL', $homePath);
+		$commands[] = sprintf('cd %s; curl -O https://raw.github.com/Ecodev/bootstrap_package/master/htdocs/typo3conf/LocalConfiguration.php', $homePath);
+		$commands[] = sprintf('cd %s; mv LocalConfiguration.php bootstrappackage/typo3conf', $homePath);
+		$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
+
+		// Create tarball and zipball
 		$commands[] = sprintf('cd %s; tar -czf bootstrappackage.tar.gz bootstrappackage', $homePath);
 		$commands[] = sprintf('cd %s; zip -r bootstrappackage.zip bootstrappackage', $homePath);
-		$commands[] = sprintf('mv %s %s', $path, $originalPath);
+
+		// delete bootstrap package directory
+		$commands[] = sprintf('cd %s; rm -rf bootstrappackage', $homePath);
 
 		if ($input->getOption('move')) {
 			$target = $input->getOption('move');

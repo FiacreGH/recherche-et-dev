@@ -31,16 +31,15 @@ A bunch of scripts for generating the TYPO3 CMS Bootstrap Package.
 	# Bundle files and put them into EXT:introduction
 	php console.php file-bundle
 
+	-> push EXT:introduction
+
 	# Create a package
+	# @todo handle the FIRST_INSTALL_FILE + GeneralConfiguration
 	php console.php package
 
 	-> Install Package
-	-> Check what Feature Tests say
-
-	# Push EXT:introduction
-	php console.php @todo
-
-	# Upload the zipball / tarball to github
-	php console.php upload
+	-> Run Feature Tests
+	-> Push the zipball / tarball to github
+	-> Communicate
 
 
