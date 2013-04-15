@@ -23,7 +23,7 @@ class DumpCommand extends Console\Command\Command {
 		$this->setDescription('Dump Database');
 		$this->setHelp('Optimize database and then dump into `introduction.sql` for the bootstrap package..');
 		$this->addOption('dry-run', 'd', Console\Input\InputOption::VALUE_NONE, 'Output command that are going to be executed but don\'t run them.');
-		$this->addOption('move', 'm', Console\Input\InputOption::VALUE_NONE, 'Move the dump file into EXT:introduction instead of letting in current directory.');
+		$this->addOption('move', 'm', Console\Input\InputOption::VALUE_NONE, 'Move the dump file into EXT:introduction instead of letting the file where it was created (current directory).');
 	}
 
 	/**

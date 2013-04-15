@@ -5,7 +5,7 @@ namespace PackageMaker\Command;
 use PackageMaker\Util\ExtensionUtility;
 use Symfony\Component\Console as Console;
 
-class GitUpdateCommand extends Console\Command\Command {
+class GitStatusCommand extends Console\Command\Command {
 
 	/**
 	 * @var \PackageMaker\Util\ExtensionUtility
@@ -20,8 +20,8 @@ class GitUpdateCommand extends Console\Command\Command {
 
 		$this->extensionUtility = new ExtensionUtility();
 
-		$this->setDescription('Update Git repository');
-		$this->setHelp('Update Git repository of extensions.');
+		$this->setDescription('Upload to Github');
+		$this->setHelp('Upload the Bootstrap Package to Github');
 		$this->addOption('dry-run', 'd', Console\Input\InputOption::VALUE_NONE, 'Output command that are going to be executed but don\'t run them.');
 	}
 
@@ -32,22 +32,13 @@ class GitUpdateCommand extends Console\Command\Command {
 	 */
 	protected function execute(Console\Input\InputInterface $input, Console\Output\OutputInterface $output) {
 
-		$extPath = realpath(__DIR__ . '/../../../../../htdocs/typo3conf/ext');
-
-		foreach ($this->extensionUtility->getExtensionsToGitUpdate() as $extension) {
-			$commands[] = sprintf('echo "Pulling \"%s\"..."', $extension);
-
-			// Generate command
-			$commands[] = sprintf('cd %s/%s; git checkout master; git pull',
-				$extPath,
-				$extension
-			);
-		}
+		$path = realpath(__DIR__ . '/../../../../../bootstrappackage');
 
 		if ($input->getOption('dry-run')) {
 			$output->writeln($commands);
 		} else {
-			$this->work($commands);
+			$result = $this->work($commands);
+			$output->writeln($result);
 		}
 	}
 

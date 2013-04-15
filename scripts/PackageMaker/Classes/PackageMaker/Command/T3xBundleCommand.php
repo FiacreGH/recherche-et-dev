@@ -5,7 +5,7 @@ namespace PackageMaker\Command;
 use PackageMaker\Util\ExtensionUtility;
 use Symfony\Component\Console as Console;
 
-class T3xUpdateCommand extends Console\Command\Command {
+class T3xBundleCommand extends Console\Command\Command {
 
 	/**
 	 * @var \PackageMaker\Util\ExtensionUtility
