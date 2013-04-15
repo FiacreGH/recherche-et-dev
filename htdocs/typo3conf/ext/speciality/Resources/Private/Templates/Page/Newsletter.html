@@ -1,0 +1,31 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+<f:layout name="Newsletter"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Configuration">
+		<flux:flexform id="newsletter" label="Newsletter">
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column colPos="0" name="Main Content"/>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
+
+	<f:section name="Resources">
+		<f:render partial="SharedResources" section="SharedResources"/>
+	</f:section>
+
+	<f:section name="Content">
+		<div class="row-fluid">
+			<div class="span12" role="main">
+				<v:page.content.render column="0"/>
+			</div>
+		</div>
+	</f:section>
+
+</div>
