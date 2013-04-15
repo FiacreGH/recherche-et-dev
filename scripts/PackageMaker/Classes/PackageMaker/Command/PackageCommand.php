@@ -60,7 +60,10 @@ class PackageCommand extends Console\Command\Command {
 			$commands[] = sprintf('cd %s; curl -s -O https://raw.github.com/Ecodev/bootstrap_package/master/htdocs/typo3conf/LocalConfiguration.php', $homePath);
 			$commands[] = sprintf('cd %s; mv LocalConfiguration.php bootstrappackage/typo3conf', $homePath);
 			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
-			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/.git', $homePath); // save a bit of space by removing git info
+
+			// Save a bit of space by removing files from EXT:introduction
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/.git', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/Resources/Private/Subpackages/Introduction/', $homePath);
 
 			if (! empty($ball['file_to_remove'])) {
 				$commands[] = sprintf('cd %s; rm -rf bootstrappackage/%s', $homePath, $ball['file_to_remove']);
