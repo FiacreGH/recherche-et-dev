@@ -1,7 +1,7 @@
 {
 	"name": "typo3cms/bootstrap-introduction",
 	"description": "Bootstrap introduction package for TYPO3 CMS",
-	"keywords": ["bootstrap", "introduction-package", "typo3", "cms"],
+	"keywords": ["bootstrap-package", "typo3", "cms", "console"],
 	"homepage": "http://bootstrap.ecodev.ch",
 	"license": "LGPL-3.0+",
 	"authors": [
