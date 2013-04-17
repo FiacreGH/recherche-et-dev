@@ -138,11 +138,12 @@ span.code {
 	border: 1px #ccd solid;
 }
 
-span.read-more {
+/* Color span in blue only in RTE */
+body.htmlarea-content-body span.read-more {
 	color: blue;
 }
 
-/* Frontend style: make it identifiable by jquery plugin togglebox */
+/* This span should be hidden by default in FE */
 .container span.read-more-content {
 	display: none;
 }
