@@ -42,7 +42,7 @@ body {
 
 .bs-docs-sidenav > li > a {
 	display: block;
-	width: 190px  \9;
+	width: 190px   \9;
 	margin: 0 0 -1px;
 	padding: 8px 14px;
 	border: 1px solid #e5e5e5;
@@ -118,7 +118,7 @@ body {
 	}
 
 	.bs-docs-sidenav > li > a {
-		width: 230px  \9; /* Override the previous IE8-9 hack */
+		width: 230px   \9; /* Override the previous IE8-9 hack */
 	}
 }
 
@@ -282,7 +282,6 @@ DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
 	margin-left: 10px;
 }
 
-
 /* Position: Beside text, left */
 .csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
 	float: left;
@@ -299,6 +298,7 @@ DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
 	float: right;
 	right: 50%;
 }
+
 .csc-textpic-center .csc-textpic-center-inner {
 	position: relative;
 	float: right;
