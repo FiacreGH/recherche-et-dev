@@ -69,6 +69,7 @@ class DumpCommand extends Console\Command\Command {
 			'sys_file_processedfile',
 			'sys_refindex',
 			'tx_extensionmanager_domain_model_extension',
+			'tx_rsaauth_keys',
 		);
 
 		// Get a list of cache table which should be cleared beforehand and merge them into the $tables variable.
