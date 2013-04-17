@@ -7,26 +7,40 @@
 
 	<f:section name="SubNavigation">
 		<!-- submenu navigation, collapsible -->
-		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="TRUE">
+		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="true" expandAll="false">
 			<f:if condition="{menu}">
 				<nav role="navigation">
 					<ul class="nav nav-list bs-docs-sidenav affix-top">
-						<f:for each="{menu}" as="submenuPage" iteration="iteration">
-							<v:switch value="{submenuPage.doktype}">
-								<v:case case="199" break="TRUE">
+						<f:for each="{menu}" as="menuPage" iteration="iteration">
+							<v:switch value="{menuPage.doktype}">
+								<v:case case="199" break="true">
 									<li class="disabled">
 										<i class="icon-chevron-right"></i>
 										<f:if condition="{iteration.isFirst}" else="&nbsp;&nbsp;"/>
-										<span class="navbar-text" style="color: #bbbbbb">{submenuPage.title}:</span>
+										<span class="navbar-text" style="color: #bbbbbb">{menuPage.title}:</span>
 										&nbsp;
 									</li>
 								</v:case>
-								<v:case case="default" break="TRUE">
-									<li class="{submenuPage.class}">
+								<v:case case="default" break="true">
+									<li class="{menuPage.class}">
 										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
-									        href="{submenuPage.link}" class="{submenuPage.class}">
-											<i class="icon-chevron-right"></i>{submenuPage.title}
+										   href="{menuPage.link}" class="{menuPage.class}">
+											<i class="icon-chevron-right"></i>{menuPage.title}
 										</a>
+										<!-- Sub menu -->
+										<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
+										             useShortcutTarget="true">
+											<f:if condition="{menu}">
+												<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+													<li class="{subMenuPage.class} sousMenuIndent">
+														<a tabindex="{subIteration.cycle -> v:math.sum(b: 200)}"
+														   href="{subMenuPage.link}" class="{subMenuPage.class}">
+															{subMenuPage.title}
+														</a>
+													</li>
+												</f:for>
+											</f:if>
+										</v:page.menu>
 									</li>
 								</v:case>
 							</v:switch>
