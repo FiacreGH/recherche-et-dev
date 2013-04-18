@@ -55,10 +55,6 @@ Follow these steps to get the website running - in no time if I would talk marke
 Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention in our company.
 If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
 
---Notice the composer step is not mandatory-- (**not true as of today since ``EXT:speciality`` was not published on the TER**).
-The difference is that extensions will be fetched from the TER and managed from the Extension Manager for update which is fine
-but not as fancy as the composer approach. Besides the fancy part, the main reasons to use Composer is the capability to handle extension from Git / SVN repositories.
-
 
 How to continue?
 ==================
@@ -214,25 +210,7 @@ So here are the steps:
 
 .. _TYPO3 Git repository: http://git.typo3.org/TYPO3v4/Distributions/Introduction.git/tree/master:/typo3conf/ext
 
-Dump database
+Packaging
 ---------------
 
-To build a SQL dump of its own website, there is a script within the build directory that may be useful for dumping the database.
-Proceed as follow::
-
-	cd build
-
-	# To get the usage
-	./dump.php --help
-
-	# Before running the script for real display the command on the console.
-	./dump.php --dry-run
-
-Copy files
-------------
-
-Copy the files that need to be shipped. For the case of the Bootstrap package:
-
-	cp -r htdocs/{fileadmin,uploads} htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files
-
-That's it! You just have made a new introduction package! Well, this will require more time but the principle is fairly simple.
+There are some instruction in this repository https://github.com/Ecodev/bootstrap_package/tree/master/scripts/PackageMaker
