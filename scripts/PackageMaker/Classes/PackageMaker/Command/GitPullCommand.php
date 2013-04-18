@@ -23,6 +23,7 @@ class GitPullCommand extends Console\Command\Command {
 		$this->setDescription('Update Git repository');
 		$this->setHelp('Update Git repository of extensions.');
 		$this->addOption('dry-run', 'd', Console\Input\InputOption::VALUE_NONE, 'Output command that are going to be executed but don\'t run them.');
+		$this->addOption('fetch', 'f', Console\Input\InputOption::VALUE_NONE, 'Fetch repository instead of pulling');
 	}
 
 	/**
@@ -37,10 +38,13 @@ class GitPullCommand extends Console\Command\Command {
 		foreach ($this->extensionUtility->getExtensionsToGitUpdate() as $extension) {
 			$commands[] = sprintf('echo "Pulling \"%s\"..."', $extension);
 
+			$action = $input->getOption('fetch') ? 'fetch' : 'pull';
+
 			// Generate command
-			$commands[] = sprintf('cd %s/%s; git checkout master; git pull',
+			$commands[] = sprintf('cd %s/%s; git checkout master; git %s',
 				$extPath,
-				$extension
+				$extension,
+				$action
 			);
 		}
 
