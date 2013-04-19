@@ -32,11 +32,25 @@
 										             useShortcutTarget="true">
 											<f:if condition="{menu}">
 												<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
-													<li class="{subMenuPage.class} sousMenuIndent">
+													<li class="{subMenuPage.class} subMenuIndent">
 														<a tabindex="{subIteration.cycle -> v:math.sum(b: 200)}"
 														   href="{subMenuPage.link}" class="{subMenuPage.class}">
-															{subMenuPage.title}
+															<i class="icon-chevron-right"></i>{subMenuPage.title}
 														</a>
+														<!-- Sub-sub menu -->
+														<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false" expandAll="false"
+														             useShortcutTarget="true">
+															<f:if condition="{menu}">
+																<f:for each="{menu}" as="subSubMenuPage" iteration="subSubIteration">
+																	<li class="{subSubMenuPage.class} subSubMenuIndent">
+																		<a tabindex="{subSubIteration.cycle -> v:math.sum(b: 200)}"
+																		   href="{subSubMenuPage.link}" class="{subSubMenuPage.class}">
+																			<i class="icon-chevron-right"></i>{subSubMenuPage.title}
+																		</a>
+																	</li>
+																</f:for>
+															</f:if>
+														</v:page.menu>
 													</li>
 												</f:for>
 											</f:if>

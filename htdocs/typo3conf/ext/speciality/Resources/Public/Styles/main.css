@@ -42,7 +42,7 @@ body {
 
 .bs-docs-sidenav > li > a {
 	display: block;
-	width: 190px   \9;
+	width: 190px    \9;
 	margin: 0 0 -1px;
 	padding: 8px 14px;
 	border: 1px solid #e5e5e5;
@@ -103,6 +103,25 @@ body {
 	bottom: 270px;
 }
 
+/* style for sub-submenu */
+li.subMenuIndent a {
+	padding-left: 15%;
+}
+
+li.subMenuIndent a.active {
+	padding-left: 15%;
+	border-top: 1px solid #FFF;
+}
+
+li.subSubMenuIndent a {
+	padding-left: 25%;
+}
+
+li.subSubMenuIndent a.active {
+	padding-left: 25%;
+	border-top: 1px solid #FFF;
+}
+
 /* Responsive
 -------------------------------------------------- */
 
@@ -118,7 +137,7 @@ body {
 	}
 
 	.bs-docs-sidenav > li > a {
-		width: 230px   \9; /* Override the previous IE8-9 hack */
+		width: 230px    \9; /* Override the previous IE8-9 hack */
 	}
 }
 
