@@ -14,7 +14,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" style="margin-left: 0px;" href="{v:site.url()}">
+					<a class="brand" style="margin-left: 0px;" href="{v:site.url()}" tabindex="1">
 						<v:site.name/>
 					</a>
 
@@ -24,7 +24,7 @@
 							<ul class="nav">
 								<f:for each="{menu}" as="mainPage" iteration="iteration">
 									<li class="{mainPage.class}">
-										<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+										<a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
 										   href="{mainPage.link}"
 										   class="{mainPage.class}">{mainPage.title}</a>
 									</li>
@@ -35,7 +35,7 @@
 						<form class="navbar-form pull-right" role="search">
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-search"></i></span>
-								<input class="span2 input-nav" type="text" tabindex="2"
+								<input class="span2 input-nav" type="text"
 								       placeholder="Search (not implemented yet)">
 							</div>
 						</form>

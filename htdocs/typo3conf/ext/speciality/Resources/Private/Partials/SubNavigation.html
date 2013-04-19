@@ -23,7 +23,7 @@
 								</v:case>
 								<v:case case="default" break="true">
 									<li class="{menuPage.class}">
-										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
+										<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
 										   href="{menuPage.link}" class="{menuPage.class}">
 											<i class="icon-chevron-right"></i>{menuPage.title}
 										</a>
@@ -33,7 +33,7 @@
 											<f:if condition="{menu}">
 												<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
 													<li class="{subMenuPage.class} subMenuIndent">
-														<a tabindex="{subIteration.cycle -> v:math.sum(b: 200)}"
+														<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
 														   href="{subMenuPage.link}" class="{subMenuPage.class}">
 															<i class="icon-chevron-right"></i>{subMenuPage.title}
 														</a>
@@ -43,7 +43,7 @@
 															<f:if condition="{menu}">
 																<f:for each="{menu}" as="subSubMenuPage" iteration="subSubIteration">
 																	<li class="{subSubMenuPage.class} subSubMenuIndent">
-																		<a tabindex="{subSubIteration.cycle -> v:math.sum(b: 200)}"
+																		<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
 																		   href="{subSubMenuPage.link}" class="{subSubMenuPage.class}">
 																			<i class="icon-chevron-right"></i>{subSubMenuPage.title}
 																		</a>

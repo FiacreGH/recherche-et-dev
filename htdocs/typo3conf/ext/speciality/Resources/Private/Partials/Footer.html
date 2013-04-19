@@ -31,8 +31,7 @@
 							<div class="span3">
 								<ul class="unstyled">
 									<li class="{menuPage.class}">
-										<a tabindex="{iteration.cycle -> v:math.sum(b: 200)}"
-										   href="{menuPage.link}" class="{menuPage.class}">
+										<a href="{menuPage.link}" class="{menuPage.class}">
 											<h4>{menuPage.title}</h4>
 										</a>
 									</li>
@@ -43,8 +42,7 @@
 										<f:if condition="{menu}">
 											<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
 												<li class="{subMenuPage.class}">
-													<a tabindex="{subIteration.cycle -> v:math.sum(b: 200)}"
-													   href="{subMenuPage.link}" class="{subMenuPage.class}">
+													<a href="{subMenuPage.link}" class="{subMenuPage.class}">
 														{subMenuPage.title}
 													</a>
 												</li>
