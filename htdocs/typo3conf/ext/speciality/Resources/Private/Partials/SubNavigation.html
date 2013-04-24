@@ -7,7 +7,7 @@
 
 	<f:section name="SubNavigation">
 		<!-- submenu navigation, collapsible -->
-		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="true" expandAll="false" levels="3">
+		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="true" expandAll="false">
 			<f:if condition="{menu}">
 				<nav role="navigation">
 					<ul class="nav nav-list bs-docs-sidenav affix-top">
@@ -28,33 +28,38 @@
 											<i class="icon-chevron-right"></i>{menuPage.title}
 										</a>
 										<!-- Sub menu -->
-										<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
-										             useShortcutTarget="true">
-											<f:if condition="{menu}">
-												<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
-													<li class="{subMenuPage.class} subMenuIndent">
-														<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-														   href="{subMenuPage.link}" class="{subMenuPage.class}">
-															<i class="icon-chevron-right"></i>{subMenuPage.title}
-														</a>
-														<!-- Sub-sub menu -->
-														<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false" expandAll="false"
-														             useShortcutTarget="true">
-															<f:if condition="{menu}">
-																<f:for each="{menu}" as="subSubMenuPage" iteration="subSubIteration">
-																	<li class="{subSubMenuPage.class} subSubMenuIndent">
-																		<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-																		   href="{subSubMenuPage.link}" class="{subSubMenuPage.class}">
-																			<i class="icon-chevron-right"></i>{subSubMenuPage.title}
-																		</a>
-																	</li>
-																</f:for>
-															</f:if>
-														</v:page.menu>
-													</li>
-												</f:for>
-											</f:if>
-										</v:page.menu>
+										<v:iterator.contains haystack="{rootLine}" needle="{menuPage.uid}">
+											<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
+											             useShortcutTarget="true">
+												<f:if condition="{menu}">
+													<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+														<li class="{subMenuPage.class} subMenuIndent">
+															<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+															   href="{subMenuPage.link}" class="{subMenuPage.class}">
+																<i class="icon-chevron-right"></i>{subMenuPage.title}
+															</a>
+															<!-- Sub-sub menu -->
+															<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false"
+															             expandAll="false"
+															             useShortcutTarget="true">
+																<f:if condition="{menu}">
+																	<f:for each="{menu}" as="subSubMenuPage"
+																	       iteration="subSubIteration">
+																		<li class="{subSubMenuPage.class} subSubMenuIndent">
+																			<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+																			   href="{subSubMenuPage.link}"
+																			   class="{subSubMenuPage.class}">
+																				<i class="icon-chevron-right"></i>{subSubMenuPage.title}
+																			</a>
+																		</li>
+																	</f:for>
+																</f:if>
+															</v:page.menu>
+														</li>
+													</f:for>
+												</f:if>
+											</v:page.menu>
+										</v:iterator.contains>
 									</li>
 								</v:case>
 							</v:switch>
