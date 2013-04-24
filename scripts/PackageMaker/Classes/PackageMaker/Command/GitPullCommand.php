@@ -38,10 +38,14 @@ class GitPullCommand extends Console\Command\Command {
 		foreach ($this->extensionUtility->getExtensionsToGitUpdate() as $extension) {
 			$commands[] = sprintf('echo "Pulling \"%s\"..."', $extension);
 
-			$action = $input->getOption('fetch') ? 'fetch' : 'pull';
+			$action = 'git checkout master; git fetch origin;';
+
+			if (!$input->getOption('fetch')) {
+				$action .= ' git merge origin/master';
+			}
 
 			// Generate command
-			$commands[] = sprintf('cd %s/%s; git checkout master; git %s',
+			$commands[] = sprintf('cd %s/%s; %s',
 				$extPath,
 				$extension,
 				$action
