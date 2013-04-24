@@ -32,31 +32,37 @@
 											<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
 											             useShortcutTarget="true">
 												<f:if condition="{menu}">
-													<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
-														<li class="{subMenuPage.class} subMenuIndent">
-															<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-															   href="{subMenuPage.link}" class="{subMenuPage.class}">
-																<i class="icon-chevron-right"></i>{subMenuPage.title}
-															</a>
-															<!-- Sub-sub menu -->
-															<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false"
-															             expandAll="false"
-															             useShortcutTarget="true">
-																<f:if condition="{menu}">
-																	<f:for each="{menu}" as="subSubMenuPage"
-																	       iteration="subSubIteration">
-																		<li class="{subSubMenuPage.class} subSubMenuIndent">
-																			<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-																			   href="{subSubMenuPage.link}"
-																			   class="{subSubMenuPage.class}">
-																				<i class="icon-chevron-right"></i>{subSubMenuPage.title}
-																			</a>
-																		</li>
-																	</f:for>
-																</f:if>
-															</v:page.menu>
-														</li>
-													</f:for>
+													<ul class="nav nav-list">
+
+														<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+															<li class="{subMenuPage.class} subMenuIndent">
+																<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+																   href="{subMenuPage.link}" class="{subMenuPage.class}">
+																	<i class="icon-chevron-right"></i>{subMenuPage.title}
+																</a>
+																<!-- Sub-sub menu -->
+																<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false"
+																             expandAll="false"
+																             useShortcutTarget="true">
+																	<f:if condition="{menu}">
+																		<f:for each="{menu}" as="subSubMenuPage"
+																		       iteration="subSubIteration">
+
+																			<ul class="nav nav-list">
+																				<li class="{subSubMenuPage.class} subSubMenuIndent">
+																					<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+																					   href="{subSubMenuPage.link}"
+																					   class="{subSubMenuPage.class}">
+																						<i class="icon-chevron-right"></i>{subSubMenuPage.title}
+																					</a>
+																				</li>
+																			</ul>
+																		</f:for>
+																	</f:if>
+																</v:page.menu>
+															</li>
+														</f:for>
+													</ul>
 												</f:if>
 											</v:page.menu>
 										</v:iterator.contains>
