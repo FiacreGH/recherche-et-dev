@@ -14,10 +14,12 @@ A bunch of scripts for generating the TYPO3 CMS Bootstrap Package.
 	php console.php file-distribution-update
 
 	# Check the status of the Git repository
-	php console.php git-status
+	php console.php git --status
 
 	# Update Git repository
-	php console.php git-pull
+	php console.php git --fetch
+	php console.php git --diff
+	php console.php git --pull
 
 	-> clear the cache
 	-> Check what Feature Tests say
