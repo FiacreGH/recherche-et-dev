@@ -24,11 +24,18 @@
 					$el = $(this).parent().next();
 					while ($el.length > 0) {
 
-						// Stop loop when class read-more is found in sibling element.
+						// Stop loop when class "read-more" is found in sibling element which indicates,
+						// there will be another toggable block below.
 						if ($('.read-more', $el).length > 0) {
-							$el = []; // will return false in while condition
+							$el = []; // will stop loop in while condition
 						} else {
-							$('.read-more-content', $el).toggle();
+							// The class 'read-more-content' could be applied on the element itself.
+							if ($($el).hasClass('read-more-content')) {
+								$($el).toggle();
+							} else {
+								// Look into the content
+								$('.read-more-content', $el).toggle();
+							}
 							$el = $el.next();
 						}
 					}
@@ -36,7 +43,5 @@
 				e.preventDefault();
 			});
 		});
-
 	}); // end of closure
 })(jQuery);
-

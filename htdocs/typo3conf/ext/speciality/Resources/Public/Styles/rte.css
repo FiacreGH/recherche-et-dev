@@ -19,23 +19,24 @@ body.htmlarea-content-body TABLE TH {
 	color: inherit;
 }
 
-/* Paragraph styles */
-p.text-center {
-	text-align: center;
-}
-
-p.text-left {
+/* Align buttons */
+.align-left {
 	text-align: left;
 }
 
-p.text-right {
+.align-right {
 	text-align: right;
 }
 
-p.text-justify {
+.align-center {
+	text-align: center;
+}
+
+.align-justify {
 	text-align: justify;
 }
 
+/* Paragraph styles */
 p sup, p sub {
 	font-size: 0.7em;
 }
@@ -143,12 +144,16 @@ body.htmlarea-content-body span.read-more {
 	color: blue;
 }
 
-/* This span should be hidden by default in FE */
+/* Blocks should be hidden by default in FE */
+.container p.read-more-content,
+.container ul.read-more-content,
 .container span.read-more-content {
 	display: none;
 }
 
 /* Backend style: put some color to highlight the difference with regular text */
+.htmlarea-content-body p.read-more-content,
+.htmlarea-content-body ul.read-more-content,
 .htmlarea-content-body span.read-more-content {
 	background-color: #F2F5A9;
 	font-style: italic;
