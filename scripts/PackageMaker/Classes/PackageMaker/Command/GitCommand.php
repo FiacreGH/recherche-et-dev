@@ -24,6 +24,7 @@ class GitCommand extends Console\Command\Command {
 		$this->setHelp('Update Git repository of extensions.');
 		$this->addOption('dry-run', 'd', Console\Input\InputOption::VALUE_NONE, 'Output command that are going to be executed but don\'t run them.');
 		$this->addOption('status', 's', Console\Input\InputOption::VALUE_NONE, 'Get status of repository');
+		$this->addOption('reset', 'r', Console\Input\InputOption::VALUE_NONE, 'Reset repository');
 		$this->addOption('fetch', 'f', Console\Input\InputOption::VALUE_NONE, 'Fetch repository');
 		$this->addOption('pull', 'p', Console\Input\InputOption::VALUE_NONE, 'Pull repository');
 		$this->addOption('diff', '', Console\Input\InputOption::VALUE_NONE, 'Pull repository');
@@ -46,6 +47,11 @@ class GitCommand extends Console\Command\Command {
 			if ($input->getOption('status')) {
 				$doPrint = TRUE;
 				$action = 'git status';
+			}
+
+			if ($input->getOption('reset')) {
+				$doPrint = TRUE;
+				$action = 'git reset --hard origin/master';
 			}
 
 			if ($input->getOption('fetch')) {
