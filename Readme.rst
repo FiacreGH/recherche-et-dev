@@ -162,18 +162,6 @@ Tip for development
 .. _uncache extension: https://github.com/NamelessCoder/uncache
 .. _extension builder: https://forge.typo3.org/projects/show/extension-extension_builder
 
-Check list for production
-==================================
-
-To go live with your website, consider doing the following step:
-
-* Change icons in the document root (favicon, apple touch icons) and configure robots.txt, humans.txt if needed.
-* Remove extension ``introduction`` located at ``htdocs/typo3conf/ext/introduction``. The extension has become useless once the website has been installed.
-* Update the Index Reference (for php /Users/fudriot/Sites/Ecodev/dummy.fab/htdocs/typo3/cli_dispatch.phpsh lowlevel_refindex -c
-* Select the language package in the BE. @todo provide with a link to an already existing tutorial.
-* Suggested security: put the database password into directory ``private`` at the root or somewhere else.
-* ... there are probably more tips to come here...
-
 Behavior-driven development
 ==================================
 
