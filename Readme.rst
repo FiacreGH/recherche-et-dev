@@ -15,6 +15,8 @@ This is another introduction package for TYPO3 CMS that may be interesting for t
 How to install?
 ===============
 
+**This will currently not work because a patch is required for TYPO3 CMS 6.1 (released 30.04.2013). However, you can still download http://get.typo3.org/bootstrap shipping the stable version with TYPO3 CMS 6.0**
+
 Follow these steps to get the website running - in no time if I would talk marketing :) ::
 
 	# Clone the repository
