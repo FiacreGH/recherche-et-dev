@@ -15,23 +15,13 @@ This is another introduction package for TYPO3 CMS that may be interesting for t
 How to install?
 ===============
 
-**This will currently not work because a patch is required for TYPO3 CMS 6.1 (released 30.04.2013). However, you can still download http://get.typo3.org/bootstrap shipping the stable version with TYPO3 CMS 6.0**
-
-Follow these steps to get the website running - in no time if I would talk marketing :) ::
+There are two options, either you can get the **stable version** from http://get.typo3.org/bootstrap or you can follow this little step by step tutorial to get the **master version** - in no time to talk the marketing guy :) ::
 
 	# Clone the repository
-	git clone https://github.com/Ecodev/bootstrap_package.git
-
-	# If composer is not yet installed.
-	# hint: consider installing "composer" globally in your system at one point.
-	cd bootstrap_package
-	curl -s https://getcomposer.org/installer | php
-
-	# Install the dependencies
-	php composer.phar install
+	git clone --recursive git://github.com/Ecodev/bootstrap_package.git
 
 	# Download TYPO3 CMS Core
-	cd htdocs
+	cd bootstrap_package/htdocs
 	wget get.typo3.org/current -O typo3_src-latest.tgz
 
 	# Extract TYPO3 CMS Core archive and symlink
