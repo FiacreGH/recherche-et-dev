@@ -31,6 +31,12 @@ class FileIntroductionUpdateCommand extends AbstractCommand {
 		$commands[] = sprintf('rm -rf %s', $targetPath);
 		$commands[] = sprintf('cp -r %s %s', $sourcePath, $targetPath);
 
+		$sourcePath = realpath(__DIR__ . '/../../../../../htdocs/uploads');
+		$targetPath = realpath(__DIR__ . '/../../../../../htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Files/uploads');
+
+		$commands[] = sprintf('rm -rf %s', $targetPath);
+		$commands[] = sprintf('cp -r %s %s', $sourcePath, $targetPath);
+
 		if ($input->getOption('dry-run')) {
 			$output->writeln($commands);
 		} else {
