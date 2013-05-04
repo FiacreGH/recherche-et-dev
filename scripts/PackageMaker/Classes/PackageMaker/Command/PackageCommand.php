@@ -57,10 +57,11 @@ class PackageCommand extends AbstractCommand {
 
 			// Restore certain files
 			$commands[] = sprintf('cd %s; touch bootstrappackage/typo3conf/FIRST_INSTALL', $homePath);
-			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp,typo3conf/LocalConfiguration.php}/*', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/LocalConfiguration.php', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
 
 			// Save a bit of space by removing files from EXT:introduction
-			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/.git', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/*/.git', $homePath);
 			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/Resources/Private/Subpackages/Introduction/', $homePath);
 
 			if (! empty($ball['file_to_remove'])) {
