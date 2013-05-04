@@ -4,7 +4,7 @@ namespace PackageMaker\Command;
 
 use Symfony\Component\Console as Console;
 
-class FileIntroductionUpdateCommand extends Console\Command\Command {
+class FileIntroductionUpdateCommand extends AbstractCommand {
 
 	/**
 	 * @param string $name The name of the command
@@ -37,33 +37,4 @@ class FileIntroductionUpdateCommand extends Console\Command\Command {
 			$this->work($commands);
 		}
 	}
-
-	/**
-	 * Execute shell commands
-	 *
-	 * @todo use trait when using PHP 5.4
-	 *
-	 * @param mixed $commands
-	 * @return array
-	 */
-	protected function work($commands) {
-
-		$result = array();
-
-		if (is_string($commands)) {
-			$commands = array($commands);
-		}
-
-		foreach ($commands as $command) {
-
-			// echo command won't be outputed otherwise
-			if (preg_match('/^echo /is', $command)) {
-				system($command);
-			} else {
-				exec($command, $result);
-			}
-		}
-		return $result;
-	}
 }
-

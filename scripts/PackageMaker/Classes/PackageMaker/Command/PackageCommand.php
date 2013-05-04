@@ -5,7 +5,7 @@ namespace PackageMaker\Command;
 use PackageMaker\Util\ExtensionUtility;
 use Symfony\Component\Console as Console;
 
-class PackageCommand extends Console\Command\Command {
+class PackageCommand extends AbstractCommand {
 
 	/**
 	 * @var \PackageMaker\Util\ExtensionUtility
@@ -57,9 +57,7 @@ class PackageCommand extends Console\Command\Command {
 
 			// Restore certain files
 			$commands[] = sprintf('cd %s; touch bootstrappackage/typo3conf/FIRST_INSTALL', $homePath);
-			$commands[] = sprintf('cd %s; curl -s -O https://raw.github.com/Ecodev/bootstrap_package/master/htdocs/typo3conf/LocalConfiguration.php', $homePath);
-			$commands[] = sprintf('cd %s; mv LocalConfiguration.php bootstrappackage/typo3conf', $homePath);
-			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp}/*', $homePath);
+			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/{uploads,fileadmin,typo3temp,typo3conf/LocalConfiguration.php}/*', $homePath);
 
 			// Save a bit of space by removing files from EXT:introduction
 			$commands[] = sprintf('cd %s; rm -rf bootstrappackage/typo3conf/ext/introduction/.git', $homePath);
@@ -95,32 +93,4 @@ class PackageCommand extends Console\Command\Command {
 			$output->writeln($result);
 		}
 	}
-
-	/**
-	 * Execute shell commands
-	 *
-	 * @todo use trait when using PHP 5.4
-	 * @param mixed $commands
-	 * @return array
-	 */
-	protected function work($commands) {
-
-		$result = array();
-
-		if (is_string($commands)) {
-			$commands = array($commands);
-		}
-
-		foreach ($commands as $command) {
-
-			// echo command won't be outputed otherwise
-			if (preg_match('/^echo /is', $command)) {
-				system($command);
-			} else {
-				exec($command, $result);
-			}
-		}
-		return $result;
-	}
 }
-
