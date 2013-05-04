@@ -24,6 +24,7 @@
 # /fileadmin/*
 ###########
 /htdocs/fileadmin/*
+/htdocs/uploads/*
 
 ######################
 # /htdocs/typo3conf/
