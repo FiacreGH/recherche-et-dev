@@ -222,16 +222,17 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
 						),
 					),
 				),
-				array(
-					'GETvar' => 'tx_news_pi1[controller]',
-					'noMatch' => 'null',
-					'default' => 'News',
-				),
-				array(
-					'GETvar' => 'tx_news_pi1[action]',
-					'noMatch' => 'null',
-					'default' => 'detail',
-				),
+				# @todo check how controller and action can be hidden from URL. This configuration used to work prior to 6.1.
+				#array(
+				#	'GETvar' => 'tx_news_pi1[controller]',
+				#	'noMatch' => 'null',
+				#	'default' => 'News',
+				#),
+				#array(
+				#	'GETvar' => 'tx_news_pi1[action]',
+				#	'noMatch' => 'null',
+				#	'default' => 'detail',
+				#),
 			),
 		)
 	),
