@@ -349,3 +349,7 @@ DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
 figcaption {
 	display: none;
 }
+
+.carousel-indicators {
+	left: 15px;
+}
