@@ -103,7 +103,7 @@ However, it would be nicer to handle in a programmatic way so they can be versio
 
 It is still possible to load a static configuration file from a Template record as usually. Notice, it will be loaded on the top of the ones added by the API. Thanks Xavier for your inspiring `blog post`_.
 
-.. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html!
+.. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html
 
 Application Context API
 ------------------------
