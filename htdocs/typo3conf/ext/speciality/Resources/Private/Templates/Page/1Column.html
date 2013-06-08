@@ -7,7 +7,16 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 	<f:section name="Configuration">
-		<flux:flexform id="1-column-layout" label="1 column layout">
+
+		<flux:flexform id="1column" label="1 column layout">
+
+			<!-- Options visible in page property -->
+			<flux:flexform.field.input name="settings.carousel.categories" eval="trim" default="4" />
+			<flux:flexform.field.input name="settings.carousel.width" eval="trim" default="1200"/>
+			<flux:flexform.field.input name="settings.carousel.height" eval="trim" default="340"/>
+			<flux:flexform.field.checkbox name="settings.carousel.caption" default="1"/>
+
+			<!-- Grid displayed in the page module -->
 			<flux:flexform.grid>
 				<flux:flexform.grid.row>
 					<flux:flexform.grid.column colPos="0" name="Main Content"/>
