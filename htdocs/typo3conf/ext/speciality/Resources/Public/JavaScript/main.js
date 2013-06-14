@@ -1,11 +1,24 @@
-/**
- * Toggle visibility of "read-more-content" block.
- * Example: http://bootstrap.ecodev.ch/content-examples/text-expandable/
- */
 (function ($) {
 	$(function () {
 		$(document).ready(function () {
 
+
+			/**
+			 * Activate TB tooltip which must be done explicitly since this is an opt-in plugin.
+			 */
+			$('.nav-top li a').tooltip();
+
+			/**
+			 * Show anchor link when hover h1 title.
+			 */
+			$('h1').hover(function () {
+				$('.anchor', this).toggleClass('hidden');
+			})
+
+			/**
+			 * Toggle visibility of "read-more-content" block.
+			 * Example: http://bootstrap.typo3cms.demo.typo3.org/content-examples/text-expandable/
+			 */
 			// Transform span into link
 			$('span.read-more').each(function (index) {
 				$(this).wrap('<a href="#" class="togglebox-link"></a>');

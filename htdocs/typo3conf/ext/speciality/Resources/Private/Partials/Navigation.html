@@ -21,11 +21,13 @@
 					<div class="nav-collapse collapse">
 
 						<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}" useShortcutTarget="TRUE">
-							<ul class="nav">
+							<ul class="nav nav-top">
 								<f:for each="{menu}" as="mainPage" iteration="iteration">
 									<li class="{mainPage.class}">
 										<a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
 										   href="{mainPage.link}"
+										   data-placement="bottom"
+										   title="{mainPage.abstract}"
 										   class="{mainPage.class}">{mainPage.title}</a>
 									</li>
 								</f:for>

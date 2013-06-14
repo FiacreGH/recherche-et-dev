@@ -353,3 +353,42 @@ figcaption {
 .carousel-indicators {
 	left: 15px;
 }
+
+/* Make the form in the top nav look good */
+.input-append, .input-prepend {
+	margin-bottom: 0px;
+}
+
+/* Give room to main block elements for anchor links */
+aside[role=complementary] > div.csc-default,
+div[role=section] > div.csc-default{
+	padding-top: 30px;
+}
+
+div[role=main] h1,
+div[role=main] h2,
+div[role=main] h3,
+div[role=main] h4,
+div[role=main] h5,
+div[role=main] h6 {
+	color: #444;
+	margin: 5px 0;
+}
+
+.csc-header {
+	padding-bottom: 9px;
+	margin: 20px 0 20px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.anchor {
+	color: #666;
+	font-size: 10pt;
+	padding-left: 10px;
+	vertical-align: middle;
+	line-height: 10px;
+}
+
+.anchor .icon {
+	text-decoration: none;
+}

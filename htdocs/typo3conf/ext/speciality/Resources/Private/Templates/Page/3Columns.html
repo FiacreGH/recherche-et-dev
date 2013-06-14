@@ -23,13 +23,12 @@
 	</f:section>
 
 	<f:section name="Content">
-		<div class="row-fluid">
-			<div class="span3">
+		<div class="row-fluid" role="main">
+			<div class="span3" role="section">
 				<f:render section="SubNavigation" partial="SubNavigation"  optional="TRUE" arguments="{_all}" />
 			</div>
-			<div class="span6" role="main">
+			<div class="span6" role="section">
 				<v:page.content.render column="0"/>
-				<f:render section="AddThis" partial="AddThis" optional="TRUE" arguments="{_all}"/>
 			</div>
 			<aside class="span3" role="complementary">
 				<v:page.content.render column="2"/>
