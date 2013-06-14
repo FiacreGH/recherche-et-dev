@@ -10,6 +10,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Lib/footer.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Lib/menu.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Lib/disqus.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Lib/addthis.ts">
 
 # Plugin
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_cssstyledcontent.ts">
