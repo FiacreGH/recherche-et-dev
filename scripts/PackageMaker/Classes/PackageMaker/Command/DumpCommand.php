@@ -70,6 +70,7 @@ class DumpCommand extends AbstractCommand {
 			'sys_refindex',
 			'tx_extensionmanager_domain_model_extension',
 			'tx_rsaauth_keys',
+			'tx_ncstaticfilecache_file',
 		);
 
 		// Get a list of cache table which should be cleared beforehand and merge them into the $tables variable.
