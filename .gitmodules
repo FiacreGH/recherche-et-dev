@@ -37,3 +37,6 @@
 [submodule "htdocs/typo3conf/ext/metadata"]
 	path = htdocs/typo3conf/ext/metadata
 	url = git://git.typo3.org/TYPO3v4/Extensions/metadata.git
+[submodule "htdocs/typo3conf/ext/nc_staticfilecache"]
+	path = htdocs/typo3conf/ext/nc_staticfilecache
+	url = git://github.com/TYPO3-Extensions/nc_staticfilecache.git

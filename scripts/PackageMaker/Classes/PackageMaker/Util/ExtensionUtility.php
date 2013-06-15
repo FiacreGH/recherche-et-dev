@@ -20,6 +20,7 @@ class ExtensionUtility {
 		'realurl',
 		'seo_basics',
 		'speciality',
+		'nc_staticfilecache',
 		'vhs',
 		'wt_spamshield'
 	);
