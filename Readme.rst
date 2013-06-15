@@ -56,7 +56,9 @@ If you want to get rid of it, rename the file structure to your convenience when
 Support
 ==================
 
-Bugs and wishes can be reported on the [bug tracker](https://github.com/Ecodev/bootstrap_package/issues). You can also take advantage of some commercial support related to the Bootstrap Package by contacting contact@ecodev.ch.
+Bugs and wishes can be reported on the `bug tracker`_. You can also take advantage of some commercial support related to the Bootstrap Package by contacting contact@ecodev.ch.
+
+.. _bug tracker: https://github.com/Ecodev/bootstrap_package/issues
 
 How to continue?
 ==================
