@@ -53,6 +53,11 @@ Notice the ``htdocs`` folder located at the root of the direction is not mandato
 If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
 
 
+Support
+==================
+
+Bugs and wishes can be reported on the [bug tracker](https://github.com/Ecodev/bootstrap_package/issues). You can also take advantage of some commercial support related to the Bootstrap Package by contacting contact@ecodev.ch.
+
 How to continue?
 ==================
 
