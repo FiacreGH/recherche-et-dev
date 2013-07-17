@@ -40,3 +40,6 @@
 [submodule "htdocs/typo3conf/ext/nc_staticfilecache"]
 	path = htdocs/typo3conf/ext/nc_staticfilecache
 	url = git://github.com/TYPO3-Extensions/nc_staticfilecache.git
+[submodule "htdocs/typo3conf/ext/infinite_scroll_gallery"]
+	path = htdocs/typo3conf/ext/infinite_scroll_gallery
+	url = https://github.com/Ecodev/infinite_scroll_gallery.git
