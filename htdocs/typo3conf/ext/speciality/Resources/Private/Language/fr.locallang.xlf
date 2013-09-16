@@ -9,7 +9,7 @@
 				<target state="translated">Une compagnie faisant de tout (mais pas du n'importe quoi!)</target>
 			</trans-unit>
 			<trans-unit id="lead-text-tip">
-				<source>Tip: clear the language cache in the Backend after editing a label in:</source>
+				<source>Tip: clear the cache in the Backend after editing a label in:</source>
 				<target state="translated">Nettoyer le cache de langue dans le Backend après édition de</target>
 			</trans-unit>
 		</body>
