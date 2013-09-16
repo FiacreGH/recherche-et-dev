@@ -7,15 +7,12 @@
 	<f:section name="SharedResources">
 
 		<v:asset.style name="bootstrap" path="EXT:speciality/Resources/Public/Styles/bootstrap.min.css"/>
-		<v:asset.style name="bootstrap-responsive" path="EXT:speciality/Resources/Public/Styles/bootstrap-responsive.min.css"/>
-		<v:asset.style name="main-sheet" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Styles/main.css"
-		               standalone="TRUE"/>
+		<v:asset.style name="bootstrap-theme" path="EXT:speciality/Resources/Public/Styles/bootstrap-theme.min.css"/>
+		<v:asset.style name="main-css" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Styles/main.css"/>
 		<v:asset.style name="rte" dependencies="bootstrap" path="EXT:speciality/Resources/Public/Styles/rte.css" standalone=" TRUE"/>
 		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"
 		               external="TRUE" standalone="TRUE"/>
 		<v:asset.style name="jquery-colorbox-css" path="EXT:jquerycolorbox/res/css/colorbox.css" standalone="TRUE"/>
-
-
 
 
 
@@ -35,7 +32,7 @@
 
 		<v:asset.script name="plugin" dependencies="jquery"
 		                path="EXT:speciality/Resources/Public/JavaScript/plugins.js"/>
-		<v:asset.script name="main" dependencies="jquery"
+		<v:asset.script name="main-js" dependencies="jquery"
 		                path="EXT:speciality/Resources/Public/JavaScript/main.js"/>
 
 	</f:section>

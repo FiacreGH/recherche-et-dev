@@ -5,12 +5,12 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 
-	<f:section name="SubNavigation">
+	<f:section name="NavigationSub">
 		<!-- submenu navigation, collapsible -->
 		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="true" expandAll="false">
 			<f:if condition="{menu}">
 				<nav role="navigation">
-					<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<ul class="nav navbar-list bs-docs-sidenav affix-top">
 						<f:for each="{menu}" as="menuPage" iteration="iteration">
 							<v:switch value="{menuPage.doktype}">
 								<v:case case="199" break="true">
@@ -32,10 +32,10 @@
 											<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
 											             useShortcutTarget="true">
 												<f:if condition="{menu}">
-													<ul class="nav nav-list">
+													<ul class="nav navbar-list">
 
 														<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
-															<li class="{subMenuPage.class} subMenuIndent">
+															<li class="{subMenuPage.class}">
 																<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
 																   href="{subMenuPage.link}" class="{subMenuPage.class}">
 																	<i class="icon-chevron-right"></i>{subMenuPage.title}
@@ -48,8 +48,8 @@
 																		<f:for each="{menu}" as="subSubMenuPage"
 																		       iteration="subSubIteration">
 
-																			<ul class="nav nav-list">
-																				<li class="{subSubMenuPage.class} subSubMenuIndent">
+																			<ul class="nav navbar-list">
+																				<li class="{subSubMenuPage.class}">
 																					<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
 																					   href="{subSubMenuPage.link}"
 																					   class="{subSubMenuPage.class}">

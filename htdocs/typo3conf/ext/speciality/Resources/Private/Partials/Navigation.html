@@ -6,39 +6,36 @@
 
 	<f:section name="Navigation">
 
-		<div class="navbar navbar-fixed-top ">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		<div class="navbar navbar-top navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" style="margin-left: 0px;" href="{v:site.url()}" tabindex="1">
+					</button>
+					<a class="navbar-brand" href="{v:site.url()}" tabindex="1">
 						<v:site.name/>
 					</a>
-
-					<div class="nav-collapse collapse">
-
-						<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}">
-							<ul class="nav nav-top">
-								<f:for each="{menu}" as="mainPage" iteration="iteration">
-									<li class="{mainPage.class}">
-										<a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
-										   href="{mainPage.link}"
-										   data-placement="bottom"
-										   title="{mainPage.abstract}"
-										   class="{mainPage.class}">{mainPage.title}</a>
-									</li>
-								</f:for>
-							</ul>
-						</v:page.menu>
-
-						<f:render section="SearchForm" partial="SearchForm" optional="true" arguments="{_all}"/>
-
-					</div>
-					<!--/.nav-collapse -->
 				</div>
+				<div class="navbar-collapse collapse">
+					<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}">
+						<ul class="nav navbar-nav">
+							<f:for each="{menu}" as="mainPage" iteration="iteration">
+								<li class="{mainPage.class}">
+									<a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
+									   href="{mainPage.link}"
+									   data-placement="bottom"
+									   title="{mainPage.abstract}"
+									   class="{mainPage.class}">{mainPage.title}</a>
+								</li>
+							</f:for>
+						</ul>
+					</v:page.menu>
+
+					<f:render section="SearchForm" partial="SearchForm" optional="true" arguments="{_all}"/>
+				</div>
+				<!--/.nav-collapse -->
 			</div>
 		</div>
 	</f:section>

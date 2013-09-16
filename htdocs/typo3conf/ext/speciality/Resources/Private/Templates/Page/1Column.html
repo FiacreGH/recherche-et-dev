@@ -30,8 +30,8 @@
 	</f:section>
 
 	<f:section name="Content">
-		<div class="row-fluid" role="main">
-			<div class="span12" role="section">
+		<div class="row" role="main">
+			<div class="col-md-12" role="section">
 				<v:page.content.render column="0"/>
 				<f:if condition="{v:var.typoscript(path: 'lib.addthis.display')}">
 					<f:render section="AddThis" partial="AddThis" optional="TRUE" arguments="{_all}"/>

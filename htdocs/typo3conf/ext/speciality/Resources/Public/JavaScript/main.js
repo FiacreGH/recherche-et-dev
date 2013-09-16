@@ -10,7 +10,7 @@
 			/**
 			 * Activate TB tooltip which must be done explicitly since this is an opt-in plugin.
 			 */
-			$('.nav-top li a').tooltip();
+			$('.navbar-top li a').tooltip();
 
 			/**
 			 * Show anchor link when hover h1 title.
@@ -28,7 +28,7 @@
 				$(this).wrap('<a href="#" class="togglebox-link"></a>');
 			});
 
-			// Add listeners
+			// Add handler which toggles paragraph visibility.
 			$('.togglebox-link').click(function (e) {
 
 				// first case: the text to be expanded is in the same paragraph.

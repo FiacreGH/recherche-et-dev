@@ -1,12 +1,3 @@
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
-}
-
-.hero-unit {
-	margin-bottom: 10px;
-}
-
 .addthis_toolbox {
 	margin-top: 10px;
 }
@@ -24,42 +15,35 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 	border-radius: 6px;
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
 }
 
-.bs-docs-sidenav > li > a {
+.bs-docs-sidenav > li  a {
 	display: block;
-	width: 190px    \9;
 	margin: 0 0 -1px;
 	padding: 8px 14px;
 	border: 1px solid #e5e5e5;
 }
 
 .bs-docs-sidenav > li:first-child > a {
-	-webkit-border-radius: 6px 6px 0 0;
-	-moz-border-radius: 6px 6px 0 0;
 	border-radius: 6px 6px 0 0;
 }
 
 .bs-docs-sidenav > li:last-child > a {
-	-webkit-border-radius: 0 0 6px 6px;
-	-moz-border-radius: 0 0 6px 6px;
 	border-radius: 0 0 6px 6px;
 }
 
-.bs-docs-sidenav > .active > a {
+.nav.bs-docs-sidenav > .active .nav .current > a,
+.nav.bs-docs-sidenav > .current > a,
+.nav.bs-docs-sidenav > .active > a {
+	color: #fff;
+	background-color: #0088CF;
 	position: relative;
 	z-index: 2;
 	padding: 9px 15px;
 	border: 0;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
-	-webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
-	-moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
 	box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
@@ -75,42 +59,13 @@ body {
 	background-color: #f5f5f5;
 }
 
-.bs-docs-sidenav a:hover .icon-chevron-right {
-	opacity: .5;
-}
-
-.bs-docs-sidenav .active .icon-chevron-right,
-.bs-docs-sidenav .active a:hover .icon-chevron-right {
-	background-image: url(../img/glyphicons-halflings-white.png);
-	opacity: 1;
-}
-
-.bs-docs-sidenav.affix {
-	top: 40px;
-}
-
-.bs-docs-sidenav.affix-bottom {
-	position: absolute;
-	top: auto;
-	bottom: 270px;
-}
-
 /* style for sub-submenu */
-li.subMenuIndent a {
+.nav.bs-docs-sidenav > .active .nav a {
 	padding-left: 15%;
 }
 
-li.subMenuIndent a.active {
+.nav.bs-docs-sidenav > .active .nav a.active {
 	padding-left: 15%;
-	border-top: 1px solid #FFF;
-}
-
-li.subSubMenuIndent a {
-	padding-left: 25%;
-}
-
-li.subSubMenuIndent a.active {
-	padding-left: 25%;
 	border-top: 1px solid #FFF;
 }
 
@@ -120,9 +75,6 @@ li.subSubMenuIndent a.active {
 /* Desktop large
 ------------------------- */
 @media (min-width: 1200px) {
-	.bs-docs-container {
-		max-width: 970px;
-	}
 
 	.bs-docs-sidenav {
 		width: 258px;
@@ -136,13 +88,6 @@ li.subSubMenuIndent a.active {
 /* Desktop
 ------------------------- */
 @media (max-width: 980px) {
-	/* Unfloat brand */
-	body > .navbar-fixed-top .brand {
-		float: left;
-		margin-left: 0;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
 
 	/* Inline-block quick links for more spacing */
 	.quick-links li {
@@ -160,15 +105,6 @@ li.subSubMenuIndent a.active {
 /* Tablet to desktop
 ------------------------- */
 @media (min-width: 768px) and (max-width: 979px) {
-	/* Remove any padding from the body */
-	body {
-		padding-top: 0;
-	}
-
-	/* Widen masthead and social buttons to fill body padding */
-	.jumbotron {
-		margin-top: -20px; /* Offset bottom margin on .navbar */
-	}
 
 	/* Adjust sidenav width */
 	.bs-docs-sidenav {
@@ -184,18 +120,6 @@ li.subSubMenuIndent a.active {
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
-	/* Remove any padding from the body */
-	body {
-		padding-top: 0;
-	}
-
-	/* Widen masthead and social buttons to fill body padding */
-	.jumbotron {
-		padding: 40px 20px;
-		margin-top: -20px; /* Offset bottom margin on .navbar */
-		margin-right: -20px;
-		margin-left: -20px;
-	}
 
 	.masthead h1 {
 		font-size: 90px;
@@ -244,7 +168,8 @@ li.subSubMenuIndent a.active {
 	}
 }
 
-/* CSS Style Content below */
+/* CSS Style Content below
+-------------------------------------------------- */
 .csc-default {
 	clear: both;
 }
