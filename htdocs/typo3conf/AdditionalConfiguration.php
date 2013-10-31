@@ -1,16 +1,20 @@
 <?php
 
 // Security tip for production: putting the database password outside the document root!
-$databaseCredentialsFile = PATH_site . '../scripts/Configuration.php';
+$databaseCredentialsFile = PATH_site . '../configuration/Settings.php';
 if (file_exists($databaseCredentialsFile)) {
 	require_once ($databaseCredentialsFile);
-	// file ``private/Database.php`` should contains something like:
+
+	# file ``configuration/Settings.php`` should contains something like:
+	# Database settings
 	//$GLOBALS['TYPO3_CONF_VARS']['DB']['database'] = '';
 	//$GLOBALS['TYPO3_CONF_VARS']['DB']['host'] = '';
 	//$GLOBALS['TYPO3_CONF_VARS']['DB']['password'] = '';
 	//$GLOBALS['TYPO3_CONF_VARS']['DB']['username'] = '';
-}
 
+	# Backend settings
+	//$GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '';
+}
 
 # Frontend Settings
 #$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '404.html';
