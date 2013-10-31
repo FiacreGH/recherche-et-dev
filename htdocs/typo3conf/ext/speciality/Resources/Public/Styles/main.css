@@ -267,10 +267,6 @@ figcaption {
 	display: none;
 }
 
-.carousel-indicators {
-	left: 15px;
-}
-
 /* Make the form in the top nav look good */
 .input-append, .input-prepend {
 	margin-bottom: 0px;
