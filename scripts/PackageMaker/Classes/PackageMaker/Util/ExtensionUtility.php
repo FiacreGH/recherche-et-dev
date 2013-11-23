@@ -14,6 +14,7 @@ class ExtensionUtility {
 		'flux',
 		'introduction',
 		'jquerycolorbox',
+		'vidi',
 		'media',
 		'metadata',
 		'news',

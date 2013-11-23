@@ -3,7 +3,7 @@
 	url = git://github.com/FluidTYPO3/fluidcontent
 [submodule "htdocs/typo3conf/ext/fluidcontent_bootstrap"]
 	path = htdocs/typo3conf/ext/fluidcontent_bootstrap
-	url = git://github.com/FluidTYPO3/fluidcontent_bootstrap
+	url = git://github.com/fudriot/fluidcontent_bootstrap
 [submodule "htdocs/typo3conf/ext/fluidpages"]
 	path = htdocs/typo3conf/ext/fluidpages
 	url = git://github.com/FluidTYPO3/fluidpages
