@@ -35,7 +35,7 @@ class DumpCommand extends AbstractCommand {
 
 		// Get the configuration for this website
 		$configurationPath = realpath(__DIR__ . '/../../../../../htdocs/typo3conf/LocalConfiguration.php');
-		$alternativeConfigurationFile = realpath(__DIR__ . '/../../../../../scripts/Configuration.php');
+		$alternativeConfigurationFile = realpath(__DIR__ . '/../../../../../configuration/Settings.php');
 		$introductionPackagePath = realpath(__DIR__ . '/../../../../../htdocs/typo3conf/ext/introduction/Resources/Private/Subpackages/Bootstrap/Database/introduction.sql');
 
 		$configuration = require($configurationPath);
