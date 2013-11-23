@@ -49,7 +49,7 @@ class MenuAnchor {
 	 * @return string
 	 */
 	function main($content, $conf) {
-		return sprintf('<a class="anchor hidden" href="#c%s"><span class="icon icon-asterisk"></span></a>',
+		return sprintf('<a class="anchor hidden" href="#c%s"><span class="glyphicon glyphicon-asterisk"></span></a>',
 			$content
 		);
 	}
