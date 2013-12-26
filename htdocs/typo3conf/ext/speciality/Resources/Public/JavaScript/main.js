@@ -15,9 +15,9 @@
 			/**
 			 * Show anchor link when hover h1 title.
 			 */
-			$('h1').hover(function () {
+			$('h1').hover(function() {
 				$('.anchor', this).toggleClass('hidden');
-			})
+			});
 
 			/**
 			 * Toggle visibility of "read-more-content" block.
