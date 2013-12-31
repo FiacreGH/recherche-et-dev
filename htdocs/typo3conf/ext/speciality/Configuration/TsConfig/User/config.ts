@@ -55,3 +55,15 @@ mod.web_list {
 	itemsLimitSingleTable = 1000
 	itemsLimitPerTable = 50
 }
+
+tx_vidi {
+	dataType {
+		fe_users {
+			storagePid = 29
+		}
+
+		fe_groups {
+			storagePid = 29
+		}
+	}
+}
