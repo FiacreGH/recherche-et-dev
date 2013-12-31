@@ -33,3 +33,7 @@ if (TYPO3_MODE == 'BE') {
 		);
 	}
 }
+
+# Use Flux Core API for registering extension provider.
+Tx_Flux_Core::registerProviderExtensionKey($_EXTKEY, 'Page');
+Tx_Flux_Core::registerProviderExtensionKey($_EXTKEY, 'Content');
