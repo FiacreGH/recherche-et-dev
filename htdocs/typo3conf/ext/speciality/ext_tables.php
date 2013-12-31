@@ -15,21 +15,6 @@ $userTsConfig = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl(
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TsConfig/User/config.ts');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig($userTsConfig);
 
-# Include custom TCA
-# @todo adjust compatibility TYPO3 6.1
-$recordTypes = array('BeUsers');
-$configurationPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . '/Configuration/TCA';
-foreach ($recordTypes as $recordType) {
-	$configurationFile = $configurationPath . '/' . $recordType . '.php';
-	if (file_exists($configurationFile)) {
-		include_once ($configurationFile);
-	}
-}
-
-// Configure Pages
-# @todo adjust compatibility TYPO3 6.1
-\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
-
 // New icons for the BE
 if (TYPO3_MODE == 'BE') {
 
