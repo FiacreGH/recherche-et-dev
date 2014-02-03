@@ -1,8 +1,8 @@
 /**
-* Rich Text Editor Setup
-*
-* @author Fabien Udriot <fabien.udriot@ecodev.ch>
-*/
+ * Rich Text Editor Setup
+ *
+ * @author Fabien Udriot <fabien.udriot@ecodev.ch>
+ */
 RTE {
 
 	// Default RTE configuration (all tables)
