@@ -5,18 +5,20 @@ Check it out the live example running at http://bootstrap.typo3cms.demo.typo3.or
 possible to log in the BE and play around. The demo is reset every three hours as information.
 Head to http://bootstrap.typo3cms.demo.typo3.org/typo3 and log-in with "admin" "password" as credentials.
 
-Fedext Migration to namespace
------------------------------
+Fedext development branch with TYPO3 6.1
+----------------------------------------
 
-This is a temporary section to explain how Fedext development branches can be used in conjunction with TYPO3 CMS 6.1.
+This is a temporary section to explain how `Fedext`_ "development" can be used in conjunction with TYPO3 CMS 6.1.
 
-As you can read in `this article`_, `Fedext`_ is dropping support of TYPO3 CMS 4.x branch and is shifting, among other, its code basis towards namespaces.
+I am assuming that you have acknowledged the branching strategy we have adopted in our FluidTYPO3 project. If not there is a `post`_ where you can catch up.
+
+As you can also read in `this article`_, Fedext is dropping support of TYPO3 CMS 4.x branch and is shifting its code basis towards namespaces, among other.
 Although, it is targeting in a first place the upcoming TYPO3 6.2 LTS, it is yet possible to use Fedext with development branches with TYPO3 CMS 6.1.
-I felt being a good choice for the Bootstrap Package, since there were some bugs appearing in the legacy branches as CMS 6.1
+I felt being a good choice for the Bootstrap Package, since there were some bugs appearing in the "legacy" branches as CMS 6.1
 is evolving. Additionally, I wanted to be on the "safe" side for the future and solve the breaking changes ASAP.
-This being said, I had to figure out a few things to make it work but after a bit of digging it turns out to be fairly simple.
+This being said, I had to figure out a few things to make it. Though, after a bit of digging it turns out to be fairly simple.
 
-* Update Fedext extensions to development branch. We are using Git for managing our website, so it was straightforward. To know more about our branching strategy, refer to this `post`_.
+* Update Fedext extensions to development branch. Since we are using for managing our website, this is pretty straightforward.
 
 ::
 
@@ -28,12 +30,12 @@ This being said, I had to figure out a few things to make it work but after a bi
 
 * Head to the Install Tool, there are a few fields to be created
 
-* Important!! Use the branch `dev branch`_ of TYPO3 6.1. The dev branch as of this writing corresponds to upcoming 6.1.8 which should be release in a close future.
-  There are some changes in the way classes are instantiated (AKA ``makeInstance``) which are required to have Fedext working properly on the Frontend without the BE login.
+* Important!! Use the `dev branch`_ of TYPO3 6.1 as well. This corresponds as of this writing to the upcoming 6.1.8 release which should happen in a close future.
+  FYI, there are some changes in the way classes are instantiated (AKA ``makeInstance``) which are required to have Fedext working properly on the Frontend without the BE login.
 
-* Migrate your template. Check out `this documentation`_ and the script at the button. The script did more good for my templates than harm. ;)
+* Migrate your template. Check out `this documentation`_ and the script at the button. The script took good care of my template and didn't break anything. :)
 
-**Beware**: the current work, can not yet released as stable. Mainly because of yet to be released TYPO3 6.1.8.
+For now, the current state of the Bootstrap Package, can not yet be issued as stable, mainly because of yet to be released TYPO3 6.1.8. Stay tune!
 
 .. _this documentation: https://github.com/FluidTYPO3/documentation/blob/master/Namespaces.md
 .. _dev branch: https://git.typo3.org/Packages/TYPO3.CMS.git/shortlog/refs/heads/TYPO3_6-1
@@ -144,7 +146,7 @@ However, we are using Git for managing our entire website and we want to have th
 We are managing our configuration in file `EXT:speciality/Configuration/TypoScript/setup.ts`. Have a look there if you must add additional
 configuration.
 
-If you are facing problem, you may consider the Hook approach for managin Static TypoScript template. More detail in this `blog post`_.
+If you are facing problem, you may consider the Hook approach for managing your Static TypoScript template. More detail in this `blog post`_.
 
 .. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html
 
