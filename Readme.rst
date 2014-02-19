@@ -133,8 +133,11 @@ As further reading, I recommend the `excellent work / documentation`_ from `@Nam
 .. _fluidpages_bootstrap: https://github.com/NamelessCoder/fluidpages_bootstrap
 
 
-What special features is here?
-==============================
+Adding a new extension
+----------------------
+
+Checkout those instructions:
+https://github.com/Ecodev/bootstrap_package/wiki/Adding-Extensions-How-To
 
 Static TypoScript template
 --------------------------
@@ -149,26 +152,9 @@ If you are facing problem, you may consider the Hook approach for managing your 
 
 .. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html
 
-Override configuration in Context
----------------------------------
-
-@todo this section is obsolete and must rewritten after this patch has landed http://forge.typo3.org/issues/50131
-
-While developing on its local machine, it might be interesting to override default values of the live website.
-A good example, is the domain name for instance which will be different than the one in production.
-It can be performed by adding configuration in directory ``EXT:speciality/Configuration/Development``.
-
-* If present, two TypoScript files will be automatically loaded on the top (and will override the default configuration)
-
-	``EXT:speciality/Configuration/Development/setup.txt``
-	``EXT:speciality/Configuration/Development/constants.txt``
-
-* A PHP file can be added ``EXT:speciality/Configuration/Development/DefaultConfiguration.php`` for PHP configuration which will also be automatically loaded. Just make sure, the extension "speciality" is loaded at last to avoid unwanted behaviour.
-
-Tip: check out default PHP configuration from ``EXT:speciality/Configuration/Php/DefaultConfiguration.php``
 
 Tip for development
----------------------
+-------------------
 
 * TYPO3 has many levels of caches. While it is good for performance, it will become very annoying in development mode. Check out the `uncache extension`_ to work around.
 * For new TYPO3 developers which are starting with extension development take advantage of the `extension builder`_.
@@ -177,14 +163,14 @@ Tip for development
 .. _extension builder: https://forge.typo3.org/projects/show/extension-extension_builder
 
 Behavior-driven development
-==================================
+===========================
 
-According to Wikipedia, `behavior-driven development`_ (abbreviated BDD) is a software development process based on test-driven development.
-The main purpose of BDD is to ensure the feature set is there taking the point of view of a User (largely speaking). It is also referred as
+The main purpose of `behavior-driven development`_ (abbreviated BDD) is to ensure the feature set is there taking
+the point of view of a User (largely speaking). It is also referred as
 "Acceptance tests". Acceptance criteria should be written in terms of scenarios and implemented as classes:
 Given [initial context], when [event occurs], then [ensure some outcomes].
 
-Since an example is worth a thousand words::
+See it in practice::
 
 	cd tests
 
@@ -195,24 +181,5 @@ Since an example is worth a thousand words::
 
 Feature tests files are to be found into ``tests/features``.
 
-
 .. _behavior-driven development: http://en.wikipedia.org/wiki/Behavior-driven_development
-
 Making your own introduction package
-=====================================
-
-Building your own introduction package is much easier than it looks. Actually the ``EXT:introduction`` (which provided the boilerplate code) was designed to manage multiple packages.
-You will need to fork the Introduction extension from https://github.com/Ecodev/introduction.git which was extracted from the `TYPO3 Git repository`_. (Don't know why there isn't a standalone repository for this extension?)
-
-So here are the steps:
-
-* Fork https://github.com/Ecodev/introduction.git
-* Duplicate directory with your own name ``EXT:introduction/Resources/Private/Subpackages/Introduction``.
-* Go through the files and replace what makes sense.
-
-.. _TYPO3 Git repository: http://git.typo3.org/TYPO3v4/Distributions/Introduction.git/tree/master:/typo3conf/ext
-
-Packaging
----------------
-
-There are some instruction in this repository https://github.com/Ecodev/bootstrap_package/tree/master/scripts/PackageMaker
