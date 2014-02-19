@@ -1,4 +1,4 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
@@ -8,19 +8,19 @@
      xmlns:m="http://typo3.org/ns/TYPO3/CMS/Media/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Media" id="carouselWidget"
+	<flux:form wizardTab="Media" id="carouselWidget"
 	               icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="categories" eval="trim" default="4"/>
-		<flux:flexform.field.input name="width" eval="trim" default="600"/>
-		<flux:flexform.field.input name="height" eval="trim" default="170"/>
-		<flux:flexform.field.checkbox name="caption" default="1"/>
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
-				<flux:flexform.grid.column>
-				</flux:flexform.grid.column>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
+		<flux:field.input name="categories" eval="trim" default="4"/>
+		<flux:field.input name="width" eval="trim" default="600"/>
+		<flux:field.input name="height" eval="trim" default="170"/>
+		<flux:field.checkbox name="caption" default="1"/>
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">
