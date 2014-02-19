@@ -2,6 +2,14 @@
 # TypoScript: constants
 ###################################################
 
+# TypoScript constants coming from third-party extensions.
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/constants.txt">
+# No constants for EXT:fluidcontent
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/constants.txt">
+
 config {
 
 	# cat=site-configuration/content/0100; type=text; label= Domain (FQDN)

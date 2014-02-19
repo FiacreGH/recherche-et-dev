@@ -2,6 +2,14 @@
 # Include all TypoScript files
 ###################################################
 
+# TypoScript configuration coming from third-party extensions.
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/setup.txt">
+
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/language.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/config.ts">
@@ -20,9 +28,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_pagebrowse.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_seobasics.ts">
 
-## Content
+# Content
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Content/tt_content.ts">
 
-## Page
+# Page
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Page/header.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Page/page.ts">
