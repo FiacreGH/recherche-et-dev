@@ -9,7 +9,6 @@ Fedext development branch with TYPO3 6.1
 ----------------------------------------
 
 This is a temporary section to explain how `Fedext`_ "development" can be used in conjunction with TYPO3 CMS 6.1.
-
 I am assuming that you have acknowledged the branching strategy we have adopted in our FluidTYPO3 project. If not there is a `post`_ where you can catch up.
 
 As you can also read in `this article`_, Fedext is dropping support of TYPO3 CMS 4.x branch and is shifting its code basis towards namespaces, among other.
@@ -35,7 +34,7 @@ This being said, I had to figure out a few things to make it. Though, after a bi
 
 * Migrate your template. Check out `this documentation`_ and the script at the button. The script took good care of my template and didn't break anything. :)
 
-For now, the current state of the Bootstrap Package, can not yet be issued as stable, mainly because of yet to be released TYPO3 6.1.8. Stay tune!
+For now, the current Bootstrap Package, can not be issued as stable, mainly because of the yet to be released TYPO3 6.1.8. Stay tune!
 
 .. _this documentation: https://github.com/FluidTYPO3/documentation/blob/master/Namespaces.md
 .. _dev branch: https://git.typo3.org/Packages/TYPO3.CMS.git/shortlog/refs/heads/TYPO3_6-1
