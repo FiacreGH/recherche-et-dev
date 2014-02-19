@@ -1,12 +1,49 @@
 Bootstrap package for TYPO3 CMS
-================================
+===============================
 
 Check it out the live example running at http://bootstrap.typo3cms.demo.typo3.org/. The package is provided in the demo area of typo3 meaning it is
 possible to log in the BE and play around. The demo is reset every three hours as information.
 Head to http://bootstrap.typo3cms.demo.typo3.org/typo3 and log-in with "admin" "password" as credentials.
 
+Fedext Migration to namespace
+-----------------------------
+
+This is a temporary section to explain how Fedext development branches can be used in conjunction with TYPO3 CMS 6.1.
+
+As you can read in `this article`_, `Fedext`_ is dropping support of TYPO3 CMS 4.x branch and is shifting, among other, its code basis towards namespaces.
+Although, it is targeting in a first place the upcoming TYPO3 6.2 LTS, it is yet possible to use Fedext with development branches with TYPO3 CMS 6.1.
+I felt being a good choice for the Bootstrap Package, since there were some bugs appearing in the legacy branches as CMS 6.1
+is evolving. Additionally, I wanted to be on the "safe" side for the future and solve the breaking changes ASAP.
+This being said, I had to figure out a few things to make it work but after a bit of digging it turns out to be fairly simple.
+
+* Update Fedext extensions to development branch. We are using Git for managing our website, so it was straightforward. To know more about our branching strategy, refer to this `post`_.
+
+::
+
+	cd fluidcontent; git co development; git pull;
+	cd fluidcontent_bootstrap; git co development; git pull;
+	cd fluidpages; git co development; git pull;
+	cd flux; git co development; git pull;
+	cd vhs; git co master;
+
+* Head to the Install Tool, there are a few fields to be created
+
+* Important!! Use the branch `dev branch`_ of TYPO3 6.1. The dev branch as of this writing corresponds to upcoming 6.1.8 which should be release in a close future.
+  There are some changes in the way classes are instantiated (AKA ``makeInstance``) which are required to have Fedext working properly on the Frontend without the BE login.
+
+* Migrate your template. Check out `this documentation`_ and the script at the button. The script did more good for my templates than harm. ;)
+
+**Beware**: the current work, can not yet released as stable. Mainly because of yet to be released TYPO3 6.1.8.
+
+.. _this documentation: https://github.com/FluidTYPO3/documentation/blob/master/Namespaces.md
+.. _dev branch: https://git.typo3.org/Packages/TYPO3.CMS.git/shortlog/refs/heads/TYPO3_6-1
+.. _post: https://fedext.net/blog/git-branching-strategy.html
+.. _Fedext: https://fedext.net/
+.. _this article: https://fedext.net/blog/dropping-typo3-4x-support.html
+
+
 Motivation
--------------
+----------
 
 All started with the modernisation of our Dummy package we were using in our company. To give a bit of background, we were aiming to:
 
@@ -58,14 +95,14 @@ If you want to get rid of it, rename the file structure to your convenience when
 .. _system requirement: http://wiki.typo3.org/TYPO3_6.1#System_Requirements
 
 Support
-==================
+=======
 
 Bugs and wishes can be reported on the `bug tracker`_. You can also take advantage of some commercial support related to the Bootstrap Package by contacting contact@ecodev.ch.
 
 .. _bug tracker: https://github.com/Ecodev/bootstrap_package/issues
 
 How to continue?
-==================
+================
 
 As a next step, you likely want to change the CSS, add some custom layouts or customize configuration.
 The place to head to is ``EXT:speciality`` which is located at ``htdocs/typo3conf/ext/speciality``. The name "speciality"
@@ -77,7 +114,7 @@ where to find the source code. This is not a big deal to change the name in case
 * PHP Code - ``EXT:speciality/Classes/``
 
 Adding a new layout
----------------------
+-------------------
 
 As a short tutorial, let assume one needs to add a 4 column layout in the website. Proceed as follows:
 
@@ -96,28 +133,23 @@ As further reading, I recommend the `excellent work / documentation`_ from `@Nam
 
 
 What special features is here?
-=====================================
+==============================
 
-Static TypoScript files API
-----------------------------
+Static TypoScript template
+--------------------------
 
-Static configuration files are usually managed and stored in the database. To be precise they are added from a Template record (AKA ``sys_template``) in tab "Includes".
-However, it would be nicer to handle in a programmatic way so they can be versioned in the source code. For that purpose a thin API is available taking advantage of hook in ``\TYPO3\CMS\Core\TypoScript\TemplateService``. In file ``ext_localconf.php``, you will find the following code::
+Static configuration files are usually managed and stored in the database. To be more precise, they can be added in the BE
+from a Template record (AKA ``sys_template``) in tab "Includes".
+However, we are using Git for managing our entire website and we want to have this configurable at the source code level.
+We are managing our configuration in file `EXT:speciality/Configuration/TypoScript/setup.ts`. Have a look there if you must add additional
+configuration.
 
-	# A list of static configuration files to be loaded. Order has its importance of course.
-	\TYPO3\CMS\Speciality\Hooks\TypoScriptTemplate::getInstance()->addStaticTemplates(array(
-		'EXT:css_styled_content/static',
-		'EXT:speciality/Configuration/TypoScript',
-		'EXT:fluidcontent/Configuration/TypoScript',
-		'EXT:fluidcontent_boostrap/Configuration/TypoScript',
-	));
-
-It is still possible to load a static configuration file from a Template record as usually. Notice, it will be loaded on the top of the ones added by the API. Thanks Xavier for your inspiring `blog post`_.
+If you are facing problem, you may consider the Hook approach for managin Static TypoScript template. More detail in this `blog post`_.
 
 .. _blog post: http://blog.causal.ch/2012/05/automatically-including-static-ts-from.html
 
 Override configuration in Context
----------------------------------------
+---------------------------------
 
 @todo this section is obsolete and must rewritten after this patch has landed http://forge.typo3.org/issues/50131
 
