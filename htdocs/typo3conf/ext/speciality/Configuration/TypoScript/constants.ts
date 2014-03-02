@@ -7,7 +7,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/constants.txt">
 # No constants for EXT:fluidcontent
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/constants.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/constants.txt">
 
 config {

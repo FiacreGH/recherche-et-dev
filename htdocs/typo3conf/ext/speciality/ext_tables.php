@@ -18,7 +18,7 @@ $userTsConfig = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl(
 // New icons for the BE
 if (TYPO3_MODE == 'BE') {
 
-	$icons = array('category', 'comment', 'storage', 'tesseract', 'news', 'people');
+	$icons = array('category', 'comment', 'storage', 'news', 'people');
 	foreach ($icons as $icon) {
 
 		\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
