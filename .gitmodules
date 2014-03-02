@@ -46,3 +46,6 @@
 [submodule "htdocs/typo3conf/ext/vidi"]
 	path = htdocs/typo3conf/ext/vidi
 	url = git://git.typo3.org/TYPO3CMS/Extensions/vidi.git
+[submodule "build/Phing"]
+	path = build/Phing
+	url = https://github.com/fudriot/t3phing
