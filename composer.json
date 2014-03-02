@@ -1,0 +1,10 @@
+{
+	"comments": "phing/phing also possible value dev-master",
+	"require": {
+		"phing/phing": "dev-master"
+	},
+	"config": {
+		"bin-dir": "bin/"
+	},
+	"bin": ["vendor/phing/phing/bin/phing"]
+}

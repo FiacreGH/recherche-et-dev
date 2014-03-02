@@ -1,24 +1,15 @@
 ###########
 # /
 ###########
-/build.xml
 /.*
 /*.phar
-.gitmodules
-/nbproject/private/
 /vendor/*
-
-###########
-# Make an exception for this file
-###########
-!.gitignore
+/bin/*
 
 ###########
 # /htdocs/*
 ###########
-/htdocs/nbproject
 /htdocs/typo3_src*
-
 
 ###########
 # /fileadmin/*
@@ -34,8 +25,14 @@
 /htdocs/typo3conf/FIRST_INSTALL
 /htdocs/typo3conf/*.log
 
-
 ###########
 # /scripts/*
 ###########
 /scripts/Configuration.php
+
+######################
+# /htdocs/typo3conf/ext/speciality
+######################
+/htdocs/typo3conf/ext/speciality/.sass-cache/*
+/htdocs/typo3conf/ext/speciality/node_modules/*
+/htdocs/typo3conf/ext/speciality/Temporary/*
