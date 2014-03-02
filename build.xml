@@ -19,11 +19,28 @@
 			           property="file.settings.exists"/>
 		</not>
 		<then>
+
+			<echo>Since file "configuration/PhingSettings.xml", let try to create it.</echo>
+			<echo></echo>
+			<echo>A few questions related to your local server</echo>
+			<input propertyName="local.domain"
+			       message="Your local domain without 'www', e.g. example.local? $>"/>
+			<input propertyName="is.server.development"
+			       message="Is it a development server? If you answer true, I assume you have another deployment server. true or false $>"/>
+			<input propertyName="local.core.path"
+			       message="The path to the TYPO3 CMS core? e.g. /t3core/typo3_src-6.1 $>"/>
+
+			<echo></echo>
+			<echo>A few questions related to your remote server</echo>
+			<input propertyName="remote.server.credentials"
+			       message="The credentials to the server if relevant? Ex. user@domain.com $>"/>
+			<input propertyName="remote.domain"
+			       message="The final domain without 'www' if relevant? $>"/>
+
 			<echo></echo>
 			<echo>[WARNING] A new file "configuration/PhingSettings.xml" has just been generated.</echo>
 			<echo>It may be a good idea to have a look at it and personalise it a bit...</echo>
 			<echo>Once being checked, run again this phing. It should look different.</echo>
-			<echo></echo>
 			<import file="build/Phing/FixSettings.xml"/>
 		</then>
 		<else>
