@@ -54,6 +54,32 @@ All started with the modernisation of our Dummy package we were using in our com
 
 We wanted not only a package to demonstrate the capability of TYPO3 but also something useful so that it should save us from the tedious and repeating work when kick-starting a website. The result is pretty much promising. More important we **have put everything in public** so that you can test and also take advantage for your own needs.
 
+Generate
+
+Update Assets Workflow
+======================
+
+Find some instructions how you can update the layout of this site based on a workflow
+powered by Phing and Grunt::
+
+	# Head to the home
+    cd bootstrap_package
+
+    # Installation of Composer is not already don
+    curl -sS https://getcomposer.org/installer | pdhp
+
+    # Optional: install it globally. You may reload your terminal.
+    mv composer.phar /usr/local/bin/composer
+
+	# Install dependencies
+    php composer.phar install (if installed globally "composer install")
+
+	./bin/phing
+	-> read carefully instruction.
+
+	# Watch, compile, package your assets
+	./bin/phing asset-watch
+	./bin/phing asset-package
 
 How to install?
 ===============
