@@ -15,7 +15,9 @@ module.exports = (grunt) ->
 		cssmin:
 			combine:
 				files:
-					'Resources/Public/Distribution/StyleSheets/site.min.css': ['Resources/Public/Distribution/StyleSheets/site.css']
+					'Resources/Public/Distribution/StyleSheets/site.min.css': [
+						'Temporary/site.css'
+					]
 
 	########## JS ############
 		concat:
@@ -24,8 +26,9 @@ module.exports = (grunt) ->
 				src: [
 					'Temporary/main.css',
 					'Resources/Public/StyleSheets/Site/rte.css'
+					'../jquerycolorbox/res/css/colorbox.css',
 				],
-				dest: 'Resources/Public/Distribution/StyleSheets/site.css',
+				dest: 'Temporary/site.css',
 			options:
 				separator: ';'
 
@@ -80,7 +83,10 @@ module.exports = (grunt) ->
 					# includes files within path
 						expand: true
 						flatten: true
-						src: ['Resources/Public/Components/bootstrap/fonts/*']
+						src: [
+							'Resources/Public/Components/bootstrap/fonts/*'
+							'Resources/Public/Components/font-awesome/fonts/*'
+						]
 						dest: 'Resources/Public/Distribution/Fonts/'
 						filter: 'isFile'
 				]
@@ -121,6 +127,10 @@ module.exports = (grunt) ->
 	grunt.registerTask "css", ['sass', 'concat:css', 'cssmin']
 	grunt.registerTask "js", ['jshint', 'uglify', 'concat:js']
 	grunt.registerTask "package", ['copy', 'css', 'js']
+	grunt.registerTask "package-js", ['copy', 'css']
+	grunt.registerTask "package-css", ['copy', 'css']
+	grunt.registerTask "p-css", ['package-css']
+	grunt.registerTask "p-js", ['package-js']
 
 	#	grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 	grunt.registerTask 'default', ['help']
