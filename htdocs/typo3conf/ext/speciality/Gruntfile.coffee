@@ -34,6 +34,7 @@ module.exports = (grunt) ->
 			# src: ['src/**/*.js'],
 				src: [
 					'Resources/Public/Components/jquery/jquery.min.js'
+					'Resources/Public/Components/modernizr/modernizr.js'
 					'Resources/Public/Components/bootstrap/dist/js/bootstrap.min.js'
 					'Temporary/main.min.js'
 				]
@@ -45,17 +46,12 @@ module.exports = (grunt) ->
 
 			dist:
 				files:
-				# target : [source]
-				#					'Resources/Public/JavaScript/Site/site.min.js': ['<%= concat.dist.dest %>']
-					'Temporary/main.min.js': [
-						'Resources/Public/JavaScript/Site/main.js'
-						'Resources/Public/JavaScript/Site/plugins.js'
-					]
+					"Temporary/main.min.js": ["<%= jshint.files %>"]
 
 		jshint:
 			files: [
-				'Resources/Public/JavaScript/Site/main.js'
-				'Resources/Public/JavaScript/Site/plugins.js'
+				'Resources/Public/JavaScript/main.js'
+				'Resources/Public/JavaScript/plugins.js'
 			]
 
 			options:
@@ -82,7 +78,11 @@ module.exports = (grunt) ->
 			main:
 				files: [
 					# includes files within path
-					{expand: true, flatten: true, src: ['Resources/Public/Components/bootstrap/fonts/*'], dest: 'Resources/Public/Distribution/Fonts/', filter: 'isFile'}
+						expand: true
+						flatten: true
+						src: ['Resources/Public/Components/bootstrap/fonts/*']
+						dest: 'Resources/Public/Distribution/Fonts/'
+						filter: 'isFile'
 				]
 
 	########## Watcher ############
@@ -95,13 +95,23 @@ module.exports = (grunt) ->
 				tasks: ['js']
 
 
+	########## Help ############
+	grunt.registerTask "help", "Just display some helping output.", () ->
+		grunt.log.writeln "Usage:"
+		grunt.log.writeln ""
+		grunt.log.writeln "- grunt watch   : watch your file and compile as you edit"
+		grunt.log.writeln "- grunt package : package your assets ready to be deployed"
+		grunt.log.writeln ""
+		grunt.log.writeln "Use grunt --help for a more verbose description of this grunt."
+		return
+
 	grunt.loadNpmTasks 'grunt-contrib-uglify'
 	grunt.loadNpmTasks 'grunt-contrib-jshint'
 	grunt.loadNpmTasks 'grunt-contrib-watch'
 	grunt.loadNpmTasks 'grunt-contrib-concat'
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks 'grunt-contrib-sass';
+	grunt.loadNpmTasks 'grunt-contrib-cssmin';
+	grunt.loadNpmTasks 'grunt-contrib-copy';
 
 	# https: / /github.com/ asciidisco / grunt - imagine
 	#grunt.loadNpmTasks('grunt-imagine')
@@ -113,8 +123,5 @@ module.exports = (grunt) ->
 	grunt.registerTask "package", ['copy', 'css', 'js']
 
 	#	grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-	grunt.registerTask 'default', [
-		'concat'
-		'uglify'
-	]
+	grunt.registerTask 'default', ['help']
 	return

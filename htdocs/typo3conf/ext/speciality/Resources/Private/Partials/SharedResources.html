@@ -6,31 +6,19 @@
 
 	<f:section name="SharedResources">
 
-		<v:asset.style name="bootstrap" path="EXT:speciality/Resources/Public/StyleSheets/bootstrap.min.css"/>
-		<v:asset.style name="bootstrap-theme" path="EXT:speciality/Resources/Public/StyleSheets/bootstrap-theme.min.css"/>
-		<v:asset.style name="font-awesome" dependencies="bootstrap" path="EXT:speciality/Resources/Public/StyleSheets/font-awesome.min.css"/>
-		<v:asset.style name="main-css" dependencies="bootstrap" path="EXT:speciality/Resources/Public/StyleSheets/main.css"/>
-		<v:asset.style name="rte" dependencies="bootstrap" path="EXT:speciality/Resources/Public/StyleSheets/rte.css" standalone=" TRUE"/>
-		<v:asset.style name="jquery-colorbox-css" path="EXT:jquerycolorbox/res/css/colorbox.css" standalone="TRUE"/>
 
-		<v:asset.script name="jquery" allowMoveToFooter="false"
-		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/jquery-1.9.0.min.js"/>
-		<v:asset.script name="modernizr" allowMoveToFooter="false" dependencies="jquery"
-		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/modernizr-2.6.2-respond-1.1.0.min.js"/>
+		<v:asset.style name="main-css" standalone="true" rewrite="false"
+		               path="EXT:speciality/Resources/Public/Distribution/StyleSheets/site.min.css"/>
+
+		<v:asset.script name="main-js" standalone="true"
+		                path="EXT:speciality/Resources/Public/Distribution/JavaScript/site.min.js"/>
 
 
-		<v:asset.script name="bootstrap-core" dependencies="jquery"
-		                path="EXT:speciality/Resources/Public/JavaScript/Libraries/bootstrap.min.js"/>
-
-		<v:asset.script name="jquery-colorbox" dependencies="jquery"
-		                path="EXT:jquerycolorbox/res/js/jquery.colorbox-min.js"/>
-		<v:asset.script name="jquery-colorbox-main" dependencies="jquery"
-		                path="EXT:jquerycolorbox/res/js/main.js"/>
-
-		<v:asset.script name="plugin" dependencies="jquery"
-		                path="EXT:speciality/Resources/Public/JavaScript/plugins.js"/>
-		<v:asset.script name="main-js" dependencies="jquery"
-		                path="EXT:speciality/Resources/Public/JavaScript/main.js"/>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
 	</f:section>
 
