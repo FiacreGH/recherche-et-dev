@@ -168,17 +168,17 @@ module.exports = (grunt) ->
 		watch:
 			css:
 				files: ["<%= dir.source %>/StyleSheets/Sass/*.scss"]
-				tasks: ["css"]
+				tasks: ["build-css"]
 			js:
 				files: ["<%= jshint.files %>"]
-				tasks: ["js"]
+				tasks: ["build-js"]
 
 
 	########## Help ############
 	grunt.registerTask "help", "Just display some helping output.", () ->
 		grunt.log.writeln "Usage:"
 		grunt.log.writeln ""
-		grunt.log.writeln "- grunt watch          : watch your file and compile as you edit"
+		grunt.log.writeln "- grunt watch        : watch your file and compile as you edit"
 		grunt.log.writeln "- grunt build        : build your assets ready to be deployed"
 		grunt.log.writeln "- grunt build-css    : only build your css files"
 		grunt.log.writeln "- grunt build-js     : only build your js files"
@@ -187,6 +187,7 @@ module.exports = (grunt) ->
 		grunt.log.writeln "Use grunt --help for a more verbose description of this grunt."
 		return
 
+	# Load Node module
 	grunt.loadNpmTasks "grunt-contrib-uglify"
 	grunt.loadNpmTasks "grunt-contrib-jshint"
 	grunt.loadNpmTasks "grunt-contrib-watch"
@@ -198,14 +199,10 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks "grunt-string-replace"
 	grunt.loadNpmTasks "grunt-imagine"
 
+	# Alias tasks
 	grunt.task.renameTask("string-replace", "import")
 
-	# https: / /github.com/ asciidisco / grunt - imagine
-	#grunt.loadNpmTasks("grunt-imagine")
-
-	#	grunt.registerTask("test", ["jshint", "qunit"]);
-	grunt.registerTask "test", ["jshint"]
-	grunt.registerTask "js", ["jshint", "uglify", "concat:js"]
+	# Tasks
 	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
 	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
 	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
@@ -213,7 +210,5 @@ module.exports = (grunt) ->
 	grunt.registerTask "b-css", ["build-css"]
 	grunt.registerTask "b-js", ["build-js"]
 	grunt.registerTask "b-images", ["build-images"]
-
-	#	grunt.registerTask("default", ["jshint", "qunit", "concat", "uglify"]);
 	grunt.registerTask "default", ["help"]
 	return
