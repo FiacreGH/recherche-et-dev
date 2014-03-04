@@ -5,6 +5,79 @@ Check it out the live example running at http://bootstrap.typo3cms.demo.typo3.or
 possible to log in the BE and play around. The demo is reset every three hours as information.
 Head to http://bootstrap.typo3cms.demo.typo3.org/typo3 and log-in with "admin" "password" as credentials.
 
+Frontend Development Workflow
+=============================
+
+Here goes some explanation about how to update the design of this distribution along with the JavaScript.
+
+Before further reading, also consider a few assertion
+
+* I develop locally whenever I can and push the changes to the production system when they are ready.
+* I am using Git as the main deployment tool for the source code. It is good enough for our projects.
+Third party TYPO3 extensions are in sub-modules for now but I am hoping it could be handed by Composer in a close future.
+Normally, every extensions from the Forge has its mirror in the `SVN archive`_  at Github.
+* For synchronising the database and the files, I am using some Phing tasks that you can find in this project as well in ``/build/Phing``
+
+
+Recently, I have experimenting some workflow based on Phing, Grunt and Bower. I found it quite "professional" and cool enough to be shared.
+Very briefly, a few words about those tools if you are not familiar with them:
+
+- `Grunt`_: describes itself as the "JavaScript Task Runner". It is basically an automation tool enabling to quickly build advanced workflow
+cComing alongside with a rich ecosystem of plugins for all sort of needs.
+One of the handy feature, is the "watch" functionality which observes any changes made on the file system and triggers
+a build. This make the build process quite efficient and transparent. Additionally, the building process
+includes all sort of optimisation for the web such as minifying, compressing the files.
+Also images are optimized by third party libraries which is basically done by the `Grunt Imagine`_ tasks
+Coming from the PHP world, I took about a day to dig into the tool and considered as a useful investment so far...
+
+- `Bower`_: Package Manager for the web where package can be understand as Web Component such a jQuery, Twitter Bootstrap, ...
+It makes pretty straightforward to cope with versions and dependencies of these Web Components.
+For instance, starting a new project, you certainly want to have your libraries up to date.
+Bower will scan and let you know which library must be upgraded. I am already rejoiced not to hunt down this kind of information by myself!
+
+- `Phing`_: is a build system for PHP. Actually, it is not really required in the frontend development process since Grunt does all the job in a more adequate manner.
+However, it is handy when it comes about replicating the site from the production server and vice versa.
+
+
+The `Public`_ directory has the following structure.
+
+- Source: everything that we code goes here which includes the raw Sass, JavaScript, images, ... The directory is und
+- Build: the generated output optimized for the production. I never edit files there. It is also in Git.
+- Components: Web Components managed by Bower. The directory is not under Git since it is replicable.
+
+Alright, time for getting hands dirty! Assuming, you have installed the Bootstrap Package, find some instructions how to get started
+with this development workflow::
+
+	# Head to the home
+    cd bootstrap_package
+
+    # Installation of Composer is not already don
+    curl -sS https://getcomposer.org/installer | pdhp
+
+    # Optional: install it globally. You may reload your terminal.
+    mv composer.phar /usr/local/bin/composer
+
+	# Install dependencies
+    php composer.phar install (if installed globally "composer install")
+
+	./bin/phing
+	-> read carefully instruction.
+
+	# Install necessary Web Component
+	./bin/phing bower-install
+
+	# Watch, compile, package your assets
+	./bin/phing asset-watch
+	./bin/phing asset-package
+
+.. _Grunt: http://gruntjs.com/
+.. _Bower: http://bower.io/
+.. _Phing: http://www.phing.info/
+.. _SVN archive: https://github.com/TYPO3-svn-archive/
+.. _Public: https://github.com/Ecodev/bootstrap_package/tree/master/htdocs/typo3conf/ext/speciality/Resources/Public
+.. _Grunt Imagine: https://github.com/asciidisco/grunt-imagine
+
+
 Fedext development branch with TYPO3 6.1
 ----------------------------------------
 
@@ -53,33 +126,6 @@ All started with the modernisation of our Dummy package we were using in our com
 * Keep folder fileadmin clean from TS / JS / CSS files which should be for storing media only (images, documents etc…)
 
 We wanted not only a package to demonstrate the capability of TYPO3 but also something useful so that it should save us from the tedious and repeating work when kick-starting a website. The result is pretty much promising. More important we **have put everything in public** so that you can test and also take advantage for your own needs.
-
-Generate
-
-Update Assets Workflow
-======================
-
-Find some instructions how you can update the layout of this site based on a workflow
-powered by Phing and Grunt::
-
-	# Head to the home
-    cd bootstrap_package
-
-    # Installation of Composer is not already don
-    curl -sS https://getcomposer.org/installer | pdhp
-
-    # Optional: install it globally. You may reload your terminal.
-    mv composer.phar /usr/local/bin/composer
-
-	# Install dependencies
-    php composer.phar install (if installed globally "composer install")
-
-	./bin/phing
-	-> read carefully instruction.
-
-	# Watch, compile, package your assets
-	./bin/phing asset-watch
-	./bin/phing asset-package
 
 How to install?
 ===============
