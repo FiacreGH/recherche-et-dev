@@ -18,6 +18,7 @@
     "grunt-contrib-cssmin": "~0.8.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-string-replace": "~0.2.7",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-imagine": "~0.3.3"
   }
 }

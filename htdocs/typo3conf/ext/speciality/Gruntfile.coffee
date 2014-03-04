@@ -2,12 +2,65 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
 
+	############################ Assets ############################
+
 	##
-	# StyleSheet + JavaScript: clean up environment
+	# Assets: clean up environment
 	##
 		clean:
 			temporary:
 				src: ["Temporary"]
+
+	##
+	# Assets: copy some files to the distribution directory
+	##
+		copy:
+			fonts:
+				files: [
+					# includes files within path
+					expand: true
+					flatten: true
+					src: [
+						"Resources/Public/Components/bootstrap/fonts/*"
+						"Resources/Public/Components/font-awesome/fonts/*"
+					]
+					dest: "Resources/Public/Distribution/Fonts/"
+					filter: "isFile"
+				]
+			images:
+				files: [
+					# includes files within path
+					expand: true
+					flatten: true
+					src: [
+						"Temporary/Build/Images/jquerycolorbox/res/css/images/*"
+					]
+					dest: "Resources/Public/Distribution/Images/"
+					filter: "isFile"
+				]
+
+	##
+	# Assets: optimize assets for the web
+	##
+		pngmin:
+			src: [
+				'../jquerycolorbox/res/css/images/*.png'
+			],
+			dest: 'Temporary/Build/Images/'
+
+		gifmin:
+			src: [
+				'../jquerycolorbox/res/css/images/*.gif'
+			],
+			dest: 'Temporary/Build/Images/'
+
+		jpgmin:
+			src: [
+				'../jquerycolorbox/res/css/images/*.jpg'
+			],
+			dest: 'Temporary/Build/Images/'
+
+	############################ StyleSheets ############################
 
 	##
 	# StyleSheet: importation of "external" stylesheets form third party extensions.
@@ -99,20 +152,6 @@ module.exports = (grunt) ->
 					module: true
 					document: true
 
-	########## Package ############
-		copy:
-			fonts:
-				files: [
-					# includes files within path
-					expand: true
-					flatten: true
-					src: [
-						"Resources/Public/Components/bootstrap/fonts/*"
-						"Resources/Public/Components/font-awesome/fonts/*"
-					]
-					dest: "Resources/Public/Distribution/Fonts/"
-					filter: "isFile"
-				]
 
 	########## Watcher ############
 		watch:
@@ -128,10 +167,11 @@ module.exports = (grunt) ->
 	grunt.registerTask "help", "Just display some helping output.", () ->
 		grunt.log.writeln "Usage:"
 		grunt.log.writeln ""
-		grunt.log.writeln "- grunt watch        : watch your file and compile as you edit"
-		grunt.log.writeln "- grunt release      : release your assets ready to be deployed"
-		grunt.log.writeln "- grunt release-css  : only release your css files"
-		grunt.log.writeln "- grunt release-js  : only release your js files"
+		grunt.log.writeln "- grunt watch          : watch your file and compile as you edit"
+		grunt.log.writeln "- grunt release        : release your assets ready to be deployed"
+		grunt.log.writeln "- grunt release-css    : only release your css files"
+		grunt.log.writeln "- grunt release-js     : only release your js files"
+		grunt.log.writeln "- grunt release-images : only release images"
 		grunt.log.writeln ""
 		grunt.log.writeln "Use grunt --help for a more verbose description of this grunt."
 		return
@@ -145,6 +185,7 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks "grunt-contrib-copy"
 	grunt.loadNpmTasks "grunt-contrib-clean"
 	grunt.loadNpmTasks "grunt-string-replace"
+	grunt.loadNpmTasks "grunt-imagine"
 
 	grunt.task.renameTask("string-replace", "import")
 
@@ -155,11 +196,13 @@ module.exports = (grunt) ->
 	grunt.registerTask "test", ["jshint"]
 	#grunt.registerTask "css", ["sass", "concat:css", "cssmin"]
 	grunt.registerTask "js", ["jshint", "uglify", "concat:js"]
-	grunt.registerTask "release", ["release-js", "release-css"] # release ? build?
+	grunt.registerTask "release", ["release-js", "release-css", "release-images"] # release ? build?
 	grunt.registerTask "release-js", ["js"]
-	grunt.registerTask "release-css", ["clean", "import", "sass", "concat:css", "copy", "cssmin"]
+	grunt.registerTask "release-css", ["clean", "import", "sass", "concat:css", "cssmin"]
+	grunt.registerTask "release-images", ["pngmin", "gifmin", "jpgmin","copy"]
 	grunt.registerTask "r-css", ["release-css"]
 	grunt.registerTask "r-js", ["release-js"]
+	grunt.registerTask "r-images", ["release-images"]
 
 	#	grunt.registerTask("default", ["jshint", "qunit", "concat", "uglify"]);
 	grunt.registerTask "default", ["help"]
