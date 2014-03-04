@@ -1,6 +1,12 @@
 module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
+		dir:
+			component: "Resources/Public/Components"
+			build: "Resources/Public/Build"
+			source: "Resources/Public/Source"
+			temp: "Temporary"
+			ext_jquerycolorbox: "../jquerycolorbox/res/css"
 
 	############################ Assets ############################
 
@@ -12,7 +18,7 @@ module.exports = (grunt) ->
 				src: ["Temporary"]
 
 	##
-	# Assets: copy some files to the distribution directory
+	# Assets: copy some files to the distribution dir
 	##
 		copy:
 			fonts:
@@ -21,10 +27,10 @@ module.exports = (grunt) ->
 					expand: true
 					flatten: true
 					src: [
-						"Resources/Public/Components/bootstrap/fonts/*"
-						"Resources/Public/Components/font-awesome/fonts/*"
+						"<%= dir.component %>/bootstrap/fonts/*"
+						"<%= dir.component %>/font-awesome/fonts/*"
 					]
-					dest: "Resources/Public/Distribution/Fonts/"
+					dest: "<%= dir.build %>/Fonts/"
 					filter: "isFile"
 				]
 			images:
@@ -33,9 +39,9 @@ module.exports = (grunt) ->
 					expand: true
 					flatten: true
 					src: [
-						"Temporary/Build/Images/jquerycolorbox/res/css/images/*"
+						"<%= dir.temp %>/**"
 					]
-					dest: "Resources/Public/Distribution/Images/"
+					dest: "<%= dir.build %>/Images/"
 					filter: "isFile"
 				]
 
@@ -44,21 +50,21 @@ module.exports = (grunt) ->
 	##
 		pngmin:
 			src: [
-				'../jquerycolorbox/res/css/images/*.png'
+				'<%= dir.ext_jquerycolorbox %>/images/*.png'
 			],
-			dest: 'Temporary/Build/Images/'
+			dest: '<%= dir.temp %>'
 
 		gifmin:
 			src: [
-				'../jquerycolorbox/res/css/images/*.gif'
+				'<%= dir.ext_jquerycolorbox %>/images/*.gif'
 			],
-			dest: 'Temporary/Build/Images/'
+			dest: '<%= dir.temp %>'
 
 		jpgmin:
 			src: [
-				'../jquerycolorbox/res/css/images/*.jpg'
+				'<%= dir.ext_jquerycolorbox %>/images/*.jpg'
 			],
-			dest: 'Temporary/Build/Images/'
+			dest: '<%= dir.temp %>'
 
 	############################ StyleSheets ############################
 
@@ -68,7 +74,7 @@ module.exports = (grunt) ->
 		import:
 			jquerycolorbox:
 				files:
-					"Temporary/Source/colorbox.css": "../jquerycolorbox/res/css/*.css"
+					"<%= dir.temp %>/Source/colorbox.css": "<%= dir.ext_jquerycolorbox %>/*.css"
 				options:
 					replacements: [
 						pattern: 'images/',
@@ -79,58 +85,36 @@ module.exports = (grunt) ->
 	# StyleSheet: compiling to CSS
 	##
 		sass: # Task
-			dist: # Target
+			build: # Target
 				options: # Target options
 				# output_style = expanded or nested or compact or compressed
 					style: "expanded"
 
 				files:
 				# must comme last in the concatation process
-					"Temporary/Source/zzz_main.css": "Resources/Public/StyleSheets/Sass/main.scss" # "destination": "source"
+					"<%= dir.temp %>/Source/zzz_main.css": "<%= dir.source %>/StyleSheets/Sass/main.scss"
 
-	########## concat css + js ############
-		concat:
-			css:
-				src: [
-					"Temporary/Source/*.css",
-				],
-				dest: "Temporary/Build/site.css",
-			options:
-				separator: ";"
-			js:
-				src: [
-					"Resources/Public/Components/jquery/jquery.min.js"
-					"Resources/Public/Components/modernizr/modernizr.js"
-					"Resources/Public/Components/bootstrap/dist/js/bootstrap.min.js"
-					"Temporary/main.min.js"
-				]
-				dest: "Resources/Public/Distribution/JavaScript/site.min.js"
 
 	##
 	# StyleSheet: minification of CSS
 	##
 		cssmin:
 			options: {}
-			release:
+			build:
 				files:
-					"Resources/Public/Distribution/StyleSheets/site.min.css": [
-						"Temporary/Build/*"
+					"<%= dir.build %>/StyleSheets/site.min.css": [
+						"<%= dir.temp %>/Build/*"
 					]
 
 
+	############################ JavaScript ############################
 
-	########## uglify js ############
-		uglify:
-			options:
-				banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"dd-mm-yyyy\") %> */\n"
-			dist:
-				files:
-					"Temporary/main.min.js": ["<%= jshint.files %>"]
-
+	##
+	# JavaScript: check javascript coding guide lines
+	##
 		jshint:
 			files: [
-				"Resources/Public/JavaScript/main.js"
-				"Resources/Public/JavaScript/plugins.js"
+				"<%= dir.source %>/JavaScript/*.js"
 			]
 
 			options:
@@ -152,11 +136,38 @@ module.exports = (grunt) ->
 					module: true
 					document: true
 
+	##
+	# JavaScript: minimize javascript
+	##
+		uglify:
+			options:
+				banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"dd-mm-yyyy\") %> */\n"
+			dist:
+				files:
+					"<%= dir.temp %>/main.min.js": ["<%= jshint.files %>"]
+
+	########## concat css + js ############
+		concat:
+			css:
+				src: [
+					"<%= dir.temp %>/Source/*.css",
+				],
+				dest: "<%= dir.temp %>/Build/site.css",
+			options:
+				separator: ";"
+			js:
+				src: [
+					"<%= dir.components %>/jquery/jquery.min.js"
+					"<%= dir.components %>/modernizr/modernizr.js"
+					"<%= dir.components %>/bootstrap/dist/js/bootstrap.min.js"
+					"<%= dir.temp %>/main.min.js"
+				]
+				dest: "<%= dir.build %>/JavaScript/site.min.js"
 
 	########## Watcher ############
 		watch:
 			css:
-				files: ["Resources/Public/StyleSheets/Sass/*.scss"]
+				files: ["<%= dir.source %>/StyleSheets/Sass/*.scss"]
 				tasks: ["css"]
 			js:
 				files: ["<%= jshint.files %>"]
@@ -168,10 +179,10 @@ module.exports = (grunt) ->
 		grunt.log.writeln "Usage:"
 		grunt.log.writeln ""
 		grunt.log.writeln "- grunt watch          : watch your file and compile as you edit"
-		grunt.log.writeln "- grunt release        : release your assets ready to be deployed"
-		grunt.log.writeln "- grunt release-css    : only release your css files"
-		grunt.log.writeln "- grunt release-js     : only release your js files"
-		grunt.log.writeln "- grunt release-images : only release images"
+		grunt.log.writeln "- grunt build        : build your assets ready to be deployed"
+		grunt.log.writeln "- grunt build-css    : only build your css files"
+		grunt.log.writeln "- grunt build-js     : only build your js files"
+		grunt.log.writeln "- grunt build-images : only build images"
 		grunt.log.writeln ""
 		grunt.log.writeln "Use grunt --help for a more verbose description of this grunt."
 		return
@@ -194,15 +205,14 @@ module.exports = (grunt) ->
 
 	#	grunt.registerTask("test", ["jshint", "qunit"]);
 	grunt.registerTask "test", ["jshint"]
-	#grunt.registerTask "css", ["sass", "concat:css", "cssmin"]
 	grunt.registerTask "js", ["jshint", "uglify", "concat:js"]
-	grunt.registerTask "release", ["release-js", "release-css", "release-images"] # release ? build?
-	grunt.registerTask "release-js", ["js"]
-	grunt.registerTask "release-css", ["clean", "import", "sass", "concat:css", "cssmin"]
-	grunt.registerTask "release-images", ["pngmin", "gifmin", "jpgmin","copy"]
-	grunt.registerTask "r-css", ["release-css"]
-	grunt.registerTask "r-js", ["release-js"]
-	grunt.registerTask "r-images", ["release-images"]
+	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
+	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
+	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
+	grunt.registerTask "build-images", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
+	grunt.registerTask "b-css", ["build-css"]
+	grunt.registerTask "b-js", ["build-js"]
+	grunt.registerTask "b-images", ["build-images"]
 
 	#	grunt.registerTask("default", ["jshint", "qunit", "concat", "uglify"]);
 	grunt.registerTask "default", ["help"]
