@@ -21,27 +21,26 @@ Recently, I have experimenting some workflow based on `Phing`_, `Grunt`_ and `Bo
 Very briefly, a few words about those tools if you are not familiar with them:
 
 - `Grunt`_: describes itself as the "JavaScript Task Runner". It is basically an automation tool enabling to quickly build advanced workflow
-Coming alongside with a rich ecosystem for all sort of needs.
-One of the handy feature, is the "watch" functionality which observes any changes made on the file system and triggers
-a build. This make the delivery process quite efficient and transparent. Additionally, the building process
-includes all sort of optimisation for the web such as minifying, compressing the files.
-Also images are optimized and size get shrunk by third party libraries which is basically done by the `Grunt Imagine`_ tasks
-Coming from the PHP world, I took about a day to dig into the tool and considered as a useful investment so far...
+  Coming alongside with a rich ecosystem for all sort of needs.
+  One of the handy feature, is the "watch" functionality which observes any changes made on the file system and triggers
+  a build. This make the delivery process quite efficient and transparent. Additionally, the building process
+  includes all sort of optimisation for the web such as minifying, compressing the files.
+  Also images are optimized and size get shrunk by third party libraries which is basically done by the `Grunt Imagine`_ tasks
+  Coming from the PHP world, I took about a day to dig into the tool and considered as a useful investment so far...
 
 - `Bower`_: Package Manager for the web where package can be Web Components such a jQuery, Twitter Bootstrap, ...
-It makes pretty straightforward to cope with versions and dependencies of these Web Components.
-For instance, starting a new project, you certainly want to have your libraries up to date.
-Bower will scan and let you know which library must be upgraded. I am already rejoiced not to hunt down this kind of information by myself!
+  It makes pretty straightforward to cope with versions and dependencies of these Web Components.
+  For instance, starting a new project, you certainly want to have your libraries up to date.
+  Bower will scan and let you know which library must be upgraded. I am already rejoiced not to hunt down this kind of information by myself!
 
 - `Phing`_: is a build system for PHP. Actually, it is not really required in the frontend development process since Grunt does all the job in a more adequate manner.
-However, it is handy when it comes about replicating the site from the production server and vice versa.
+  However, it is handy when it comes about replicating the site from the production server and vice versa.
 
+Notice also the new file structure of the `Public`_ directory:
 
-The `Public`_ directory has the following structure.
-
-- Source: everything that we code goes here which includes the raw Sass, JavaScript, images, ... The directory is und
-- Build: the generated output optimized for the production. I never edit files there. It is also in Git.
-- Components: Web Components managed by Bower. The directory is not under Git since it is replicable.
+- Source: everything that we produce as code comes here that includes the raw Sass, JavaScript, images, ...
+- Build: the generated output optimized for the production. I never edit files there. The files are also controlled by Git.
+- Components: Web Components managed by Bower. The directory is not under Git though, since it is replicable.
 
 Alright, time for getting hands dirty! Assuming, you have installed the Bootstrap Package, find some instructions how to get started
 with this development workflow::
