@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 			build: "Resources/Public/Build"
 			source: "Resources/Public/Source"
 			temp: "Temporary"
-			ext_jquerycolorbox: "../jquerycolorbox/res/css"
+			ext_jquerycolorbox: "../jquerycolorbox/res"
 
 	############################ Assets ############################
 
@@ -50,19 +50,19 @@ module.exports = (grunt) ->
 	##
 		pngmin:
 			src: [
-				'<%= dir.ext_jquerycolorbox %>/images/*.png'
+				'<%= dir.ext_jquerycolorbox %>/css/images/*.png'
 			],
 			dest: '<%= dir.temp %>'
 
 		gifmin:
 			src: [
-				'<%= dir.ext_jquerycolorbox %>/images/*.gif'
+				'<%= dir.ext_jquerycolorbox %>/css/images/*.gif'
 			],
 			dest: '<%= dir.temp %>'
 
 		jpgmin:
 			src: [
-				'<%= dir.ext_jquerycolorbox %>/images/*.jpg'
+				'<%= dir.ext_jquerycolorbox %>/css/images/*.jpg'
 			],
 			dest: '<%= dir.temp %>'
 
@@ -74,7 +74,7 @@ module.exports = (grunt) ->
 		import:
 			jquerycolorbox:
 				files:
-					"<%= dir.temp %>/Source/colorbox.css": "<%= dir.ext_jquerycolorbox %>/*.css"
+					"<%= dir.temp %>/Source/colorbox.css": "<%= dir.ext_jquerycolorbox %>/css/*.css"
 				options:
 					replacements: [
 						pattern: 'images/',
@@ -154,12 +154,14 @@ module.exports = (grunt) ->
 				],
 				dest: "<%= dir.temp %>/Build/site.css",
 			options:
-				separator: ";"
+				separator: "\n"
 			js:
 				src: [
-					"<%= dir.components %>/jquery/jquery.min.js"
-					"<%= dir.components %>/modernizr/modernizr.js"
-					"<%= dir.components %>/bootstrap/dist/js/bootstrap.min.js"
+					"<%= dir.component %>/jquery/jquery.min.js"
+					#"<%= dir.component %>/modernizr/modernizr.js" comment out if needed!!
+					"<%= dir.component %>/bootstrap/dist/js/bootstrap.min.js"
+					"<%= dir.ext_jquerycolorbox %>/js/jquery.colorbox-min.js"
+					"<%= dir.ext_jquerycolorbox %>/js/main.js"
 					"<%= dir.temp %>/main.min.js"
 				]
 				dest: "<%= dir.build %>/JavaScript/site.min.js"
@@ -204,7 +206,8 @@ module.exports = (grunt) ->
 
 	# Tasks
 	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
-	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
+	#grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
+	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js"]
 	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
 	grunt.registerTask "build-images", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
 	grunt.registerTask "b-css", ["build-css"]
