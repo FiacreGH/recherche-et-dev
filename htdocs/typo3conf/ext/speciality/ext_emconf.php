@@ -33,6 +33,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.1.1-6.1.99',
+			'jquerycolorbox' => '',
 			'fluidcontent' => '',
 			'fluidpages' => '',
 			'cms' => '',
