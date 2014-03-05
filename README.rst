@@ -9,10 +9,9 @@ Frontend Development Workflow
 =============================
 
 Here goes some explanation about **how to update the design along with the JavaScript** in this TYPO3 CMS distribution.
-Before further reading, also consider a few assertion about my developer habits to give a bit of background:
+Before further reading, also consider a few assertion to give a bit of background:
 
-* I develop locally whenever I can and push the changes to the production system when they are ready.
-* I am using Git as the main deployment tool for the source code. It serves our projects good enough.
+* I develop locally and use Git as the main deployment tool for the source code. It serves our projects good enough.
   Third party TYPO3 extensions are in sub-modules for now but I am hoping it could be handed by Composer in a close future.
   Normally, every extensions from the Forge has its mirror on the `SVN archive`_  at Github.
 * For synchronising the database and the files, I am using some Phing tasks that you can find in this project as well in ``/build/Phing``
@@ -49,23 +48,29 @@ with this development workflow::
     cd bootstrap_package
 
     # Installation of Composer is not already don
-    curl -sS https://getcomposer.org/installer | pdhp
+    curl -sS https://getcomposer.org/installer | php
 
     # Optional: install it globally. You may reload your terminal.
     mv composer.phar /usr/local/bin/composer
 
 	# Install dependencies
-    php composer.phar install (if installed globally "composer install")
+	# If Composer is installed globally "composer install"
+    php composer.phar install
 
 	./bin/phing
 	-> read carefully instruction.
 
+	# Check the system is correctly configured
+	./bin/phing check-system
+
 	# Install necessary Web Component
 	./bin/phing bower-install
 
-	# Watch, compile, package your assets
+	# Make a new build your assets
+	./bin/phing asset-build
+
+	# Watch your assets and compile as they change.
 	./bin/phing asset-watch
-	./bin/phing asset-package
 
 .. _Grunt: http://gruntjs.com/
 .. _Bower: http://bower.io/
