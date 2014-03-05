@@ -37,8 +37,8 @@ Very briefly, a few words about those tools if you are not familiar with them:
 
 Notice also the new file structure of the `Public`_ directory:
 
-- Source: everything that we produce as code comes here that includes the raw Sass, JavaScript, images, ...
-- Build: the generated output optimized for the production. I never edit files there. The files are also controlled by Git.
+- Source: everything that we produce as code that includes the raw Sass, JavaScript, images comes here.
+- Build: the generated output optimized for production. Never edit files there obviously.
 - Components: Web Components managed by Bower. The directory is not under Git though, since it is replicable.
 
 Alright, time for getting hands dirty! Assuming, you have installed the Bootstrap Package, find some instructions how to get started
@@ -47,10 +47,10 @@ with this development workflow::
 	# Head to the home
 	cd bootstrap_package
 
-	# Installation of Composer is not already don
+	# Installation of Composer is not already done
 	curl -sS https://getcomposer.org/installer | php
 
-	# Optional: install it globally. You may reload your terminal.
+	# Optional: install it globally. You may need to reload your terminal.
 	mv composer.phar /usr/local/bin/composer
 
 	# Install dependencies
@@ -59,13 +59,14 @@ with this development workflow::
 	php composer.phar install
 
 	./bin/phing
-	-> read carefully instruction. A file must be generated.
+	-> read carefully instruction. A file must be generated in `configuration`.
 
-	# Check the system is correctly configured.
+	# Check whether the system is correctly configured.
 	# Phing will tell you if some more tools must be installed.
 	./bin/phing check-system
 
 	# Download additional Web Components such as jQuery, etc...
+	# Files will go into EXT:speciality/Resources/Public/Components
 	./bin/phing bower-install
 
 	# Make a new build of your assets
