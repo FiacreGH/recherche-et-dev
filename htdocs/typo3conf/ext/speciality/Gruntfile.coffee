@@ -49,10 +49,20 @@ module.exports = (grunt) ->
 	# Assets: optimize assets for the web
 	##
 		pngmin:
-			src: [
-				'<%= dir.ext_jquerycolorbox %>/css/images/*.png'
-			],
-			dest: '<%= dir.temp %>'
+			ext_jquerycolorbox:
+				options:
+					ext: '.png'
+				files: [
+					src: '<%= dir.ext_jquerycolorbox %>/css/images/*.png'
+					dest: '<%= dir.temp %>'
+				]
+			images:
+				options:
+					ext: '.png'
+				files: [
+					src: '<%= dir.source %>/Images/*.png'
+					dest: '<%= dir.temp %>'
+				]
 
 		gifmin:
 			src: [
@@ -200,13 +210,13 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks "grunt-contrib-clean"
 	grunt.loadNpmTasks "grunt-string-replace"
 	grunt.loadNpmTasks "grunt-imagine"
+	grunt.loadNpmTasks "grunt-pngmin"
 
 	# Alias tasks
 	grunt.task.renameTask("string-replace", "import")
 
 	# Tasks
 	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
-	#grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
 	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js"]
 	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
 	grunt.registerTask "build-images", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
