@@ -45,31 +45,36 @@ Alright, time for getting hands dirty! Assuming, you have installed the Bootstra
 with this development workflow::
 
 	# Head to the home
-    cd bootstrap_package
+	cd bootstrap_package
 
-    # Installation of Composer is not already don
-    curl -sS https://getcomposer.org/installer | php
+	# Installation of Composer is not already don
+	curl -sS https://getcomposer.org/installer | php
 
-    # Optional: install it globally. You may reload your terminal.
-    mv composer.phar /usr/local/bin/composer
+	# Optional: install it globally. You may reload your terminal.
+	mv composer.phar /usr/local/bin/composer
 
 	# Install dependencies
-	# If Composer is installed globally "composer install"
-    php composer.phar install
+	# If Composer is installed globally "composer install" is enought
+	# This will basically installed Phing locally for this website.
+	php composer.phar install
 
 	./bin/phing
-	-> read carefully instruction.
+	-> read carefully instruction. A file must be generated.
 
-	# Check the system is correctly configured
+	# Check the system is correctly configured.
+	# Phing will tell you if some more tools must be installed.
 	./bin/phing check-system
 
-	# Install necessary Web Component
+	# Download additional Web Components such as jQuery, etc...
 	./bin/phing bower-install
 
-	# Make a new build your assets
+	# Make a new build of your assets
+	# Files will go into EXT:speciality/Resources/Public/Build
 	./bin/phing asset-build
 
 	# Watch your assets and compile as they change.
+	# Try changing anything in a file into EXT:speciality/Resources/Public/Source
+	# A new build must be generated.
 	./bin/phing asset-watch
 
 .. _Grunt: http://gruntjs.com/
