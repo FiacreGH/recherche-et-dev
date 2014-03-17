@@ -217,7 +217,7 @@ module.exports = (grunt) ->
 
 	# Tasks
 	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
-	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js"]
+	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
 	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
 	grunt.registerTask "build-images", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
 	grunt.registerTask "b-css", ["build-css"]
