@@ -7,7 +7,7 @@
     "twbs-bootstrap-sass": "3.1.1",
     "bootstrap": "3.1.1",
     "modernizr": "2.7.1",
-    "requirejs-bower": "git@github.com:jrburke/requirejs-bower.git",
+    "requirejs-bower": "https://github.com/jrburke/requirejs-bower.git",
     "font-awesome": "~4.0.3"
   }
 }
