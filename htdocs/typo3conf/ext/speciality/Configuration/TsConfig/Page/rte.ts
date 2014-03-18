@@ -36,7 +36,7 @@ RTE {
 		showStatusBar = 1
 
 		// RTE stylesheet
-		contentCSS = typo3conf/ext/speciality/Resources/Public/Source/StyleSheets/Site/rte.css
+		contentCSS = EXT:speciality/Resources/Public/Source/StyleSheets/Site/rte.css
 
 		// Remove HTML tags and their content
 		removeTagsAndContents =
