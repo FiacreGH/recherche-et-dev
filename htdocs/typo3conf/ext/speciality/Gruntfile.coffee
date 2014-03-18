@@ -160,7 +160,8 @@ module.exports = (grunt) ->
 		concat:
 			css:
 				src: [
-					"<%= dir.temp %>/Source/*.css",
+					"<%= dir.temp %>/Source/*.css"
+					"<%= dir.source %>/StyleSheets/**/*.css"
 				],
 				dest: "<%= dir.temp %>/Build/site.css",
 			options:
@@ -179,7 +180,10 @@ module.exports = (grunt) ->
 	########## Watcher ############
 		watch:
 			css:
-				files: ["<%= dir.source %>/StyleSheets/Sass/*.scss"]
+				files: [
+					"<%= dir.source %>/StyleSheets/**/*.scss"
+					"<%= dir.source %>/StyleSheets/**/*.css"
+				]
 				tasks: ["build-css"]
 			js:
 				files: ["<%= jshint.files %>"]
