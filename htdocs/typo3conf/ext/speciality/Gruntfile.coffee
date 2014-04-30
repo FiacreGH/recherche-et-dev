@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
 		dir:
-			component: "Resources/Public/Components"
+			components: "Resources/Public/Components"
 			build: "Resources/Public/Build"
 			source: "Resources/Public/Source"
 			temp: "Temporary"
@@ -27,8 +27,8 @@ module.exports = (grunt) ->
 					expand: true
 					flatten: true
 					src: [
-						"<%= dir.component %>/bootstrap/fonts/*"
-						"<%= dir.component %>/font-awesome/fonts/*"
+						"<%= dir.components %>/bootstrap/fonts/*"
+						"<%= dir.components %>/font-awesome/fonts/*"
 					]
 					dest: "<%= dir.build %>/Fonts/"
 					filter: "isFile"
@@ -145,6 +145,7 @@ module.exports = (grunt) ->
 					console: true
 					module: true
 					document: true
+					Modernizr: true
 
 	##
 	# JavaScript: minimize javascript
@@ -168,9 +169,9 @@ module.exports = (grunt) ->
 				separator: "\n"
 			js:
 				src: [
-					"<%= dir.component %>/jquery/jquery.min.js"
-					#"<%= dir.component %>/modernizr/modernizr.js" comment out if needed!!
-					"<%= dir.component %>/bootstrap/dist/js/bootstrap.min.js"
+					"<%= dir.components %>/jquery/jquery.min.js"
+					#"<%= dir.components %>/modernizr/modernizr.js" comment out if needed!!
+					"<%= dir.components %>/bootstrap/dist/js/bootstrap.min.js"
 					"<%= dir.ext_jquerycolorbox %>/js/jquery.colorbox-min.js"
 					"<%= dir.ext_jquerycolorbox %>/js/main.js"
 					"<%= dir.temp %>/main.min.js"
@@ -198,7 +199,7 @@ module.exports = (grunt) ->
 		grunt.log.writeln "- grunt build        : build your assets ready to be deployed"
 		grunt.log.writeln "- grunt build-css    : only build your css files"
 		grunt.log.writeln "- grunt build-js     : only build your js files"
-		grunt.log.writeln "- grunt build-images : only build images"
+		grunt.log.writeln "- grunt build-icons  : only build icons"
 		grunt.log.writeln ""
 		grunt.log.writeln "Use grunt --help for a more verbose description of this grunt."
 		return
@@ -220,12 +221,12 @@ module.exports = (grunt) ->
 	grunt.task.renameTask("string-replace", "import")
 
 	# Tasks
-	grunt.registerTask "build", ["build-js", "build-css", "build-images"]
+	grunt.registerTask "build", ["build-js", "build-css", "build-icons"]
 	grunt.registerTask "build-js", ["jshint", "uglify", "concat:js", "clean"]
-	grunt.registerTask "build-css", ["import", "sass", "concat:css", "cssmin", "clean"]
-	grunt.registerTask "build-images", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
-	grunt.registerTask "b-css", ["build-css"]
-	grunt.registerTask "b-js", ["build-js"]
-	grunt.registerTask "b-images", ["build-images"]
+	grunt.registerTask "build-css", ["sass", "concat:css", "import", "cssmin", "clean"]
+	grunt.registerTask "build-icons", ["pngmin", "gifmin", "jpgmin","copy", "clean"]
+	grunt.registerTask "css", ["build-css"]
+	grunt.registerTask "js", ["build-js"]
+	grunt.registerTask "icons", ["build-icons"]
 	grunt.registerTask "default", ["help"]
 	return
