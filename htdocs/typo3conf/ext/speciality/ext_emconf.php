@@ -22,7 +22,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'conflicts' => '',
 	'priority' => '',
 	'module' => '',
-	'state' => 'stable',
+	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => 0,
 	'createDirs' => '',
@@ -33,13 +33,12 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2.0-6.2.99',
-			'flux' => '',
-			'fluidpages' => '',
-			'fluidcontent' => '',
-			'fluidcontent_bootstrap' => '',
-			'vhs' => '',
-			'cms' => '',
-			'realurl' => '',
+			'flux' => '7.0.0-7.0.99',
+			'fluidpages' => '3.0.0-3.0.99',
+			'fluidcontent' => '4.0.0-4.0.99',
+			'fluidcontent_bootstrap' => '3.0.0-3.0.99',
+			'vhs' => '1.8.5',
+			'realurl' => '1.12.8',
 		),
 		'conflicts' => array(
 		),
@@ -48,7 +47,6 @@ $EM_CONF[$_EXTKEY] = array(
 	),
 	'suggests' => array(
 	),
-	'_md5_values_when_last_written' => 'a:9:{s:12:"ext_icon.gif";s:4:"68b4";s:14:"ext_tables.php";s:4:"5f04";s:9:"README.md";s:4:"965c";s:34:"Configuration/TypoScript/setup.txt";s:4:"7a29";s:35:"Resources/Private/Layouts/Page.html";s:4:"a0f3";s:43:"Resources/Private/Partials/PageObjects.html";s:4:"b2e4";s:44:"Resources/Private/Templates/Page/Render.html";s:4:"cf3e";s:49:"Resources/Private/Templates/Page/WithSidebar.html";s:4:"f986";s:66:"Resources/Private/Templates/ViewHelpers/Widget/Paginate/Index.html";s:4:"1309";}',
 );
 
 ?>
