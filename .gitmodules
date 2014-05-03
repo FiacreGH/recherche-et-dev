@@ -19,9 +19,6 @@
 [submodule "htdocs/typo3conf/ext/media"]
 	path = htdocs/typo3conf/ext/media
 	url = git://git.typo3.org/TYPO3CMS/Extensions/media.git
-[submodule "htdocs/typo3conf/ext/news"]
-	path = htdocs/typo3conf/ext/news
-	url = git://git.typo3.org/TYPO3CMS/Extensions/news.git
 [submodule "htdocs/typo3conf/ext/realurl"]
 	path = htdocs/typo3conf/ext/realurl
 	url = git://git.typo3.org/TYPO3CMS/Extensions/realurl.git
@@ -31,18 +28,12 @@
 [submodule "htdocs/typo3conf/ext/jquerycolorbox"]
 	path = htdocs/typo3conf/ext/jquerycolorbox
 	url = git://github.com/Ecodev/jquerycolorbox.git
-[submodule "htdocs/typo3conf/ext/wt_spamshield"]
-	path = htdocs/typo3conf/ext/wt_spamshield
-	url = git://git.typo3.org/TYPO3CMS/Extensions/wt_spamshield.git
 [submodule "htdocs/typo3conf/ext/metadata"]
 	path = htdocs/typo3conf/ext/metadata
 	url = git://git.typo3.org/TYPO3CMS/Extensions/metadata.git
 [submodule "htdocs/typo3conf/ext/nc_staticfilecache"]
 	path = htdocs/typo3conf/ext/nc_staticfilecache
 	url = git://github.com/TYPO3-svn-archive/nc_staticfilecache.git
-[submodule "htdocs/typo3conf/ext/infinite_scroll_gallery"]
-	path = htdocs/typo3conf/ext/infinite_scroll_gallery
-	url = https://github.com/Ecodev/infinite_scroll_gallery.git
 [submodule "htdocs/typo3conf/ext/vidi"]
 	path = htdocs/typo3conf/ext/vidi
 	url = git://git.typo3.org/TYPO3CMS/Extensions/vidi.git
