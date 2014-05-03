@@ -7,7 +7,7 @@
 
 	<f:section name="NavigationSub">
 		<!-- submenu navigation, collapsible -->
-		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" useShortcutData="true" expandAll="false">
+		<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.sub.entryLevel')}" expandAll="false">
 			<f:if condition="{menu}">
 				<nav role="navigation">
 					<ul class="nav navbar-list bs-docs-sidenav affix-top">
@@ -29,8 +29,7 @@
 										</a>
 										<!-- Sub menu -->
 										<v:iterator.contains haystack="{rootLine}" needle="{menuPage.uid}" considerKeys="true">
-											<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false"
-											             useShortcutTarget="true">
+											<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false">
 												<f:if condition="{menu}">
 													<ul class="nav navbar-list">
 
@@ -42,8 +41,7 @@
 																</a>
 																<!-- Sub-sub menu -->
 																<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false"
-																             expandAll="false"
-																             useShortcutTarget="true">
+																             expandAll="false">
 																	<f:if condition="{menu}">
 																		<f:for each="{menu}" as="subSubMenuPage"
 																		       iteration="subSubIteration">
