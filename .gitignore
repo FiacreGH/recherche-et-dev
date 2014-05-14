@@ -31,8 +31,6 @@
 /scripts/Configuration.php
 
 ######################
-# /htdocs/typo3conf/ext/speciality
-######################
 /htdocs/typo3conf/ext/speciality/.sass-cache/*
 /htdocs/typo3conf/ext/speciality/node_modules/*
 /htdocs/typo3conf/ext/speciality/Temporary/*
