@@ -37,3 +37,9 @@
 [submodule "build/Phing"]
 	path = build/Phing
 	url = https://github.com/fudriot/t3phing
+[submodule "htdocs/typo3conf/ext/speciality"]
+	path = htdocs/typo3conf/ext/speciality
+	url = https://github.com/Ecodev/speciality.git
+[submodule "htdocs/typo3conf/ext/speciality_distribution"]
+	path = htdocs/typo3conf/ext/speciality_distribution
+	url = https://github.com/Ecodev/speciality_distribution.git
