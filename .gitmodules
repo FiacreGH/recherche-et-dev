@@ -1,18 +1,18 @@
 [submodule "htdocs/typo3conf/ext/fluidcontent"]
 	path = htdocs/typo3conf/ext/fluidcontent
-	url = git://github.com/FluidTYPO3/fluidcontent
+	url = https://github.com/FluidTYPO3/fluidcontent
 [submodule "htdocs/typo3conf/ext/fluidcontent_bootstrap"]
 	path = htdocs/typo3conf/ext/fluidcontent_bootstrap
-	url = git://github.com/FluidTYPO3/fluidcontent_bootstrap
+	url = https://github.com/FluidTYPO3/fluidcontent_bootstrap
 [submodule "htdocs/typo3conf/ext/fluidpages"]
 	path = htdocs/typo3conf/ext/fluidpages
-	url = git://github.com/FluidTYPO3/fluidpages
+	url = https://github.com/FluidTYPO3/fluidpages
 [submodule "htdocs/typo3conf/ext/flux"]
 	path = htdocs/typo3conf/ext/flux
-	url = git://github.com/FluidTYPO3/flux
+	url = https://github.com/FluidTYPO3/flux
 [submodule "htdocs/typo3conf/ext/vhs"]
 	path = htdocs/typo3conf/ext/vhs
-	url = git://github.com/FluidTYPO3/vhs
+	url = https://github.com/FluidTYPO3/vhs
 [submodule "htdocs/typo3conf/ext/media"]
 	path = htdocs/typo3conf/ext/media
 	url = git://git.typo3.org/TYPO3CMS/Extensions/media.git
@@ -21,13 +21,10 @@
 	url = git://git.typo3.org/TYPO3CMS/Extensions/realurl.git
 [submodule "htdocs/typo3conf/ext/seo_basics"]
 	path = htdocs/typo3conf/ext/seo_basics
-	url = https://github.com/fudriot/t3ext-seo_basics.git
-[submodule "htdocs/typo3conf/ext/jquerycolorbox"]
-	path = htdocs/typo3conf/ext/jquerycolorbox
-	url = git://github.com/Ecodev/jquerycolorbox.git
+	url = https://github.com/b13/t3ext-seo_basics.git
 [submodule "htdocs/typo3conf/ext/nc_staticfilecache"]
 	path = htdocs/typo3conf/ext/nc_staticfilecache
-	url = git://github.com/TYPO3-svn-archive/nc_staticfilecache.git
+	url = https://github.com/TYPO3-svn-archive/nc_staticfilecache.git
 [submodule "htdocs/typo3conf/ext/vidi"]
 	path = htdocs/typo3conf/ext/vidi
 	url = git://git.typo3.org/TYPO3CMS/Extensions/vidi.git
