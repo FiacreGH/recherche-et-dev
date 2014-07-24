@@ -10,12 +10,12 @@
 # /htdocs/*
 ###########
 /htdocs/typo3_src*
-
-###########
-# /fileadmin/*
-###########
-/htdocs/fileadmin/*
+/htdocs/typo3
 /htdocs/uploads/*
+/htdocs/index.php
+/htdocs/Packages/*
+/htdocs/fileadmin/*
+/htdocs/typo3conf/ext/*
 
 ######################
 # /htdocs/typo3conf/

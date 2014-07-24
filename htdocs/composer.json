@@ -1,0 +1,31 @@
+{
+	"repositories": [
+		{ "type": "composer", "url": "http://composer.typo3.org/" },
+		{ "type": "git", "url": "https://github.com/Ecodev/speciality.git"},
+		{ "type": "git", "url": "https://github.com/Ecodev/speciality_distribution.git"},
+		{ "type": "git", "url": "git://git.typo3.org/TYPO3CMS/Extensions/media.git"},
+		{ "type": "git", "url": "git://git.typo3.org/TYPO3CMS/Extensions/vidi.git"}
+	],
+	"name": "dfau/typo3-cms-base-distribution",
+	"description" : "TYPO3 CMS Base Distribution",
+	"license": "GPL-2.0+",
+	"config": {
+		"vendor-dir": "Packages/Libraries",
+		"bin-dir": "bin"
+	},
+	"require": {
+		"typo3/cms": "6.2.*",
+		"typo3-ter/fluidcontent": "*",
+		"typo3-ter/fluidcontent-bootstrap": "*",
+		"typo3-ter/fluidpages": "*",
+		"typo3-ter/flux": "*",
+		"fab/media": "dev-master",
+		"typo3-ter/nc-staticfilecache": "*",
+		"typo3-ter/realurl": "*",
+		"typo3-ter/seo-basics": "*",
+		"ecodev/speciality": "dev-master",
+		"ecodev/speciality-distribution": "dev-master",
+		"fab/vidi": "dev-master",
+		"typo3-ter/vhs": "*"
+	}
+}

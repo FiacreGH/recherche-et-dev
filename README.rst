@@ -1,10 +1,80 @@
-Bootstrap package for TYPO3 CMS
-===============================
+Speciality Distribution for TYPO3 CMS
+=====================================
 
 .. No public website so far. Let see if it can be re-activated.
-.. Check it out the live example running at http://bootstrap.typo3cms.demo.typo3.org/. The package is provided in the demo area of typo3 meaning it is
-.. possible to log in the BE and play around. The demo is reset every three hours as information.
-.. Head to http://bootstrap.typo3cms.demo.typo3.org/typo3 and log-in with "admin" "password" as credentials.
+
+How to install with TYPO3 CMS 6.2
+---------------------------------
+
+**Long term the goal is to have the Speciality Distribution shipped via the TER** following the TYPO3 CMS Distributions model change in 6.2. For now, it is not
+possible as EXT:media and EXT:vidi are not yet released on the TER - with the compatibility of CMS 6.2. I am working hard on that!
+I still have one important feature to merge in Vidi (a BE listing engine required by Media) before it
+can be released as I want to avoid possible breaking changes after TER release. I have the financial support to do it, just need the time!
+
+However, the good news is that the Speciality Distribution can nevertheless be installed via Git and has some Composer flavour as a bonus.
+Notice the `system requirement`_ before proceeding and make sure PHP 5.3.7 - 5.4.x and MariaDB / MySQL 5.1.x-5.5.x is installed in your
+system::
+
+	# Clone the repository
+	git clone git://github.com/Ecodev/bootstrap_package.git speciality.distribution
+
+	# Download TYPO3 CMS Core
+	cd speciality.distribution/htdocs
+
+	# Download CMS Core and extensions through Composer.
+	# If you don't have Composer on your system, refer to https://getcomposer.org/download/
+	composer install
+
+	# There is a bug in the Composer Installer. To fix that, these commands are required:
+	rm -rf Packages/Libraries/{ecodev,fab}
+	composer install
+
+	# Manual steps
+	-> configure a Virtual Host. Convenience example for Apache:
+
+		<VirtualHost *:80>
+		    DocumentRoot "/var/vhosts/speciality.distribution/htdocs"
+		    ServerName speciality.distribution
+		    ServerAlias *.speciality.distribution
+		    ErrorLog "/var/vhosts/speciality.distribution/logs/error_log"
+		    CustomLog "/var/vhosts/speciality.distribution/logs/access_log" common
+		</VirtualHost>
+
+	-> add a DNS entry (e.g editing /etc/hosts file)
+
+	# Run the 1,2,3 wizard installation
+	touch typo3conf/ENABLE_INSTALL_TOOL
+
+	# Run the Installation Wizard.
+	# !! IMPORTANT: at step 5 of the wizard, do not download list of distributions.
+	# The distribution has already been download by Composer.
+	open http://speciality.distribution
+
+	# Open the Backend at the end of the Wizard.
+	http://speciality.distribution/typo3
+
+	# Install the extension containing the distribution
+	-> Open the Extension Manager
+	-> Search for extension "speciality_distribution" and install it. (Install EXT:vhs first, if you encounter an exception during installation)
+	-> wait and :)
+
+
+Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention in our company.
+If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
+
+.. _system requirement: http://wiki.typo3.org/TYPO3_6.1#System_Requirements
+
+
+
+TODO:
+
+* Check whether to integrate `EXT:fluidcontent_core`_ instead of EXT:css_styled_content.
+* Streamline the page template (1column.html, 2column.html could be replaced as done in `EXT:fluidpages_bootstrap`_
+
+.. _this ticket: https://forge.typo3.org/issues/58648
+.. _EXT:fluidcontent_core: https://github.com/FluidTYPO3/fluidcontent_core
+.. _EXT:fluidpages_bootstrap: https://github.com/FluidTYPO3/fluidpages_bootstrap
+
 
 Motivation
 ----------
@@ -16,46 +86,6 @@ All started with the modernisation of our Dummy package we were using in our com
 * Keep folder fileadmin clean from TS / JS / CSS files which should be for storing media only (images, documents etc…)
 
 We wanted not only a package to demonstrate the capability of TYPO3 but also something useful so that it should save us from the tedious and repeating work when kick-starting a website. The result is pretty much promising. More important we **have put everything in public** so that you can test and also take advantage for your own needs.
-
-How to install?
-===============
-
-There are two options, either you can get the **stable version** from http://get.typo3.org/bootstrap or you can follow this
-little step by step tutorial to get the **master version** - in no time to talk the marketing guy :) Notice the
-`system requirement`_ before proceeding and make sure PHP 5.3.7 - 5.4.x and MariaDB / MySQL 5.1.x-5.5.x is installed in your
-system::
-
-	# Clone the repository
-	git clone --recursive git://github.com/Ecodev/bootstrap_package.git
-
-	# Download TYPO3 CMS Core
-	cd bootstrap_package/htdocs
-	wget get.typo3.org/current -O typo3_src-latest.tgz
-
-	# Extract TYPO3 CMS Core archive and symlink
-	tar -xzf typo3_src-latest.tgz
-	rm typo3_src-latest.tgz
-	ln -s typo3_src-* typo3_src
-
-	# Manual steps
-	-> configure a Virtual Host. Convenience example for Apache:
-
-		<VirtualHost *:80>
-		    DocumentRoot "/var/vhosts/example.fab/htdocs"
-		    ServerName example.fab
-		    ServerAlias *.example.fab
-		    ErrorLog "/var/vhosts/example.fab/logs/error_log"
-		    CustomLog "/var/vhosts/example.fab/logs/access_log" common
-		</VirtualHost>
-
-	-> add a DNS entry (e.g editing /etc/hosts file)
-	-> open in the browser http://example.com and run the 1,2,3 wizard
-
-
-Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention in our company.
-If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
-
-.. _system requirement: http://wiki.typo3.org/TYPO3_6.1#System_Requirements
 
 Support
 =======

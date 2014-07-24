@@ -1,39 +1,3 @@
-[submodule "htdocs/typo3conf/ext/fluidcontent"]
-	path = htdocs/typo3conf/ext/fluidcontent
-	url = https://github.com/FluidTYPO3/fluidcontent
-[submodule "htdocs/typo3conf/ext/fluidcontent_bootstrap"]
-	path = htdocs/typo3conf/ext/fluidcontent_bootstrap
-	url = https://github.com/FluidTYPO3/fluidcontent_bootstrap
-[submodule "htdocs/typo3conf/ext/fluidpages"]
-	path = htdocs/typo3conf/ext/fluidpages
-	url = https://github.com/FluidTYPO3/fluidpages
-[submodule "htdocs/typo3conf/ext/flux"]
-	path = htdocs/typo3conf/ext/flux
-	url = https://github.com/FluidTYPO3/flux
-[submodule "htdocs/typo3conf/ext/vhs"]
-	path = htdocs/typo3conf/ext/vhs
-	url = https://github.com/FluidTYPO3/vhs
-[submodule "htdocs/typo3conf/ext/media"]
-	path = htdocs/typo3conf/ext/media
-	url = git://git.typo3.org/TYPO3CMS/Extensions/media.git
-[submodule "htdocs/typo3conf/ext/realurl"]
-	path = htdocs/typo3conf/ext/realurl
-	url = git://git.typo3.org/TYPO3CMS/Extensions/realurl.git
-[submodule "htdocs/typo3conf/ext/seo_basics"]
-	path = htdocs/typo3conf/ext/seo_basics
-	url = https://github.com/b13/t3ext-seo_basics.git
-[submodule "htdocs/typo3conf/ext/nc_staticfilecache"]
-	path = htdocs/typo3conf/ext/nc_staticfilecache
-	url = https://github.com/TYPO3-svn-archive/nc_staticfilecache.git
-[submodule "htdocs/typo3conf/ext/vidi"]
-	path = htdocs/typo3conf/ext/vidi
-	url = git://git.typo3.org/TYPO3CMS/Extensions/vidi.git
 [submodule "build/Phing"]
 	path = build/Phing
 	url = https://github.com/fudriot/t3phing
-[submodule "htdocs/typo3conf/ext/speciality"]
-	path = htdocs/typo3conf/ext/speciality
-	url = https://github.com/Ecodev/speciality.git
-[submodule "htdocs/typo3conf/ext/speciality_distribution"]
-	path = htdocs/typo3conf/ext/speciality_distribution
-	url = https://github.com/Ecodev/speciality_distribution.git
