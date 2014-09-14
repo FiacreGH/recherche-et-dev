@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1e7ffa6a2dcc3149c3ca04d6b5fe5de5",
+    "hash": "b4e00021cc5a93ff2f79ec9774089636",
     "packages": [
         {
             "name": "ecodev/speciality",
@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "6dce7665c6f0c017a0608a7ac630c9b229a4d072"
+                "reference": "c867a2262815b1cd474f5e2444fca45dc83c1b75"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2014-09-14 20:29:49"
+            "time": "2014-09-14 22:58:20"
         },
         {
             "name": "ecodev/speciality-distribution",
