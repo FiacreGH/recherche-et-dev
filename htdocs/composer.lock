@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa5c0362c5ecfa3e004ac44e39367619",
+    "hash": "1e7ffa6a2dcc3149c3ca04d6b5fe5de5",
     "packages": [
         {
             "name": "ecodev/speciality",
@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "d90d3211643a26e2d12adf922a0f7cf91605db2a"
+                "reference": "6dce7665c6f0c017a0608a7ac630c9b229a4d072"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2014-07-17 14:51:28"
+            "time": "2014-09-14 20:29:49"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "543bf65f8531188ece0f5f000cbfd2da7d29c4c8"
+                "reference": "a76be9b5d13cad8dec40d8d6ad470b639ede86c6"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,35 @@
             ],
             "description": "This package delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2014-07-17 14:57:35"
+            "time": "2014-09-14 20:33:11"
+        },
+        {
+            "name": "fab/context-hints",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fudriot/context_hints.git",
+                "reference": "5c739bc44be402bed338db77a0891dd65745106e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fudriot/context_hints/zipball/5c739bc44be402bed338db77a0891dd65745106e",
+                "reference": "5c739bc44be402bed338db77a0891dd65745106e",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Display a little hint in the Backend about the current Application Context.",
+            "homepage": "https://github.com/fudriot/context_hints",
+            "keywords": [
+                "Context",
+                "TYPO3 CMS",
+                "info"
+            ],
+            "time": "2014-08-11 15:45:53"
         },
         {
             "name": "fab/media",
@@ -44,7 +72,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/TYPO3CMS/Extensions/media.git",
-                "reference": "08e8a197f161b36e1676267ae11101cd6931df3c"
+                "reference": "62c25ebecc99adf7efbd5d774c3adb4b51faffd8"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -52,7 +80,14 @@
             ],
             "description": "Media management system for TYPO3 CMS.",
             "homepage": "https://forge.typo3.org/projects/extension-media",
-            "time": "2014-07-18 08:53:01"
+            "keywords": [
+                "Media management",
+                "TYPO3 CMS"
+            ],
+            "support": {
+                "issues": "https://forge.typo3.org/projects/extension-media"
+            },
+            "time": "2014-09-10 09:15:37"
         },
         {
             "name": "fab/vidi",
@@ -60,134 +95,224 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/TYPO3CMS/Extensions/vidi.git",
-                "reference": "208072b292e35be027445c01f8ebaf86e47815ce"
+                "reference": "07faa18e3f6f37be890c3a50c016d52e093edb9c"
             },
             "type": "typo3-cms-extension",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Generic listing of records with versatile ways of interacting with the data. Veni, vidi, vici!",
+            "description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
             "homepage": "https://forge.typo3.org/projects/extension-vidi",
-            "time": "2014-07-18 08:55:08"
+            "keywords": [
+                "TYPO3 CMS",
+                "generic listing"
+            ],
+            "support": {
+                "issues": "https://forge.typo3.org/projects/extension-vidi"
+            },
+            "time": "2014-09-10 09:17:19"
         },
         {
-            "name": "typo3-ter/fluidcontent",
-            "version": "4.0.0",
-            "dist": {
-                "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidcontent/4.0.0/t3x/",
-                "reference": null,
-                "shasum": null
+            "name": "fluidtypo3/fluidbootstraptheme",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme.git",
+                "reference": "fe8bad3b7837ae994198afe74c6dc04fad1a0f07"
             },
             "require": {
-                "typo3-ter/flux": ">= 7.0.0, <= 7.0.99",
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
-            },
-            "replace": {
-                "fluidcontent": "4.0.0",
-                "typo3-ext/fluidcontent": "4.0.0"
+                "fluidtypo3/flux": "*",
+                "fluidtypo3/vhs": "*"
             },
             "type": "typo3-cms-extension",
-            "authors": [
-                {
-                    "name": "FluidTYPO3 Team",
-                    "email": "claus@namelesscoder.net",
-                    "company": "",
-                    "username": "fluidtypo3"
-                }
-            ],
-            "description": "Fluid Content Element engine - integrates extremely compact and highly dynamic content element templates written in Fluid. See: https://github.com/FluidTYPO3/fluidcontent",
-            "time": "2014-03-25 19:29:54"
+            "description": "The fluid_bootstrap package from FluidTYPO3",
+            "time": "2014-09-09 06:39:39"
         },
         {
-            "name": "typo3-ter/fluidcontent-bootstrap",
-            "version": "3.0.0",
+            "name": "fluidtypo3/fluidcontent",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidcontent.git",
+                "reference": "35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c"
+            },
             "dist": {
-                "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidcontent_bootstrap/3.0.0/t3x/",
-                "reference": null,
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidcontent/zipball/35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c",
+                "reference": "35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c",
+                "shasum": ""
             },
             "require": {
-                "typo3-ter/fluidcontent": "*",
-                "typo3-ter/vhs": "*",
-                "typo3/cms": ">= 6.1.00, <= 6.2.99"
+                "fluidtypo3/flux": "*"
             },
-            "replace": {
-                "fluidcontent_bootstrap": "3.0.0",
-                "typo3-ext/fluidcontent_bootstrap": "3.0.0"
+            "suggest": {
+                "fluidtypo3/fluidcontent_bootstrap": "Provides Twitter Bootstrap templates for fluidcontent",
+                "fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid."
             },
             "type": "typo3-cms-extension",
-            "authors": [
-                {
-                    "name": "FluidTYPO3 Team",
-                    "email": "claus@namelesscoder.net",
-                    "company": "",
-                    "username": "namelesscoder"
-                }
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
             ],
-            "description": "A collection of Twitter Bootstrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs",
-            "time": "2014-03-29 02:09:23"
+            "description": "Create Flexible Content elements in pure fluid",
+            "homepage": "https://fedext.net",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "fedext",
+                "fluid",
+                "fluidcontent",
+                "flux",
+                "templating"
+            ],
+            "time": "2014-09-14 18:28:56"
         },
         {
-            "name": "typo3-ter/fluidpages",
-            "version": "3.0.0",
-            "dist": {
-                "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidpages/3.0.0/t3x/",
-                "reference": null,
-                "shasum": null
+            "name": "fluidtypo3/fluidcontent_core",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidcontent_core.git",
+                "reference": "03ae4e7bcf322ed0ea9dffcee590a6312496a103"
             },
             "require": {
-                "typo3-ter/flux": ">= 7.0.0, <= 7.0.99",
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
+                "fluidtypo3/flux": "*",
+                "fluidtypo3/vhs": "*"
             },
-            "conflict": {
-                "typo3-ter/templavoila": "*"
-            },
-            "replace": {
-                "fluidpages": "3.0.0",
-                "typo3-ext/fluidpages": "3.0.0"
+            "suggest": {
+                "fluidtypo3/fluidcontent": "Gives the ability to render Content Templates with pure fluid.",
+                "fluidtypo3/fluidcontent_bootstrap": "Provides Twitter Bootstrap templates for fluidcontent",
+                "fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid."
             },
             "type": "typo3-cms-extension",
-            "authors": [
-                {
-                    "name": "FluidTYPO3 Team",
-                    "email": "claus@namelesscoder.net",
-                    "company": "",
-                    "username": "fluidtypo3"
-                }
+            "license": [
+                "GPL-2.0+"
             ],
-            "description": "Fluid Page Template engine - integrates compact and highly dynamic page templates with all the benefits of Fluid.",
-            "time": "2014-03-25 19:21:46"
+            "description": "Replace css_styled_content with your own templates",
+            "homepage": "http://fluidtypo3.org/",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "fedext",
+                "fluid",
+                "fluidcontent",
+                "flux",
+                "templating"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/fedext",
+                "issues": "https://github.com/FluidTYPO3/fluidcontent_core/issues"
+            },
+            "time": "2014-09-03 23:32:29"
         },
         {
-            "name": "typo3-ter/flux",
-            "version": "7.0.0",
+            "name": "fluidtypo3/fluidpages",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidpages.git",
+                "reference": "28da1127239a00b7fafb87a6317d4930ac3d5e63"
+            },
             "dist": {
-                "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/flux/7.0.0/t3x/",
-                "reference": null,
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidpages/zipball/28da1127239a00b7fafb87a6317d4930ac3d5e63",
+                "reference": "28da1127239a00b7fafb87a6317d4930ac3d5e63",
+                "shasum": ""
             },
             "require": {
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
-            },
-            "replace": {
-                "flux": "7.0.0",
-                "typo3-ext/flux": "7.0.0"
+                "fluidtypo3/flux": "*"
             },
             "type": "typo3-cms-extension",
-            "authors": [
-                {
-                    "name": "FluidTYPO3 Team",
-                    "email": "claus@namelesscoder.net",
-                    "company": "",
-                    "username": "fluidtypo3"
-                }
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The fluidpages package from FluidTYPO3",
+            "time": "2014-09-14 20:13:24"
+        },
+        {
+            "name": "fluidtypo3/flux",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/flux.git",
+                "reference": "72b65f364c3b1e74ce6133fd8e8fb0358368646e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/flux/zipball/72b65f364c3b1e74ce6133fd8e8fb0358368646e",
+                "reference": "72b65f364c3b1e74ce6133fd8e8fb0358368646e",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The flux package from FluidTYPO3",
+            "time": "2014-09-11 12:53:48"
+        },
+        {
+            "name": "fluidtypo3/vhs",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/vhs.git",
+                "reference": "71e94ed3c06534ac94c947e29c6c14192ac423e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/vhs/zipball/71e94ed3c06534ac94c947e29c6c14192ac423e5",
+                "reference": "71e94ed3c06534ac94c947e29c6c14192ac423e5",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
             ],
-            "description": "Uses Fluid to render FlexForms, making them highly dynamic. Has built-in content preview in BE page module for any content using Flux. Offspring of the FED extension.",
-            "time": "2014-03-25 19:12:01"
+            "description": "The vhs package from FluidTYPO3",
+            "homepage": "http://fluidtypo3.org",
+            "keywords": [
+                "TYPO3 CMS",
+                "fedext",
+                "fluid",
+                "templating",
+                "utility",
+                "viewhelper"
+            ],
+            "time": "2014-09-13 22:43:55"
+        },
+        {
+            "name": "helhum/typo3-console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/typo3_console.git",
+                "reference": "c939c5212ab1e909f8c8b3041ef3949b80e193f1"
+            },
+            "require": {
+                "typo3/cms-core": ">6.2.2"
+            },
+            "replace": {
+                "typo3_console": "*"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfMinimalUsableSystem": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helhum\\Typo3Console\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A reliable and powerful console for TYPO3 CMS",
+            "homepage": "http://typo3.org",
+            "time": "2014-08-05 15:29:17"
         },
         {
             "name": "typo3-ter/nc-staticfilecache",
@@ -252,10 +377,10 @@
         },
         {
             "name": "typo3-ter/seo-basics",
-            "version": "0.8.6",
+            "version": "0.8.8",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/seo_basics/0.8.6/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/seo_basics/0.8.8/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -264,48 +389,20 @@
                 "typo3/cms": ">= 4.5.0, <= 6.2.99"
             },
             "replace": {
-                "seo_basics": "0.8.6",
-                "typo3-ext/seo_basics": "0.8.6"
+                "seo_basics": "0.8.8",
+                "typo3-ext/seo_basics": "0.8.8"
             },
             "type": "typo3-cms-extension",
             "authors": [
                 {
-                    "name": "Benjamin Mack",
+                    "name": "Benni Mack",
                     "email": "benni@typo3.org",
                     "company": "",
                     "username": "benni"
                 }
             ],
             "description": "Introduces a separate field for the title-tag per page, easy and SEO-friendly keywords and description editing in a new module as well as a Google Sitemap (XML) and a clean output in the HTML Source code.",
-            "time": "2014-03-03 10:46:18"
-        },
-        {
-            "name": "typo3-ter/vhs",
-            "version": "1.9.1",
-            "dist": {
-                "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vhs/1.9.1/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms": ">= 6.0.0, <= 6.2.99"
-            },
-            "replace": {
-                "typo3-ext/vhs": "1.9.1",
-                "vhs": "1.9.1"
-            },
-            "type": "typo3-cms-extension",
-            "authors": [
-                {
-                    "name": "FluidTYPO3 Team",
-                    "email": "claus@namelesscoder.net",
-                    "company": "",
-                    "username": "fluidtypo3"
-                }
-            ],
-            "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
-            "time": "2014-06-02 17:12:31"
+            "time": "2014-08-27 12:49:25"
         },
         {
             "name": "typo3/cms",
@@ -497,11 +594,20 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fab/media": 20,
         "ecodev/speciality": 20,
         "ecodev/speciality-distribution": 20,
-        "fab/vidi": 20
+        "fab/vidi": 20,
+        "fab/media": 20,
+        "fab/context-hints": 20,
+        "helhum/typo3-console": 20,
+        "fluidtypo3/flux": 20,
+        "fluidtypo3/fluidpages": 20,
+        "fluidtypo3/fluidcontent": 20,
+        "fluidtypo3/fluidcontent_core": 20,
+        "fluidtypo3/fluidbootstraptheme": 20,
+        "fluidtypo3/vhs": 20
     },
+    "prefer-stable": false,
     "platform": [],
     "platform-dev": []
 }
