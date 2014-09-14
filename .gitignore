@@ -1,33 +1,22 @@
 ###########
 # /
 ###########
-/.*
-/*.phar
-/vendor/*
-/bin/*
-
-###########
-# /htdocs/*
-###########
-/htdocs/typo3_src*
-/htdocs/typo3
-/htdocs/uploads/*
-/htdocs/index.php
-/htdocs/Packages/*
-/htdocs/fileadmin/*
-/htdocs/typo3conf/ext/*
+/.idea
+/nbproject
+/typo3_src*
+/typo3
+/uploads/*
+/index.php
+/Packages/*
+/fileadmin/*
+/typo3temp/*
 
 ######################
-# /htdocs/typo3conf/
+# /typo3conf/
 ######################
-/htdocs/typo3conf/LocalConfiguration.php
-/htdocs/typo3conf/PackageStates.php
-/htdocs/typo3conf/ENABLE_INSTALL_TOOL
-/htdocs/typo3conf/FIRST_INSTALL
-/htdocs/typo3conf/*.log
-
-######################
-/htdocs/typo3conf/ext/speciality/.sass-cache/*
-/htdocs/typo3conf/ext/speciality/node_modules/*
-/htdocs/typo3conf/ext/speciality/Temporary/*
-/htdocs/typo3conf/ext/speciality/Resources/Public/Components/*
+/typo3conf/LocalConfiguration.php
+/typo3conf/PackageStates.php
+/typo3conf/ENABLE_INSTALL_TOOL
+/typo3conf/FIRST_INSTALL
+/typo3conf/*.log
+/typo3conf/ext/*

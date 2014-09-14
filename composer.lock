@@ -1,77 +1,613 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "bd23544ccc5e9b1a21a83c933151b180",
+    "hash": "1e7ffa6a2dcc3149c3ca04d6b5fe5de5",
     "packages": [
         {
-            "name": "phing/phing",
+            "name": "ecodev/speciality",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phingofficial/phing.git",
-                "reference": "10c1c98302c37c59dddfcb8aa7e46525041cf277"
+                "url": "https://github.com/Ecodev/speciality.git",
+                "reference": "6dce7665c6f0c017a0608a7ac630c9b229a4d072"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
+            "homepage": "https://github.com/Ecodev/speciality.git",
+            "time": "2014-09-14 20:29:49"
+        },
+        {
+            "name": "ecodev/speciality-distribution",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ecodev/speciality_distribution.git",
+                "reference": "a76be9b5d13cad8dec40d8d6ad470b639ede86c6"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "This package delivers a special website just for you.",
+            "homepage": "https://github.com/Ecodev/speciality_speciality.git",
+            "time": "2014-09-14 20:33:11"
+        },
+        {
+            "name": "fab/context-hints",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fudriot/context_hints.git",
+                "reference": "5c739bc44be402bed338db77a0891dd65745106e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/10c1c98302c37c59dddfcb8aa7e46525041cf277",
-                "reference": "10c1c98302c37c59dddfcb8aa7e46525041cf277",
+                "url": "https://api.github.com/repos/fudriot/context_hints/zipball/5c739bc44be402bed338db77a0891dd65745106e",
+                "reference": "5c739bc44be402bed338db77a0891dd65745106e",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Display a little hint in the Backend about the current Application Context.",
+            "homepage": "https://github.com/fudriot/context_hints",
+            "keywords": [
+                "Context",
+                "TYPO3 CMS",
+                "info"
+            ],
+            "time": "2014-08-11 15:45:53"
+        },
+        {
+            "name": "fab/media",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3CMS/Extensions/media.git",
+                "reference": "62c25ebecc99adf7efbd5d774c3adb4b51faffd8"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Media management system for TYPO3 CMS.",
+            "homepage": "https://forge.typo3.org/projects/extension-media",
+            "keywords": [
+                "Media management",
+                "TYPO3 CMS"
+            ],
+            "support": {
+                "issues": "https://forge.typo3.org/projects/extension-media"
+            },
+            "time": "2014-09-10 09:15:37"
+        },
+        {
+            "name": "fab/vidi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/TYPO3CMS/Extensions/vidi.git",
+                "reference": "07faa18e3f6f37be890c3a50c016d52e093edb9c"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
+            "homepage": "https://forge.typo3.org/projects/extension-vidi",
+            "keywords": [
+                "TYPO3 CMS",
+                "generic listing"
+            ],
+            "support": {
+                "issues": "https://forge.typo3.org/projects/extension-vidi"
+            },
+            "time": "2014-09-10 09:17:19"
+        },
+        {
+            "name": "fluidtypo3/fluidbootstraptheme",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme.git",
+                "reference": "fe8bad3b7837ae994198afe74c6dc04fad1a0f07"
+            },
+            "require": {
+                "fluidtypo3/flux": "*",
+                "fluidtypo3/vhs": "*"
+            },
+            "type": "typo3-cms-extension",
+            "description": "The fluid_bootstrap package from FluidTYPO3",
+            "time": "2014-09-09 06:39:39"
+        },
+        {
+            "name": "fluidtypo3/fluidcontent",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidcontent.git",
+                "reference": "35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidcontent/zipball/35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c",
+                "reference": "35fc967a9a3a13ede2f6da20e88c8ecbb13eb65c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "fluidtypo3/flux": "*"
             },
-            "bin": [
-                "bin/phing"
+            "suggest": {
+                "fluidtypo3/fluidcontent_bootstrap": "Provides Twitter Bootstrap templates for fluidcontent",
+                "fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid."
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
             ],
-            "type": "library",
+            "description": "Create Flexible Content elements in pure fluid",
+            "homepage": "https://fedext.net",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "fedext",
+                "fluid",
+                "fluidcontent",
+                "flux",
+                "templating"
+            ],
+            "time": "2014-09-14 18:28:56"
+        },
+        {
+            "name": "fluidtypo3/fluidcontent_core",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidcontent_core.git",
+                "reference": "03ae4e7bcf322ed0ea9dffcee590a6312496a103"
+            },
+            "require": {
+                "fluidtypo3/flux": "*",
+                "fluidtypo3/vhs": "*"
+            },
+            "suggest": {
+                "fluidtypo3/fluidcontent": "Gives the ability to render Content Templates with pure fluid.",
+                "fluidtypo3/fluidcontent_bootstrap": "Provides Twitter Bootstrap templates for fluidcontent",
+                "fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid."
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Replace css_styled_content with your own templates",
+            "homepage": "http://fluidtypo3.org/",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "fedext",
+                "fluid",
+                "fluidcontent",
+                "flux",
+                "templating"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/fedext",
+                "issues": "https://github.com/FluidTYPO3/fluidcontent_core/issues"
+            },
+            "time": "2014-09-03 23:32:29"
+        },
+        {
+            "name": "fluidtypo3/fluidpages",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/fluidpages.git",
+                "reference": "28da1127239a00b7fafb87a6317d4930ac3d5e63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidpages/zipball/28da1127239a00b7fafb87a6317d4930ac3d5e63",
+                "reference": "28da1127239a00b7fafb87a6317d4930ac3d5e63",
+                "shasum": ""
+            },
+            "require": {
+                "fluidtypo3/flux": "*"
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The fluidpages package from FluidTYPO3",
+            "time": "2014-09-14 20:13:24"
+        },
+        {
+            "name": "fluidtypo3/flux",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/flux.git",
+                "reference": "72b65f364c3b1e74ce6133fd8e8fb0358368646e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/flux/zipball/72b65f364c3b1e74ce6133fd8e8fb0358368646e",
+                "reference": "72b65f364c3b1e74ce6133fd8e8fb0358368646e",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The flux package from FluidTYPO3",
+            "time": "2014-09-11 12:53:48"
+        },
+        {
+            "name": "fluidtypo3/vhs",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/vhs.git",
+                "reference": "71e94ed3c06534ac94c947e29c6c14192ac423e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/vhs/zipball/71e94ed3c06534ac94c947e29c6c14192ac423e5",
+                "reference": "71e94ed3c06534ac94c947e29c6c14192ac423e5",
+                "shasum": ""
+            },
+            "type": "typo3-cms-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "The vhs package from FluidTYPO3",
+            "homepage": "http://fluidtypo3.org",
+            "keywords": [
+                "TYPO3 CMS",
+                "fedext",
+                "fluid",
+                "templating",
+                "utility",
+                "viewhelper"
+            ],
+            "time": "2014-09-13 22:43:55"
+        },
+        {
+            "name": "helhum/typo3-console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/typo3_console.git",
+                "reference": "c939c5212ab1e909f8c8b3041ef3949b80e193f1"
+            },
+            "require": {
+                "typo3/cms-core": ">6.2.2"
+            },
+            "replace": {
+                "typo3_console": "*"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfMinimalUsableSystem": true
+                    }
+                }
+            },
             "autoload": {
-                "classmap": [
-                    "classes/phing/"
-                ]
+                "psr-4": {
+                    "Helhum\\Typo3Console\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A reliable and powerful console for TYPO3 CMS",
+            "homepage": "http://typo3.org",
+            "time": "2014-08-05 15:29:17"
+        },
+        {
+            "name": "typo3-ter/nc-staticfilecache",
+            "version": "2.5.1",
+            "dist": {
+                "type": "t3x",
+                "url": "http://typo3.org/extensions/repository/download/nc_staticfilecache/2.5.1/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms": ">= 4.5.0, <= 6.2.99"
+            },
+            "replace": {
+                "nc_staticfilecache": "2.5.1",
+                "typo3-ext/nc_staticfilecache": "2.5.1"
+            },
+            "type": "typo3-cms-extension",
+            "authors": [
+                {
+                    "name": "Static File Cache team",
+                    "email": "extensions@netcreators.com",
+                    "company": "Netcreators",
+                    "username": "netcreators"
+                }
+            ],
+            "description": "Transparent static file cache solution using mod_rewrite and mod_expires. Increase response times for static pages by a factor of 230!",
+            "time": "2014-04-09 23:38:51"
+        },
+        {
+            "name": "typo3-ter/realurl",
+            "version": "1.12.8",
+            "dist": {
+                "type": "t3x",
+                "url": "http://typo3.org/extensions/repository/download/realurl/1.12.8/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">= 5.3.2, <= 5.999.999",
+                "typo3/cms": ">= 4.5.0, <= 6.2.999"
+            },
+            "conflict": {
+                "typo3-ter/cooluri": "*",
+                "typo3-ter/simulatestatic": "*"
+            },
+            "replace": {
+                "realurl": "1.12.8",
+                "typo3-ext/realurl": "1.12.8"
+            },
+            "type": "typo3-cms-extension",
+            "authors": [
+                {
+                    "name": "Dmitry Dulepov",
+                    "email": "dmitry.dulepov@gmail.com",
+                    "company": "",
+                    "username": "dmitry"
+                }
+            ],
+            "description": "Creates nice looking URLs for TYPO3 pages: converts http://example.com/index.phpid12345&L2 to http://example.com/path/to/your/page/. Please, ask for free support in TYPO3 mailing lists or contact the maintainer for paid support.",
+            "time": "2014-02-17 13:13:36"
+        },
+        {
+            "name": "typo3-ter/seo-basics",
+            "version": "0.8.8",
+            "dist": {
+                "type": "t3x",
+                "url": "http://typo3.org/extensions/repository/download/seo_basics/0.8.8/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3-ter/realurl": "*",
+                "typo3/cms": ">= 4.5.0, <= 6.2.99"
+            },
+            "replace": {
+                "seo_basics": "0.8.8",
+                "typo3-ext/seo_basics": "0.8.8"
+            },
+            "type": "typo3-cms-extension",
+            "authors": [
+                {
+                    "name": "Benni Mack",
+                    "email": "benni@typo3.org",
+                    "company": "",
+                    "username": "benni"
+                }
+            ],
+            "description": "Introduces a separate field for the title-tag per page, easy and SEO-friendly keywords and description editing in a new module as well as a Google Sitemap (XML) and a clean output in the HTML Source code.",
+            "time": "2014-08-27 12:49:25"
+        },
+        {
+            "name": "typo3/cms",
+            "version": "6.2.4",
+            "source": {
+                "type": "git",
+                "url": "git://git.typo3.org/Packages/TYPO3.CMS.git",
+                "reference": "ebcf783994e4e6e17bc3058f87be5bd6c9b99d7c"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "http://get.typo3.org/6.2.4",
+                "reference": "6.2.4",
+                "shasum": "8eac119c545c6e42a8ab377df3a60cea5f23d762"
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-pcre": "*",
+                "ext-session": "*",
+                "ext-xml": "*",
+                "php": ">=5.3.7",
+                "typo3/cms-composer-installers": "1.1.*@dev"
+            },
+            "replace": {
+                "typo3/cms-about": "self.version",
+                "typo3/cms-aboutmodules": "self.version",
+                "typo3/cms-adodb": "self.version",
+                "typo3/cms-backend": "self.version",
+                "typo3/cms-belog": "self.version",
+                "typo3/cms-beuser": "self.version",
+                "typo3/cms-cms": "self.version",
+                "typo3/cms-context-help": "self.version",
+                "typo3/cms-core": "self.version",
+                "typo3/cms-cshmanual": "self.version",
+                "typo3/cms-css-styled-content": "self.version",
+                "typo3/cms-dbal": "self.version",
+                "typo3/cms-documentation": "self.version",
+                "typo3/cms-extbase": "self.version",
+                "typo3/cms-extensionmanager": "self.version",
+                "typo3/cms-extra-page-cm-options": "self.version",
+                "typo3/cms-feedit": "self.version",
+                "typo3/cms-felogin": "self.version",
+                "typo3/cms-filelist": "self.version",
+                "typo3/cms-filemetadata": "self.version",
+                "typo3/cms-fluid": "self.version",
+                "typo3/cms-form": "self.version",
+                "typo3/cms-frontend": "self.version",
+                "typo3/cms-func": "self.version",
+                "typo3/cms-func-wizards": "self.version",
+                "typo3/cms-impexp": "self.version",
+                "typo3/cms-indexed-search": "self.version",
+                "typo3/cms-indexed-search-mysql": "self.version",
+                "typo3/cms-info": "self.version",
+                "typo3/cms-info-pagetsconfig": "self.version",
+                "typo3/cms-install": "self.version",
+                "typo3/cms-lang": "self.version",
+                "typo3/cms-linkvalidator": "self.version",
+                "typo3/cms-lowlevel": "self.version",
+                "typo3/cms-opendocs": "self.version",
+                "typo3/cms-openid": "self.version",
+                "typo3/cms-perm": "self.version",
+                "typo3/cms-recordlist": "self.version",
+                "typo3/cms-recycler": "self.version",
+                "typo3/cms-reports": "self.version",
+                "typo3/cms-rsaauth": "self.version",
+                "typo3/cms-rtehtmlarea": "self.version",
+                "typo3/cms-saltedpasswords": "self.version",
+                "typo3/cms-scheduler": "self.version",
+                "typo3/cms-setup": "self.version",
+                "typo3/cms-sv": "self.version",
+                "typo3/cms-sys-action": "self.version",
+                "typo3/cms-sys-note": "self.version",
+                "typo3/cms-t3editor": "self.version",
+                "typo3/cms-t3skin": "self.version",
+                "typo3/cms-taskcenter": "self.version",
+                "typo3/cms-tstemplate": "self.version",
+                "typo3/cms-version": "self.version",
+                "typo3/cms-viewpage": "self.version",
+                "typo3/cms-wizard-crpages": "self.version",
+                "typo3/cms-wizard-sortpages": "self.version",
+                "typo3/cms-workspaces": "self.version"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.3.*@dev",
+                "phpunit/phpunit": "~4.1"
+            },
+            "suggest": {
+                "ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
+                "ext-openssl": "",
+                "ext-soap": "",
+                "ext-zip": "",
+                "ext-zlib": "TYPO3 uses zlib for amongst others output compression and un/packing t3x extension files"
+            },
+            "type": "typo3-cms-core",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2.x-dev"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "classes"
-            ],
             "license": [
-                "LGPL3"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "Michiel Rook",
-                    "email": "mrook@php.net"
+                    "name": "TYPO3 CMS Core Team",
+                    "homepage": "http://forge.typo3.org/projects/typo3cms-core",
+                    "role": "Developer"
                 },
                 {
-                    "name": "Phing Community",
-                    "homepage": "http://www.phing.info/trac/wiki/Development/Contributors"
+                    "name": "The TYPO3 Community",
+                    "homepage": "https://typo3.org/community/",
+                    "role": "Contributor"
                 }
             ],
-            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
-            "homepage": "http://www.phing.info/",
+            "description": "TYPO3 CMS is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.",
+            "homepage": "http://typo3.org/",
             "keywords": [
-                "build",
-                "task",
-                "tool"
+                "Content management system",
+                "cms",
+                "extbase",
+                "typo3"
             ],
-            "time": "2014-02-17 20:21:39"
+            "time": "2014-07-08 13:04:53"
+        },
+        {
+            "name": "typo3/cms-composer-installers",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
+                "reference": "5865cd2a4b089edb2c52b678d7099dce3ad136da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/5865cd2a4b089edb2c52b678d7099dce3ad136da",
+                "reference": "5865cd2a4b089edb2c52b678d7099dce3ad136da",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "replace": {
+                "lw/typo3cms-installers": "*",
+                "netresearch/composer-installers": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "TYPO3\\CMS\\Composer\\Installer\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Opitz",
+                    "email": "christian.opitz@netresearch.de"
+                },
+                {
+                    "name": "Lars Peipmann",
+                    "email": "lars@peipmann.de"
+                }
+            ],
+            "description": "TYPO3 CMS Installers",
+            "homepage": "http://forge.typo3.org/projects/team-composer",
+            "keywords": [
+                "cms",
+                "core",
+                "extension",
+                "installer",
+                "typo3"
+            ],
+            "time": "2014-05-26 08:48:48"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phing/phing": 20
+        "ecodev/speciality": 20,
+        "ecodev/speciality-distribution": 20,
+        "fab/vidi": 20,
+        "fab/media": 20,
+        "fab/context-hints": 20,
+        "helhum/typo3-console": 20,
+        "fluidtypo3/flux": 20,
+        "fluidtypo3/fluidpages": 20,
+        "fluidtypo3/fluidcontent": 20,
+        "fluidtypo3/fluidcontent_core": 20,
+        "fluidtypo3/fluidbootstraptheme": 20,
+        "fluidtypo3/vhs": 20
     },
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
 }
