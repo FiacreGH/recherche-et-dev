@@ -1,3 +1,0 @@
-[submodule "build/Phing"]
-	path = build/Phing
-	url = https://github.com/fudriot/t3phing
