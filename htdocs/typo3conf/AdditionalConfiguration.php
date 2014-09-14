@@ -50,7 +50,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightShowVersion'] = '1';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['maxFileNameLength'] = '255';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['recursiveDomainSearch'] = '1';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['serverTimeZone'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['setDBinit'] = 'SET NAMES utf8;';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['textfile_ext'] = 'txt,html,htm,css,tmpl,js,sql,xml,csv,php,php3,php4,php5,php6,phpsh,inc,ts';
 
 // http://foobar.lamp-solutions.de/howtos/typo3/typo3-tuning/3111/
@@ -74,19 +73,6 @@ if (FALSE) {
 	$GLOBALS['TYPO3_CONF_VARS']['BE']['folderCreateMask'] = '0775';
 }
 
-// MLC multi-byte content; change to FALSE for older US English only sites
-// Leave FALSE as not really need anymore for TYPO3 4.2 and above
-if (FALSE) {
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['UTF8filesystem'] = 'true';
-
-	// For GIFBUILDER support
-	// Set it to 'iconv' or 'mbstring'
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['t3lib_cs_convMethod'] = 'iconv';
-
-	// For 'iconv' support you need PHP 5!
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['t3lib_cs_utils'] = 'iconv';
-}
-
 // company support details
 if (FALSE) {
 	// admin login warning email
@@ -95,26 +81,9 @@ if (FALSE) {
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightWarrantyURL'] = 'http://www.ecodev.ch/';
 }
 
-// graphics settings
-if (FALSE) {
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/opt/local/bin/';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/opt/local/bin/';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']['TTFdpi'] = '96';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
-	$GLOBALS['TYPO3_CONF_VARS']["GFX"]["im_v5effects"] = '-1';
-}
-
 #curl and filepath helpers
 $GLOBALS['TYPO3_CONF_VARS']['BE']['unzip_path'] = '/usr/bin/';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['binPath'] = '/usr/local/bin,/usr/bin';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['curlUse'] = '1';
 
-// tidy for Tidy cleans the HTML-code for nice display
-if (FALSE) {
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['tidy'] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['tidy_option'] = 'output'; // all, cached, output
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['tidy_path'] = 'tidy -i --quiet true --tidy-mark true -wrap 0 -utf8 --output-xhtml true';
-}
-
-?>
+$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'] = array('fluidcontentcore/Configuration/TypoScript/');
