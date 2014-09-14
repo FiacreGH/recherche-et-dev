@@ -53,8 +53,9 @@ and MariaDB / MySQL 5.1.x-5.5.x is installed on your system::
 
 	# Install the extension containing the distribution
 	-> Open the Extension Manager
-	-> Search for extension "speciality_distribution" and install it. (Install EXT:vhs first, if you encounter an exception during installation)
-	-> wait and :)
+	-> Firstly, deactivate CSS styled content (EXT:css_styled_content)
+	-> Search for extension "speciality_distribution" and install it. It can take a while!
+	-> At the end of the installation, reload the whole Backend and :)
 
 
 .. _system requirement: http://wiki.typo3.org/TYPO3_6.2#System_Requirements
