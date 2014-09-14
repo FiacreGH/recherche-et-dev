@@ -9,8 +9,8 @@
 		{ "type": "git", "url": "https://github.com/FluidTYPO3/fluidcontent_core.git"},
 		{ "type": "git", "url": "https://github.com/helhum/typo3_console.git"}
 	],
-	"name": "dfau/typo3-cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"name": "ecodev/typo3-cms-speciality-distribution",
+	"description" : "TYPO3 CMS Speciality Distribution",
 	"license": "GPL-2.0+",
 	"config": {
 		"vendor-dir": "Packages/Libraries",
