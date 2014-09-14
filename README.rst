@@ -1,53 +1,52 @@
 Speciality Distribution for TYPO3 CMS
 =====================================
 
+Motivation
+----------
+
+All started with the modernisation of our Dummy package we were using in our company. To give a bit of background, we were aiming to:
+
+* Have Twitter Bootstrap as HTML / CSS Framework
+* Use as much as possible Fluid for the rendering and the templating. Actually, it turned out we have reached the 100% thanks to the work of Claus Due
+* Keep folder fileadmin clean from TS / JS / CSS files which should be for storing media only (images, documents etc…)
+
+We wanted not only a package to demonstrate the capability of TYPO3 but also something useful so that it should save us from the tedious and repeating work when kick-starting a website. The result is pretty much promising. More important we **have put everything in public** so that you can test and also take advantage for your own needs.
+
 .. No public website so far. Let see if it can be re-activated.
 
-How to install with TYPO3 CMS 6.2
----------------------------------
+Installation
+------------
 
-**Long term the goal is to have the Speciality Distribution shipped via the TER** following the TYPO3 CMS Distributions model change in 6.2. For now, it is not
-possible as EXT:media and EXT:vidi are not yet released on the TER - with the compatibility of CMS 6.2. I am working hard on that!
-I still have one important feature to merge in Vidi (a BE listing engine required by Media) before it
-can be released as I want to avoid possible breaking changes after TER release. I have the financial support to do it, just need the time!
+Use Composer to install the Speciality Distribution. Notice the `system requirement`_ before proceeding and make sure PHP 5.3.7 - 5.4.x
+and MariaDB / MySQL 5.1.x-5.5.x is installed on your system::
 
-However, the good news is that the Speciality Distribution can nevertheless be installed via Git and has some Composer flavour as a bonus.
-Notice the `system requirement`_ before proceeding and make sure PHP 5.3.7 - 5.4.x and MariaDB / MySQL 5.1.x-5.5.x is installed in your
-system::
+	# Download the Speciality Distribution via Composer
+	composer create-project ecodev/typo3-cms-speciality-distribution SpecialityDistribution
 
-	# Clone the repository
-	git clone git://github.com/Ecodev/bootstrap_package.git speciality.distribution
+	# If you want to keep the Git information
+	composer create-project ecodev/typo3-cms-speciality-distribution SpecialityDistribution --prefer-source --keep-vcs
 
-	# Download TYPO3 CMS Core
-	cd speciality.distribution/htdocs
-
-	# Download CMS Core and extensions through Composer.
-	# If you don't have Composer on your system, refer to https://getcomposer.org/download/
+	# There is a known bug in the Composer Installer. The packages are not installed in the correct directory for the first time.
+	# To fix that, these commands are required:
+	rm -rf Packages/Libraries/{ecodev,fab,fluidtypo3}
 	composer install
 
-	# There is a bug in the Composer Installer. To fix that, these commands are required:
-	rm -rf Packages/Libraries/{ecodev,fab}
-	composer install
+	# Prepare installation
+	touch typo3conf/ENABLE_INSTALL_TOOL
 
 	# Manual steps
 	-> configure a Virtual Host. Convenience example for Apache:
 
 		<VirtualHost *:80>
-		    DocumentRoot "/var/vhosts/speciality.distribution/htdocs"
+		    DocumentRoot "/var/vhosts/SpecialityDistribution"
 		    ServerName speciality.distribution
-		    ServerAlias *.speciality.distribution
-		    ErrorLog "/var/vhosts/speciality.distribution/logs/error_log"
-		    CustomLog "/var/vhosts/speciality.distribution/logs/access_log" common
 		</VirtualHost>
 
 	-> add a DNS entry (e.g editing /etc/hosts file)
 
-	# Run the 1,2,3 wizard installation
-	touch typo3conf/ENABLE_INSTALL_TOOL
-
 	# Run the Installation Wizard.
 	# !! IMPORTANT: at step 5 of the wizard, do not download list of distributions.
-	# The distribution has already been download by Composer.
+	# The extension containing the distribution has already been downloaded by Composer.
 	open http://speciality.distribution
 
 	# Open the Backend at the end of the Wizard.
@@ -59,33 +58,8 @@ system::
 	-> wait and :)
 
 
-Notice the ``htdocs`` folder located at the root of the direction is not mandatory. It just matches our hosting convention in our company.
-If you want to get rid of it, rename the file structure to your convenience when configuring the Virtual Host.
+.. _system requirement: http://wiki.typo3.org/TYPO3_6.2#System_Requirements
 
-.. _system requirement: http://wiki.typo3.org/TYPO3_6.1#System_Requirements
-
-
-
-TODO:
-
-* Check whether to integrate `EXT:fluidcontent_core`_ instead of EXT:css_styled_content.
-* Streamline the page template (1column.html, 2column.html could be replaced as done in `EXT:fluidpages_bootstrap`_
-
-.. _this ticket: https://forge.typo3.org/issues/58648
-.. _EXT:fluidcontent_core: https://github.com/FluidTYPO3/fluidcontent_core
-.. _EXT:fluidpages_bootstrap: https://github.com/FluidTYPO3/fluidpages_bootstrap
-
-
-Motivation
-----------
-
-All started with the modernisation of our Dummy package we were using in our company. To give a bit of background, we were aiming to:
-
-* Have Twitter Bootstrap as HTML / CSS Framework
-* Use as much as possible Fluid for the rendering and the templating. Actually, it turned out we have reached the 100% thanks to the work of Claus Due
-* Keep folder fileadmin clean from TS / JS / CSS files which should be for storing media only (images, documents etc…)
-
-We wanted not only a package to demonstrate the capability of TYPO3 but also something useful so that it should save us from the tedious and repeating work when kick-starting a website. The result is pretty much promising. More important we **have put everything in public** so that you can test and also take advantage for your own needs.
 
 Support
 =======
