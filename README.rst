@@ -25,11 +25,6 @@ and MariaDB / MySQL 5.1.x-5.5.x is installed on your system::
 	# If you want to keep the Git information
 	composer create-project ecodev/typo3-cms-speciality-distribution SpecialityDistribution --prefer-source --keep-vcs
 
-	# There is a known bug in the Composer Installer. The packages are not installed in the correct directory for the first time.
-	# To fix that, these commands are required:
-	rm -rf Packages/Libraries/{ecodev,fab,fluidtypo3}
-	composer install
-
 	# Prepare installation
 	touch typo3conf/ENABLE_INSTALL_TOOL
 
