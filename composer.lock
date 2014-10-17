@@ -72,7 +72,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/TYPO3CMS/Extensions/media.git",
-                "reference": "c53f10527acbcebe166e0c1dba85c802f5dedc22"
+                "reference": "93ef9cf29f675722f072738020af9109893e53e7"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -87,7 +87,7 @@
             "support": {
                 "issues": "https://forge.typo3.org/projects/extension-media"
             },
-            "time": "2014-09-18 10:18:19"
+            "time": "2014-10-16 07:50:50"
         },
         {
             "name": "fab/vidi",
@@ -95,7 +95,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/TYPO3CMS/Extensions/vidi.git",
-                "reference": "2f51b6e953007bd1736dccf6c5ae2cf6ec4c7096"
+                "reference": "b6fa7e4657acc04aa3d24c72d532227963227538"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -110,7 +110,7 @@
             "support": {
                 "issues": "https://forge.typo3.org/projects/extension-vidi"
             },
-            "time": "2014-09-18 10:10:52"
+            "time": "2014-10-16 12:58:33"
         },
         {
             "name": "fluidtypo3/fluidbootstraptheme",
@@ -134,12 +134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FluidTYPO3/fluidcontent.git",
-                "reference": "d14d068de67f81f50ae8a46220c91749968c7636"
+                "reference": "89c961e27d7c8f5f131b9ad527e3bce0769d61a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FluidTYPO3/fluidcontent/zipball/d14d068de67f81f50ae8a46220c91749968c7636",
-                "reference": "d14d068de67f81f50ae8a46220c91749968c7636",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidcontent/zipball/89c961e27d7c8f5f131b9ad527e3bce0769d61a2",
+                "reference": "89c961e27d7c8f5f131b9ad527e3bce0769d61a2",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "flux",
                 "templating"
             ],
-            "time": "2014-09-19 11:16:46"
+            "time": "2014-09-23 22:03:09"
         },
         {
             "name": "fluidtypo3/fluidcontent_core",
@@ -172,7 +172,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FluidTYPO3/fluidcontent_core.git",
-                "reference": "7495555039dd5f4139b89799cdf25af0c25ef5ed"
+                "reference": "4fa440e17f85ef84d1d2b1ec3c2f85b5cfa95d29"
             },
             "require": {
                 "fluidtypo3/flux": "*",
@@ -202,7 +202,7 @@
                 "irc": "irc://irc.freenode.org/fedext",
                 "issues": "https://github.com/FluidTYPO3/fluidcontent_core/issues"
             },
-            "time": "2014-09-19 10:28:48"
+            "time": "2014-10-15 18:31:33"
         },
         {
             "name": "fluidtypo3/fluidpages",
@@ -210,12 +210,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FluidTYPO3/fluidpages.git",
-                "reference": "baeaa206ce85c6d5a1a05a6b87dfe84e5a3d4ec0"
+                "reference": "2038c21bdb9cb0fccaab237c55f2c1d86227cfae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FluidTYPO3/fluidpages/zipball/baeaa206ce85c6d5a1a05a6b87dfe84e5a3d4ec0",
-                "reference": "baeaa206ce85c6d5a1a05a6b87dfe84e5a3d4ec0",
+                "url": "https://api.github.com/repos/FluidTYPO3/fluidpages/zipball/2038c21bdb9cb0fccaab237c55f2c1d86227cfae",
+                "reference": "2038c21bdb9cb0fccaab237c55f2c1d86227cfae",
                 "shasum": ""
             },
             "require": {
@@ -240,7 +240,7 @@
                 "flux",
                 "templating"
             ],
-            "time": "2014-09-21 21:15:09"
+            "time": "2014-10-14 21:53:19"
         },
         {
             "name": "fluidtypo3/flux",
@@ -248,13 +248,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FluidTYPO3/flux.git",
-                "reference": "89f15d5e416034fce65a37269b37fd9c225e54c8"
+                "reference": "060b141eba37bb450947580638a42af4941b6477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FluidTYPO3/flux/zipball/89f15d5e416034fce65a37269b37fd9c225e54c8",
-                "reference": "89f15d5e416034fce65a37269b37fd9c225e54c8",
+                "url": "https://api.github.com/repos/FluidTYPO3/flux/zipball/060b141eba37bb450947580638a42af4941b6477",
+                "reference": "060b141eba37bb450947580638a42af4941b6477",
                 "shasum": ""
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
             },
             "suggest": {
                 "fluidtypo3/fluidcontent": "Gives the ability to render Content Templates with pure fluid.",
@@ -275,7 +278,7 @@
             ],
             "description": "The flux package from FluidTYPO3",
             "homepage": "http://fluidtypo3.org",
-            "time": "2014-09-21 00:00:44"
+            "time": "2014-10-09 21:37:54"
         },
         {
             "name": "fluidtypo3/vhs",
@@ -283,13 +286,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FluidTYPO3/vhs.git",
-                "reference": "f7799a83544b95c328f8ebdaa0bf6dfb29d19cfb"
+                "reference": "9e70d50d9446d7b7baf95a01c2ad078b00c966d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FluidTYPO3/vhs/zipball/f7799a83544b95c328f8ebdaa0bf6dfb29d19cfb",
-                "reference": "f7799a83544b95c328f8ebdaa0bf6dfb29d19cfb",
+                "url": "https://api.github.com/repos/FluidTYPO3/vhs/zipball/9e70d50d9446d7b7baf95a01c2ad078b00c966d0",
+                "reference": "9e70d50d9446d7b7baf95a01c2ad078b00c966d0",
                 "shasum": ""
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
             },
             "type": "typo3-cms-extension",
             "notification-url": "https://packagist.org/downloads/",
@@ -306,7 +312,7 @@
                 "utility",
                 "viewhelper"
             ],
-            "time": "2014-09-19 11:58:39"
+            "time": "2014-10-16 20:01:36"
         },
         {
             "name": "helhum/typo3-console",
@@ -437,17 +443,17 @@
         },
         {
             "name": "typo3/cms",
-            "version": "6.2.4",
+            "version": "6.2.5",
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.CMS.git",
-                "reference": "ebcf783994e4e6e17bc3058f87be5bd6c9b99d7c"
+                "reference": "3eefe725197182b99f47db410aa5ccb313377ce0"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://get.typo3.org/6.2.4",
-                "reference": "6.2.4",
-                "shasum": "8eac119c545c6e42a8ab377df3a60cea5f23d762"
+                "url": "http://get.typo3.org/6.2.5",
+                "reference": "6.2.5",
+                "shasum": "21e475a393275b905159d7e6466f9e8532a8cfcd"
             },
             "require": {
                 "ext-fileinfo": "*",
@@ -518,7 +524,7 @@
             },
             "require-dev": {
                 "mikey179/vfsstream": "1.3.*@dev",
-                "phpunit/phpunit": "~4.1"
+                "phpunit/phpunit": "~4.1.0"
             },
             "suggest": {
                 "ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
@@ -530,7 +536,7 @@
             "type": "typo3-cms-core",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.2.x-dev"
+                    "dev-TYPO3_6-2": "6.2.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -557,7 +563,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2014-07-08 13:04:53"
+            "time": "2014-09-23 13:33:12"
         },
         {
             "name": "typo3/cms-composer-installers",
