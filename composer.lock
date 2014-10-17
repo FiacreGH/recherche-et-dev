@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "fd41f026a87e90ef48a6233c6be81e4b5b5a0def"
+                "reference": "959157bc76a0548d85591b388d3ae0c4b792204c"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,7 @@
             ],
             "description": "This package delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2014-09-21 15:44:27"
+            "time": "2014-10-17 08:28:47"
         },
         {
             "name": "fab/context-hints",
