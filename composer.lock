@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "6554fab4146991caffbaa58f61981e60392e8e48"
+                "reference": "4cb049d88a1ef64801d66be910584ea4dd7c6260"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2014-09-21 15:46:48"
+            "time": "2014-11-07 09:40:15"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "959157bc76a0548d85591b388d3ae0c4b792204c"
+                "reference": "9fde8bd4f445b95d68c1f1fd8ca224568c011892"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,7 @@
             ],
             "description": "This package delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2014-10-17 08:28:47"
+            "time": "2014-11-07 09:45:21"
         },
         {
             "name": "fab/context-hints",
