@@ -20,10 +20,10 @@ Use Composer to install the Speciality Distribution. Notice the `system requirem
 and MariaDB / MySQL 5.1.x-5.5.x is installed on your system::
 
 	# Download the Speciality Distribution via Composer
-	composer create-project ecodev/typo3-cms-speciality-distribution SpecialityDistribution
+	composer create-project ecodev/typo3-cms-speciality-distribution htdocs dev-master
 
 	# If you want to keep the Git information
-	composer create-project ecodev/typo3-cms-speciality-distribution SpecialityDistribution --prefer-source --keep-vcs
+	composer create-project ecodev/typo3-cms-speciality-distribution htdocs --prefer-source --keep-vcs
 
 	# Prepare installation
 	touch typo3conf/ENABLE_INSTALL_TOOL
