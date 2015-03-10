@@ -26,6 +26,7 @@ and MariaDB / MySQL 5.1.x-5.5.x is installed on your system::
 	composer create-project ecodev/typo3-cms-speciality-distribution htdocs --prefer-source --keep-vcs
 
 	# Prepare installation
+	cd htdocs
 	touch typo3conf/ENABLE_INSTALL_TOOL
 
 	# Manual steps
