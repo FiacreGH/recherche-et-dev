@@ -13,6 +13,21 @@ We wanted not only a package to demonstrate the capability of TYPO3 but also som
 
 .. No public website so far. Let see if it can be re-activated.
 
+
+Umbrella repository
+-------------------
+
+This Git repository is the umbrella repository which basically contains some scaffolding files taken from `HTML5 Boilerplate`_ and the Composer files.
+The command `composer install` will fetch the required Packages for you, among other:
+
+* extension `speciality`_ which contains the template and configuration files for the website. Please report and make Pull Request **in this repository**.
+* extension `speciality_distribution`_ which hosts the initial SQL dump of the distribution along with some demo images.
+This extension is only required once. Before going live, it is advised to complete remove the extension which is not necessary anymore.
+
+.. _speciality: https://github.com/Ecodev/speciality
+.. _speciality_distribution :https://github.com/Ecodev/speciality_distribution
+.. _HTML5 Boilerplate: https://html5boilerplate.com/
+
 Installation
 ------------
 
