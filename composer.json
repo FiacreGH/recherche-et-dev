@@ -11,26 +11,6 @@
     {
       "type": "git",
       "url": "https://github.com/Ecodev/speciality_distribution.git"
-    },
-    {
-      "type": "git",
-      "url": "git://git.typo3.org/TYPO3CMS/Extensions/media.git"
-    },
-    {
-      "type": "git",
-      "url": "git://git.typo3.org/TYPO3CMS/Extensions/vidi.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/FluidTYPO3/fluidcontent_core.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/helhum/typo3_console.git"
     }
   ],
   "name": "ecodev/typo3-cms-speciality-distribution",
@@ -47,23 +27,15 @@
     "typo3-ter/seo-basics": "*",
     "ecodev/speciality": "dev-master",
     "ecodev/speciality-distribution": "dev-master",
-    "fab/vidi": "dev-master",
-    "fab/media": "dev-master",
-    "fab/context-hints": "dev-master",
-    "helhum/typo3-console": "dev-master",
+    "typo3-ter/vidi": "*",
+    "typo3-ter/media": "*",
+    "typo3-ter/context-hints": "*",
+    "typo3-ter/typo3-console": "*",
     "typo3-ter/fluidcontent": "*",
     "typo3-ter/fluidpages": "*",
     "typo3-ter/fluidcontent-core": "*",
     "typo3-ter/fluidbootstraptheme": "*",
     "typo3-ter/flux": "*",
     "typo3-ter/vhs": "*"
-  },
-  "_fluidtypo3-from-packagist": {
-    "fluidtypo3/flux": "dev-master",
-    "fluidtypo3/fluidpages": "dev-master",
-    "fluidtypo3/fluidcontent": "dev-master",
-    "fluidtypo3/fluidcontent_core": "dev-master",
-    "fluidtypo3/fluidbootstraptheme": "dev-master",
-    "fluidtypo3/vhs": "dev-master"
   }
 }
