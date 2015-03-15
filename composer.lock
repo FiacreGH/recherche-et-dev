@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "8a65364168da362810bc19c9377026fa3d424ef4"
+                "reference": "8c8b9c08fcea07acf83cbfbb21ea263a38c08247"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2015-03-11 16:40:08"
+            "time": "2015-03-15 08:00:29"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "4a8d731f6712aa3614dd52cb69dbdc1267a50b87"
+                "reference": "2aca8d75989ec71ebda8df25348dfdc60e3ba75c"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,7 @@
             ],
             "description": "This package delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2015-03-12 18:13:10"
+            "time": "2015-03-15 07:58:11"
         },
         {
             "name": "helhum/class-alias-loader",
@@ -246,10 +246,10 @@
         },
         {
             "name": "typo3-ter/media",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/media/3.4.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/media/3.5.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -267,7 +267,7 @@
                 }
             ],
             "description": "Media management system for TYPO3 CMS.",
-            "time": "2015-02-22 22:20:28"
+            "time": "2015-03-12 19:08:37"
         },
         {
             "name": "typo3-ter/nc-staticfilecache",
@@ -299,24 +299,20 @@
         },
         {
             "name": "typo3-ter/realurl",
-            "version": "1.12.8",
+            "version": "1.13.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/realurl/1.12.8/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/realurl/1.13.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "php": ">= 5.3.2, <= 5.999.999",
-                "typo3/cms": ">= 4.5.0, <= 6.2.999"
+                "typo3/cms": ">= 4.5.40, <= 7.0.999"
             },
             "conflict": {
                 "typo3-ter/cooluri": "*",
                 "typo3-ter/simulatestatic": "*"
-            },
-            "replace": {
-                "realurl": "1.12.8",
-                "typo3-ext/realurl": "1.12.8"
             },
             "type": "typo3-cms-extension",
             "authors": [
@@ -328,7 +324,7 @@
                 }
             ],
             "description": "Creates nice looking URLs for TYPO3 pages: converts http://example.com/index.phpid12345&L2 to http://example.com/path/to/your/page/. Please, ask for free support in TYPO3 mailing lists or contact the maintainer for paid support.",
-            "time": "2014-02-17 13:13:36"
+            "time": "2015-03-13 11:03:03"
         },
         {
             "name": "typo3-ter/seo-basics",
@@ -388,10 +384,10 @@
         },
         {
             "name": "typo3-ter/vhs",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vhs/2.3.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/vhs/2.3.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -409,14 +405,14 @@
                 }
             ],
             "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
-            "time": "2015-03-09 22:34:54"
+            "time": "2015-03-15 02:19:51"
         },
         {
             "name": "typo3-ter/vidi",
-            "version": "0.8.0",
+            "version": "0.9.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vidi/0.8.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/vidi/0.9.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -433,7 +429,7 @@
                 }
             ],
             "description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
-            "time": "2015-02-22 22:25:30"
+            "time": "2015-03-12 19:06:16"
         },
         {
             "name": "typo3/cms",
