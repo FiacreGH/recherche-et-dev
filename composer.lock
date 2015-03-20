@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "8c8b9c08fcea07acf83cbfbb21ea263a38c08247"
+                "reference": "5e71d76b12005a0f9b136703d0709ad51756d5b6"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2015-03-15 08:00:29"
+            "time": "2015-03-20 16:23:10"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "2aca8d75989ec71ebda8df25348dfdc60e3ba75c"
+                "reference": "6d76ed1701dbf89690baa2a08010c59c11428eed"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,7 @@
             ],
             "description": "This package delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2015-03-15 07:58:11"
+            "time": "2015-03-20 16:36:00"
         },
         {
             "name": "helhum/class-alias-loader",
@@ -140,16 +140,16 @@
         },
         {
             "name": "typo3-ter/fluidcontent",
-            "version": "4.1.1",
+            "version": "4.2.1",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidcontent/4.1.1/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/fluidcontent/4.2.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3-ter/flux": ">= 7.1.0, <= 7.1.99",
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
+                "typo3-ter/flux": ">= 7.2.0, <= 7.2.99",
+                "typo3/cms": ">= 6.1.0, <= 7.1.99"
             },
             "type": "typo3-cms-extension",
             "authors": [
@@ -161,21 +161,21 @@
                 }
             ],
             "description": "Fluid Content Element engine - integrates extremely compact and highly dynamic content element templates written in Fluid. See: https://github.com/FluidTYPO3/fluidcontent",
-            "time": "2014-10-31 01:37:59"
+            "time": "2015-03-19 15:56:58"
         },
         {
             "name": "typo3-ter/fluidcontent-core",
-            "version": "1.0.3",
+            "version": "1.1.1",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidcontent_core/1.0.3/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/fluidcontent_core/1.1.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3-ter/flux": ">= 7.1.0, <= 7.1.99",
+                "typo3-ter/flux": ">= 7.2.0, <= 7.2.99",
                 "typo3-ter/vhs": ">= 2.1.0, <= 2.3.99",
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
+                "typo3/cms": ">= 6.2.0, <= 7.1.99"
             },
             "replace": {
                 "typo3-ter/fluidcontent_core": "self.version"
@@ -190,20 +190,20 @@
                 }
             ],
             "description": "Not CSS styled content - Fluid styled content",
-            "time": "2015-03-02 19:07:24"
+            "time": "2015-03-20 12:52:25"
         },
         {
             "name": "typo3-ter/fluidpages",
-            "version": "3.1.2",
+            "version": "3.2.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidpages/3.1.2/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/fluidpages/3.2.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3-ter/flux": ">= 7.1.0, <= 7.1.99",
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
+                "typo3-ter/flux": ">= 7.2.0, <= 7.2.99",
+                "typo3/cms": ">= 6.2.0, <= 7.1.99"
             },
             "conflict": {
                 "typo3-ter/templavoila": "*"
@@ -218,19 +218,19 @@
                 }
             ],
             "description": "Fluid Page Template engine - integrates compact and highly dynamic page templates with all the benefits of Fluid.",
-            "time": "2014-10-31 02:06:19"
+            "time": "2015-03-18 16:21:43"
         },
         {
             "name": "typo3-ter/flux",
-            "version": "7.1.2",
+            "version": "7.2.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/flux/7.1.2/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/flux/7.2.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3/cms": ">= 6.1.0, <= 6.2.99"
+                "typo3/cms": ">= 6.2.0, <= 7.1.99"
             },
             "type": "typo3-cms-extension",
             "authors": [
@@ -242,7 +242,7 @@
                 }
             ],
             "description": "Backend form and frontend content rendering assistance API with focus on productivity.",
-            "time": "2014-11-05 23:08:20"
+            "time": "2015-03-18 16:08:15"
         },
         {
             "name": "typo3-ter/media",
@@ -299,16 +299,16 @@
         },
         {
             "name": "typo3-ter/realurl",
-            "version": "1.13.0",
+            "version": "1.13.3",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/realurl/1.13.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/realurl/1.13.3/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "php": ">= 5.3.2, <= 5.999.999",
-                "typo3/cms": ">= 4.5.40, <= 7.0.999"
+                "typo3/cms": ">= 4.5.40, <= 7.1.999"
             },
             "conflict": {
                 "typo3-ter/cooluri": "*",
@@ -324,7 +324,7 @@
                 }
             ],
             "description": "Creates nice looking URLs for TYPO3 pages: converts http://example.com/index.phpid12345&L2 to http://example.com/path/to/your/page/. Please, ask for free support in TYPO3 mailing lists or contact the maintainer for paid support.",
-            "time": "2015-03-13 11:03:03"
+            "time": "2015-03-16 11:23:57"
         },
         {
             "name": "typo3-ter/seo-basics",
@@ -433,17 +433,17 @@
         },
         {
             "name": "typo3/cms",
-            "version": "6.2.10",
+            "version": "6.2.11",
             "source": {
                 "type": "git",
-                "url": "https://git.typo3.org/Packages/TYPO3.CMS.git",
-                "reference": "b3201dd1e9ffd33dbd55912626d6de248e8d5696"
+                "url": "https://github.com/TYPO3/TYPO3.CMS.git",
+                "reference": "1e44a4d1533aa4d70e6fa90ec96ef3f098844d59"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://get.typo3.org/6.2.10",
-                "reference": "6.2.10",
-                "shasum": "0b2fcc884555de035a27199177656a5f51855625"
+                "url": "http://get.typo3.org/6.2.11",
+                "reference": "6.2.11",
+                "shasum": "935aa012e2904742ddf1fd9bb2118865edf4097b"
             },
             "require": {
                 "ext-fileinfo": "*",
@@ -515,7 +515,7 @@
             },
             "require-dev": {
                 "mikey179/vfsstream": "1.3.*@dev",
-                "phpunit/phpunit": "~4.4.0"
+                "phpunit/phpunit": "~4.5.0"
             },
             "suggest": {
                 "ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
@@ -589,7 +589,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2015-02-26 18:23:23"
+            "time": "2015-03-17 14:06:19"
         },
         {
             "name": "typo3/cms-composer-installers",
