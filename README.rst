@@ -25,7 +25,7 @@ The command `composer install` will fetch the required Packages for you, among o
 This extension is only required once. Before going live, it is advised to complete remove the extension which is not necessary anymore.
 
 .. _speciality: https://github.com/Ecodev/speciality
-.. _speciality_distribution :https://github.com/Ecodev/speciality_distribution
+.. _speciality_distribution: https://github.com/Ecodev/speciality_distribution
 .. _HTML5 Boilerplate: https://html5boilerplate.com/
 
 Installation
