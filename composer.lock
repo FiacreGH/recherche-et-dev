@@ -12,15 +12,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "5e71d76b12005a0f9b136703d0709ad51756d5b6"
+                "reference": "2978481559799fe1dce650c6a9b958a0ce6465e5"
             },
             "type": "typo3-cms-extension",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
+            "description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2015-03-20 16:23:10"
+            "time": "2015-05-13 16:06:57"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,34 +28,38 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "6d76ed1701dbf89690baa2a08010c59c11428eed"
+                "reference": "f752a74ae924f2c9bd2c1adebd8d0216977f3e71"
             },
             "type": "typo3-cms-extension",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "This package delivers a special website just for you.",
+            "description": "Delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2015-03-20 16:36:00"
+            "time": "2015-05-13 16:18:04"
         },
         {
             "name": "helhum/class-alias-loader",
-            "version": "1.0.0",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/helhum/class-alias-loader.git",
-                "reference": "14073641d8d7859d08311bfcc3a5c19f3a40a6a3"
+                "reference": "99c59fffbae4260685bf72a5b34f2d79304903c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/helhum/class-alias-loader/zipball/14073641d8d7859d08311bfcc3a5c19f3a40a6a3",
-                "reference": "14073641d8d7859d08311bfcc3a5c19f3a40a6a3",
+                "url": "https://api.github.com/repos/helhum/class-alias-loader/zipball/99c59fffbae4260685bf72a5b34f2d79304903c8",
+                "reference": "99c59fffbae4260685bf72a5b34f2d79304903c8",
                 "shasum": ""
             },
-            "type": "library",
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "type": "composer-plugin",
             "extra": {
+                "class": "Helhum\\ClassAliasLoader\\Composer\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -81,7 +85,7 @@
                 "classloader",
                 "composer"
             ],
-            "time": "2015-02-02 18:32:18"
+            "time": "2015-04-27 12:45:04"
         },
         {
             "name": "typo3-ter/context-hints",
@@ -165,10 +169,10 @@
         },
         {
             "name": "typo3-ter/fluidcontent-core",
-            "version": "1.1.1",
+            "version": "1.1.3",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidcontent_core/1.1.1/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/fluidcontent_core/1.1.3/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -190,14 +194,14 @@
                 }
             ],
             "description": "Not CSS styled content - Fluid styled content",
-            "time": "2015-03-20 12:52:25"
+            "time": "2015-04-23 13:07:37"
         },
         {
             "name": "typo3-ter/fluidpages",
-            "version": "3.2.0",
+            "version": "3.2.2",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/fluidpages/3.2.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/fluidpages/3.2.2/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -218,7 +222,7 @@
                 }
             ],
             "description": "Fluid Page Template engine - integrates compact and highly dynamic page templates with all the benefits of Fluid.",
-            "time": "2015-03-18 16:21:43"
+            "time": "2015-04-26 22:08:02"
         },
         {
             "name": "typo3-ter/flux",
@@ -246,10 +250,10 @@
         },
         {
             "name": "typo3-ter/media",
-            "version": "3.5.0",
+            "version": "3.5.3",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/media/3.5.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/media/3.5.3/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -267,23 +271,22 @@
                 }
             ],
             "description": "Media management system for TYPO3 CMS.",
-            "time": "2015-03-12 19:08:37"
+            "time": "2015-05-06 16:13:30"
         },
         {
             "name": "typo3-ter/nc-staticfilecache",
-            "version": "2.5.2",
+            "version": "3.3.1",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/nc_staticfilecache/2.5.2/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/nc_staticfilecache/3.3.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3/cms": ">= 4.5.0, <= 6.2.99"
+                "typo3/cms": ">= 6.2.0, <= 7.2.99"
             },
             "replace": {
-                "nc_staticfilecache": "2.5.2",
-                "typo3-ext/nc_staticfilecache": "2.5.2"
+                "typo3-ter/nc_staticfilecache": "self.version"
             },
             "type": "typo3-cms-extension",
             "authors": [
@@ -295,7 +298,7 @@
                 }
             ],
             "description": "Transparent static file cache solution using mod_rewrite and mod_expires. Increase response times for static pages by a factor of 230!",
-            "time": "2014-11-11 17:11:47"
+            "time": "2015-05-13 15:03:01"
         },
         {
             "name": "typo3-ter/realurl",
@@ -357,10 +360,10 @@
         },
         {
             "name": "typo3-ter/typo3-console",
-            "version": "1.0.7",
+            "version": "1.1.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/typo3_console/1.0.7/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/typo3_console/1.1.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -380,14 +383,14 @@
                 }
             ],
             "description": "A reliable and powerful command line interface for TYPO3 CMS",
-            "time": "2015-02-23 15:59:09"
+            "time": "2015-05-12 16:49:07"
         },
         {
             "name": "typo3-ter/vhs",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vhs/2.3.1/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/vhs/2.3.2/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -405,14 +408,14 @@
                 }
             ],
             "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
-            "time": "2015-03-15 02:19:51"
+            "time": "2015-04-16 10:40:29"
         },
         {
             "name": "typo3-ter/vidi",
-            "version": "0.9.0",
+            "version": "0.9.1",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vidi/0.9.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/vidi/0.9.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -429,28 +432,28 @@
                 }
             ],
             "description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
-            "time": "2015-03-12 19:06:16"
+            "time": "2015-05-04 14:58:21"
         },
         {
             "name": "typo3/cms",
-            "version": "6.2.11",
+            "version": "6.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "1e44a4d1533aa4d70e6fa90ec96ef3f098844d59"
+                "reference": "1fece4341b5bb18137f2fd60c34e30638b8eeef3"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://get.typo3.org/6.2.11",
-                "reference": "6.2.11",
-                "shasum": "935aa012e2904742ddf1fd9bb2118865edf4097b"
+                "url": "http://get.typo3.org/6.2.12",
+                "reference": "6.2.12",
+                "shasum": "41775b361eb89c45195820cba8c8e3085dfa9f5d"
             },
             "require": {
                 "ext-fileinfo": "*",
                 "ext-pcre": "*",
                 "ext-session": "*",
                 "ext-xml": "*",
-                "helhum/class-alias-loader": "1.0.*@dev",
+                "helhum/class-alias-loader": "1.1.*@dev",
                 "php": ">=5.3.7",
                 "typo3/cms-composer-installers": "1.1.*@dev"
             },
@@ -589,7 +592,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2015-03-17 14:06:19"
+            "time": "2015-04-16 07:29:48"
         },
         {
             "name": "typo3/cms-composer-installers",
