@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "0d5676b651f5aeb6b53aaa0c57696b01",
@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "2978481559799fe1dce650c6a9b958a0ce6465e5"
+                "reference": "a2b89a0ae9a5fc79d6833e7d974411dc2fe44f01"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -20,7 +20,7 @@
             ],
             "description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2015-05-13 16:06:57"
+            "time": "2015-05-18 16:33:24"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -28,7 +28,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "f752a74ae924f2c9bd2c1adebd8d0216977f3e71"
+                "reference": "83ec71a890ff73a2e990caa124fcb047108aaa19"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -36,7 +36,7 @@
             ],
             "description": "Delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2015-05-13 16:18:04"
+            "time": "2015-05-18 16:38:25"
         },
         {
             "name": "helhum/class-alias-loader",
@@ -89,10 +89,10 @@
         },
         {
             "name": "typo3-ter/context-hints",
-            "version": "1.0.0",
+            "version": "1.2.2",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/context_hints/1.0.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/context_hints/1.2.2/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -112,7 +112,7 @@
                 }
             ],
             "description": "Displays a little message on the top of the Backend about the current context along with some useful info as tooltip.\n                    After configuring and installing the extension, reload the Backend and notice the additional info next to the TYPO3 logo.",
-            "time": "2014-08-11 17:41:55"
+            "time": "2015-05-13 18:45:00"
         },
         {
             "name": "typo3-ter/fluidbootstraptheme",
@@ -444,7 +444,7 @@
             },
             "dist": {
                 "type": "tar",
-                "url": "http://get.typo3.org/6.2.12",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/1fece4341b5bb18137f2fd60c34e30638b8eeef3",
                 "reference": "6.2.12",
                 "shasum": "41775b361eb89c45195820cba8c8e3085dfa9f5d"
             },
