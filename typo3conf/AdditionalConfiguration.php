@@ -17,11 +17,15 @@ if (file_exists($databaseCredentialsFile)) {
 }
 
 # Frontend Settings
-#$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '404.html';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/404/';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageUnavailable_handling'] = '/503/';
+
+// Declare Content Rendering for the Frontend
+$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'] = array('fluidcontentcore/Configuration/TypoScript/');
 
 // Add some more prefix table for the live search (the top right search)
 // Usage for editor: #user:foo
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['fe_user'] = 'fe_users';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['user'] = 'fe_users';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['user'] = 'fe_users';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['fe_group'] = 'fe_groups';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['group'] = 'fe_groups';
@@ -42,6 +46,3 @@ if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopme
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = '28674';
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['clearCacheSystem'] = '1';
 }
-
-// Declare Content Rendering for the Frontend
-$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'] = array('fluidcontentcore/Configuration/TypoScript/');
