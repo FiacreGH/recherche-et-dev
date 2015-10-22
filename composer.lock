@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality.git",
-                "reference": "b3c2c3f8900effcae4a005407c02dfbd802b5339"
+                "reference": "4900ee0ba369d8a6ef3710bb65932a1776f4a136"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -21,7 +21,7 @@
             ],
             "description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
             "homepage": "https://github.com/Ecodev/speciality.git",
-            "time": "2015-09-30 12:01:22"
+            "time": "2015-10-20 10:29:03"
         },
         {
             "name": "ecodev/speciality-distribution",
@@ -29,7 +29,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ecodev/speciality_distribution.git",
-                "reference": "98089bd3b43a4fe4a1bedef496bc89859237e62d"
+                "reference": "c6cceb6d80891c52347f7da26cfca7c1d56e46c5"
             },
             "type": "typo3-cms-extension",
             "license": [
@@ -37,7 +37,7 @@
             ],
             "description": "Delivers a special website just for you.",
             "homepage": "https://github.com/Ecodev/speciality_speciality.git",
-            "time": "2015-09-30 15:24:56"
+            "time": "2015-10-22 08:01:01"
         },
         {
             "name": "helhum/class-alias-loader",
@@ -271,10 +271,10 @@
         },
         {
             "name": "typo3-ter/media",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/media/3.6.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/media/3.7.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -297,7 +297,7 @@
                 }
             ],
             "description": "Media management system for TYPO3 CMS.",
-            "time": "2015-09-25 12:11:03"
+            "time": "2015-10-17 09:23:46"
         },
         {
             "name": "typo3-ter/nc-staticfilecache",
@@ -396,10 +396,10 @@
         },
         {
             "name": "typo3-ter/typo3-console",
-            "version": "1.1.4",
+            "version": "1.1.6",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/typo3_console/1.1.4/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/typo3_console/1.1.6/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -424,7 +424,7 @@
                 }
             ],
             "description": "A reliable and powerful command line interface for TYPO3 CMS",
-            "time": "2015-09-21 21:43:50"
+            "time": "2015-10-01 09:49:39"
         },
         {
             "name": "typo3-ter/vhs",
@@ -458,10 +458,10 @@
         },
         {
             "name": "typo3-ter/vidi",
-            "version": "1.0.0",
+            "version": "1.2.0",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/vidi/1.0.0/t3x/",
+                "url": "http://typo3.org/extensions/repository/download/vidi/1.2.0/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -483,7 +483,7 @@
                 }
             ],
             "description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
-            "time": "2015-09-25 12:09:07"
+            "time": "2015-10-17 09:25:58"
         },
         {
             "name": "typo3/cms",
